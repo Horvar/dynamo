@@ -1,0 +1,28 @@
+@import 'font';
+@import 'normalize';
+@import 'variables';
+
+@import 'common';
+
+@import 'slick-slider/custom';
+
+@import 'body/body';
+@import 'body/dropdown';
+
+@import 'header/header';
+@import 'header/header-blue';
+@import 'header/header-common';
+
+@import 'main/main';
+@import 'main/screen-slider';
+@import 'main/matches';
+@import 'main/news';
+@import 'main/news-cards';
+@import 'main/news-rows';
+@import 'main/teams';
+@import 'main/gallery';
+@import 'main/page-slider';
+
+@import 'footer/footer';
+@import 'footer/footer-partners';
+@import 'footer/footer-common';

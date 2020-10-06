@@ -1,0 +1,13 @@
+$themeWhite: #fff;
+$themeBlack: #11181F;
+$themeBlue: #0033A0;
+$themeBlueDark: #00205B;
+$themeBlueLight: #D9E0F1;
+$themeGrayLight: #ECF0F7;
+$themeGreen: #72C196;
+$themeRed: #D14D6D;
+
+@function pxToVw($screen, $input) {
+    $result: ($input / 1px ) / ($screen / 100) * 1vw;
+    @return $result;
+}

@@ -1,0 +1,23 @@
+.news {}
+
+.news__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__cards {
+    width: calc(276px * 3 + 32px * 2);
+    margin-right: 32px;
+    @media (min-width: 1600px) {
+        margin-right: 45px;
+    }
+    @media (min-width: 1441px) {
+        width: 100%;
+    }
+}
+.news__rows {
+    width: 271px;
+    @media (min-width: 1600px) {
+        min-width: 385px;
+    }
+}

@@ -1,0 +1,47 @@
+.main {
+    padding-bottom: 80px;
+}
+
+.main__screen-slider {
+    margin-bottom: 91px;
+    @media (min-width: 1600px) {
+        margin-bottom: 48px;
+    }
+}
+
+.main__matches {
+    margin-bottom: 80px;
+    @media (min-width: 1600px) {
+        margin-bottom: 60px;
+    }
+}
+
+.main__news {
+    margin-top: 107px;
+    margin-bottom: 93px;
+    @media (min-width: 1600px) {
+        margin-top: 88px;
+    }
+}
+
+.main__teams {
+    margin-bottom: 75px;
+    @media (min-width: 1600px) {
+        margin-bottom: 130px;
+    }
+}
+
+.main__gallery {
+    margin-top: 109px;
+    margin-bottom: 96px;
+    @media (min-width: 1600px) {
+        margin-bottom: 165px;
+    }
+}
+
+.main__page-slider {
+    margin-bottom: 95px;
+    @media (min-width: 1600px) {
+        margin-bottom: 122px;
+    }
+}

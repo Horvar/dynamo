@@ -1,0 +1,198 @@
+.header-blue {
+    min-height: 48px;
+    background: $themeBlue;
+    color: $themeWhite;
+    font-size: 14px;
+    line-height: 20px;
+}
+.header-blue__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 12px;
+}
+.header-blue__col {
+    display: flex;
+    &_1 {}
+    &_2 {
+        &>* + * {
+            position: relative;
+            &::before {
+                content: '';
+                display: inline-block;
+                margin: 0 16px;
+                width: 1px;
+                height: 8px;
+                background: $themeBlueLight;
+                opacity: 0.5;
+            }     
+        }
+    }
+}
+
+.header-blue__nav {
+    ul {
+        display: flex;
+        li {
+            & + * {
+                position: relative;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    margin: 0 16px;
+                    width: 1px;
+                    height: 8px;
+                    background: $themeBlueLight;
+                    opacity: 0.5;
+                }     
+            }
+            a {
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+.header-blue__search {
+    position: relative;
+    &>a {
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+            opacity: .7;
+        }
+        svg {
+            fill: $themeWhite;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            margin-right: 7px;
+            transition: .2s;
+        }
+        span {
+            max-width: 100px;
+            overflow: hidden;
+            transition: .5s;
+        }
+    }
+    &_opened {
+        &>a {
+            svg {
+                margin-right: 0;
+                transition: .2s 0s;
+            }
+            span {
+                opacity: 0;
+                max-width: 0;
+                transition: .2s 0s;
+            }
+        }
+        .header-blue__search-inside {
+            pointer-events: all;
+            input {
+                max-width: 250px;
+                transition: .5s .2s;
+            }
+            svg {
+                transition: opacity .2s .5s;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.header-blue__search-inside {
+    position: absolute;
+    top: 0;
+    right: 13px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    &>a {
+        display: flex;
+        align-items: center;
+        margin-right: 17px;
+        svg {
+            fill: $themeBlue;
+            width: 8px;
+            height: 8px;
+            background: rgba($themeWhite, .5);
+            padding: 4px;
+            border-radius: 50%;
+            transition: 0s;
+            opacity: 0;
+        }
+    }
+    input {
+        max-width: 0;
+        width: 250px;
+        height: 20px;
+        border: none;
+        transition: .2s;
+        
+        background: transparent;
+        color: $themeWhite;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.header-blue__social {
+    position: relative;
+    &>a {
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+            opacity: .7;
+        }
+        svg {
+            stroke: $themeWhite;
+            fill: transparent;
+            width: 5px;
+            height: 9px;
+            margin-top: 2px;
+            margin-left: 10px;
+        }
+        &[data-js-dropdown-trigger=active] {
+            opacity: .7;
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+.header-blue__social-dropdown {
+    position: absolute;
+    left: calc(50% + 18px);
+    bottom: -3px;
+    transform: translate(-50%, 100%);
+}
+
+.header-blue__language {
+    &>a {
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.header-blue__sign {
+    &>a {
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+            opacity: .7;
+        }
+        svg {
+            fill: $themeWhite;
+            width: 17px;
+            height: 24px;
+            position: absolute;
+        }
+        span {
+            padding-left: 23px;
+        }
+    }
+}

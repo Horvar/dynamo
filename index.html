@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница</title>
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="body">
+    <!-- gray header -->
+    <img src="assets/img/heading.png" alt="Общий хедер" style="margin: 0 auto; display: flex;">
+    <!-- header -->
+    <div id="data-js-loading-scroll-anchor"></div>
+    <header class="body__header header">
+        <!-- top -->
+        <div class="header__header-blue header-blue">
+            <div class="header-blue__container container container_1">
+                <div class="header-blue__col header-blue__col_1">
+                    <!-- nav -->
+                    <nav class="header-blue__nav">
+                        <ul>
+                            <li><a href="#">«Динамо» МО</a></li>
+                            <li><a href="#">MХК «Динамо»</a></li>
+                            <li><a href="#">Хоккейная академия «Динамо»</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-blue__col header-blue__col_2">
+                    <!-- search -->
+                    <div class="header-blue__search">
+                        <a href="javascript:void(0);" id="searchOpenBtn">
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#search"></use></svg>
+                            <span>Поиск</span>
+                        </a>
+                        <div class="header-blue__search-inside">
+                            <a href="javascript:void(0);" id="searchCloseBtn" tabindex="-1"><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#cross"></use></svg></a>
+                            <input type="search" id="searchInput" tabindex="-1">
+                        </div>
+                    </div>
+                    <!-- social -->
+                    <div class="header-blue__social">
+                        <a href="#" data-js-dropdown-trigger>
+                            <span>Соцсети клуба</span>
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg>
+                        </a>
+                        <div class="header-blue__social-dropdown dropdown" data-js-dropdown-menu>
+                            <div class="dropdown__content">
+                                <ul class="dropdown__social">
+                                    <li><a href="#" aria-label="Facebook"><svg width="9" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
+                                    <li><a href="#" aria-label="Twitter"><svg width="16" height="13"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>
+                                    <li><a href="#" aria-label="Instagram"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg></a></li>
+                                    <li><a href="#" aria-label="Vkontakte"><svg width="21" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg></a></li>
+                                    <li><a href="#" aria-label="Odnoklassniki"><svg width="9" height="14"><use xlink:href="assets/img/sprites/sprite-icons.svg#odnoklassniki"></use></svg></a></li>
+                                    <li><a href="#" aria-label="Youtube"><svg width="19" height="13"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- language -->
+                    <div class="header-blue__language">
+                        <a href="#">En</a>
+                    </div>
+                    <!-- sign -->
+                    <div class="header-blue__sign">
+                        <a href="#">
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#sign"></use></svg>
+                            <span>Войти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bot -->
+        <div class="header__header-common header-common">
+            <div class="header-common__container container container_1">
+                <div class="header-common__col header-common__col_1">
+                    <div class="header-common__row header-common__row_1">
+                        <!-- logo -->
+                        <a href="/" class="header-common__logo"><img src="assets/img/logo.png" srcset="assets/img/logo-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                        <!-- trophys -->
+                        <ul class="header-common__trophies">
+                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a></li>
+                            <li><a href="#"><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a></li>
+                        </ul>
+                    </div>
+                    <div class="header-common__row header-common__row_2">
+                        <nav class="header-common__nav">
+                            <ul>
+                                <li class="current"><a href="#">Билеты</a></li>
+                                <li><a href="#">Клуб</a></li>
+                                <li><a href="#">Команда</a></li>
+                                <li><a href="#">Календарь</a></li>
+                                <li><a href="#">Статистика</a></li>
+                                <li><a href="#">Пресс-центр</a></li>
+                                <li><a href="#">Медиа</a></li>
+                                <li><a href="#">Фан-зона</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-common__col header-common__col_2">
+                    <ul class="header-common__partners">
+                        <li><a href="#"><img src="assets/img/partners/partner-1.png" srcset="assets/img/partners/partner-1-2x.png 2x" alt="Генеральный спонсор ХК «Динамо» Москва"></a></li>
+                        <li><a href="#"><img src="assets/img/partners/partner-2.png" srcset="assets/img/partners/partner-2-2x.png 2x" alt="Металлоинвест"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="body__main main">
+        <section class="main__screen-slider screen-slider">
+            <div class="screen-slider__container container container_2">
+                <h1 class="screen-slider__title title-hidden">Динамо Москва</h1>
+                <div class="screen-slider__content">
+                    <ul class="screen-slider__slider screen-slider__slider_1" data-js-slick-screen-1 tabindex="-1">
+                        <li><img src="assets/img/slider/img-screen_slider-1.jpg" srcset="assets/img/slider/img-screen_slider-1-2x.jpg 2x" alt=""></li>
+                        <li><img src="assets/img/slider/img-screen_slider-2.jpg" srcset="assets/img/slider/img-screen_slider-2-2x.jpg 2x" alt=""></li>
+                        <li><img src="assets/img/slider/img-screen_slider-1.jpg" srcset="assets/img/slider/img-screen_slider-1-2x.jpg 2x" alt=""></li>
+                        <li><img src="assets/img/slider/img-screen_slider-2.jpg" srcset="assets/img/slider/img-screen_slider-2-2x.jpg 2x" alt=""></li>
+                    </ul>
+                    <ul class="screen-slider__slider screen-slider__slider_2" data-js-slick-screen-2>
+                        <li>
+                            <p>Итоги заседания совета директоров ХК «Динамо Москва»</p>
+                            <div data-js-slick-screen-blurred>1</div>
+                        </li>
+                        <li>
+                            <p>Поздравляем Дениса Соловьёва!</p>
+                            <div data-js-slick-screen-blurred>2</div>
+                        </li>
+                        <li>
+                            <p>«Динамо» — бронзовый призёр чемпионата России по хоккею!</p>
+                            <div data-js-slick-screen-blurred>3</div>
+                        </li>
+                        <li>
+                            <p>Итоги заседания совета директоров ХК «Динамо Москва»</p>
+                            <div data-js-slick-screen-blurred>4</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="main__matches matches">
+            <div class="matches__container container container_1">
+                <h2 class="matches__title title-hidden">Матчи</h2>
+                <ul class="matches__list">
+                    <!-- 1 -->
+                    <li class="matches__item">
+                        <a href="#">Подробнее о матче</a>
+                        <p class="matches__date">12 сентября, чт</p>
+                        <ul class="matches__team-list">
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-avangard.png" srcset="assets/img/teams/logo-avangard-2x.png 2x" alt="Авангард">
+                                <p>Авангард</p>
+                            </li>
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-dynamo.png" srcset="assets/img/teams/logo-dynamo-2x.png 2x" alt="Динамо">
+                                <p>Динамо</p>
+                            </li>
+                        </ul>
+                        <div class="matches__score">
+                            <span>2</span>
+                            <span>3</span>
+                            <p>в овертайме</p>
+                        </div>
+                        <div class="matches__links">
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#photo"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#report"></use></svg></a>
+                        </div>
+                        <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
+                    </li>
+                    <!-- 2 -->
+                    <li class="matches__item">
+                        <a href="#">Подробнее о матче</a>
+                        <p class="matches__date">18 сентября, сб</p>
+                        <ul class="matches__team-list">
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-ska.png" srcset="assets/img/teams/logo-ska-2x.png 2x" alt="СКА">
+                                <p>СКА</p>
+                            </li>
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-dynamo.png" srcset="assets/img/teams/logo-dynamo-2x.png 2x" alt="Динамо">
+                                <p>Динамо</p>
+                            </li>
+                        </ul>
+                        <div class="matches__score">
+                            <span>4</span>
+                            <span>6</span>
+                            <p>в овертайме</p>
+                        </div>
+                        <div class="matches__links">
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#photo"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#report"></use></svg></a>
+                        </div>
+                        <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
+                    </li>
+                    <!-- 3 -->
+                    <li class="matches__item">
+                        <a href="#">Подробнее о матче</a>
+                        <p class="matches__date">23 сентября, пт</p>
+                        <ul class="matches__team-list">
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-spartak.png" srcset="assets/img/teams/logo-spartak-2x.png 2x" alt="Спартак">
+                                <p>Спартак</p>
+                            </li>
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-dynamo.png" srcset="assets/img/teams/logo-dynamo-2x.png 2x" alt="Динамо">
+                                <p>Динамо</p>
+                            </li>
+                        </ul>
+                        <div class="matches__score">
+                            <span>2</span>
+                            <span>3</span>
+                            <p>в овертайме</p>
+                        </div>
+                        <div class="matches__links">
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#photo"></use></svg></a>
+                            <a href="#"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#report"></use></svg></a>
+                        </div>
+                        <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
+                    </li>
+                    <!-- 4 -->
+                    <li class="matches__item">
+                        <a href="#">Подробнее о матче</a>
+                        <p class="matches__date">24 сентября, сб</p>
+                        <ul class="matches__team-list">
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-salavat.png" srcset="assets/img/teams/logo-salavat-2x.png 2x" alt="Салават-юлаев">
+                                <p>Салават-юлаев</p>
+                            </li>
+                            <li class="matches__team-item">
+                                <img src="assets/img/teams/logo-dynamo.png" srcset="assets/img/teams/logo-dynamo-2x.png 2x" alt="Динамо">
+                                <p>Динамо</p>
+                            </li>
+                        </ul>
+                        <div class="matches__score matches__score_small">
+                            <span>2 дня</span>
+                            <p>до матча</p>
+                        </div>
+                        <a href="#" class="matches__button button button_fill">Купить билет</a>
+                        <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
+                    </li>
+                </ul>
+                <div class="matches__tree">
+                    <a href="#" class="matches__more">
+                        <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#calendar"></use></svg>
+                        <span>Календарь игр</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- banner -->
+        <div class="main__banner-simple banner-simple">
+            <div class="banner-simple__container container container_1">
+                <a href="#"><img src="assets/img/banners/banner-1.jpg" srcset="assets/img/banners/banner-1-2x.jpg 2x" alt="Вступай в хоккейную семью!"></a>
+            </div>
+        </div>
+        <section class="main__news news">
+            <div class="news__container container container_1">
+                <!-- cards -->
+                <div class="news__cards news-cards">
+                    <h2 class="news-cards__title h2">Новости клуба</h2>
+                    <ul class="news-cards__list">
+                        <!-- 1 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-1.jpg" srcset="assets/img/news/preview-news-1-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Новости</a>
+                            <p class="news-cards__name">Итоги заседания совета директоров</p>
+                        </li>
+                        <!-- 2 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-2.jpg" srcset="assets/img/news/preview-news-2-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Новости</a>
+                            <p class="news-cards__name">В новый сезон - в новой форме!</p>
+                        </li>
+                        <!-- 3 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-3.jpg" srcset="assets/img/news/preview-news-3-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Интервью</a>
+                            <p class="news-cards__name">В «Динамо» осталась частичка меня</p>
+                        </li>
+                        <!-- 4 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-4.jpg" srcset="assets/img/news/preview-news-4-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Новости</a>
+                            <p class="news-cards__name">Поздравляем Игоря Самочернова</p>
+                        </li>
+                        <!-- 5 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-5.jpg" srcset="assets/img/news/preview-news-5-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Новости</a>
+                            <p class="news-cards__name">Итоги заседания совета директоров</p>
+                        </li>
+                        <!-- 6 -->
+                        <li class="news-cards__item">
+                            <a href="#" class="news-cards__hidden-link">Подробнее</a>
+                            <img src="assets/img/news/preview-news-6.jpg" srcset="assets/img/news/preview-news-6-2x.jpg 2x" alt="Фото события" class="news-cards__photo">
+                            <p class="news-cards__date">09 июля</p>
+                            <a href="#" class="news-cards__tag">Новости</a>
+                            <p class="news-cards__name">Итоги заседания совета директоров</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- rows -->
+                <div class="news__rows news-rows">
+                    <h2 class="news-rows__title h2">Новости хоккея</h2>
+                    <ul class="news-rows__list">
+                        <!-- 1 -->
+                        <li class="news-rows__item">
+                            <p class="news-rows__date">09 сентября</p>
+                            <a href="#">Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</a>
+                            <a href="#">Марковин покинет «Северсталь»</a>
+                            <a href="#">Кирилл Кольцов: после небольшой паузы я полон сил для возвращения в хоккей</a>
+                            <a href="#">Бывший форвард «Авангарда» Андригетто близок к переходу в «Лозанну»</a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="news-rows__item">
+                            <p class="news-rows__date">08 сентября</p>
+                            <a href="#">Кирилл Кольцов — об окончании карьеры: «Полон сил для возвращения в хоккей еще минимум на сезон»</a>
+                            <a href="#">Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</a>
+                            <a href="#">Марковин покинет «Северсталь»</a>
+                            <a href="#">Кирилл Кольцов: после небольшой паузы я полон сил для возвращения в хоккей</a>
+                            <a href="#">Бывший форвард «Авангарда» Андригетто близок к переходу в «Лозанну»</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="main__teams teams">
+            <div class="teams__container container container_1">
+                <!-- list -->
+                <div class="teams__col teams__col_1">
+                    <h2 class="teams__title h2">Западная конференция</h2>
+                    <ul class="teams__team-list">
+                        <!-- 1 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-admiral.png" srcset="assets/img/teams/logo-admiral-2x.png 2x" alt="Адмирал" class="teams__team-logo">
+                                <p class="teams__team-name">Адмирал</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-avangard.png" srcset="assets/img/teams/logo-avangard-2x.png 2x" alt="Авангард" class="teams__team-logo">
+                                <p class="teams__team-name">Авангард</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 3 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-dynamo-mn.png" srcset="assets/img/teams/logo-dynamo-mn-2x.png 2x" alt="Динамо Мн" class="teams__team-logo">
+                                <p class="teams__team-name">Динамо Мн</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 4 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-csk.png" srcset="assets/img/teams/logo-csk-2x.png 2x" alt="ЦСКА" class="teams__team-logo">
+                                <p class="teams__team-name">ЦСКА</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 5 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-ska.png" srcset="assets/img/teams/logo-ska-2x.png 2x" alt="СКА" class="teams__team-logo">
+                                <p class="teams__team-name">СКА</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 6 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-salavat-sm.png" srcset="assets/img/teams/logo-salavat-2x-sm.png 2x" alt="Салават Юлаев" class="teams__team-logo">
+                                <p class="teams__team-name">Салават Юлаев</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 7 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-loko.png" srcset="assets/img/teams/logo-loko-2x.png 2x" alt="Локомотив" class="teams__team-logo">
+                                <p class="teams__team-name">Локомотив</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 8 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-traktor.png" srcset="assets/img/teams/logo-traktor-2x.png 2x" alt="Трактор" class="teams__team-logo">
+                                <p class="teams__team-name">Трактор</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 9 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-loko.png" srcset="assets/img/teams/logo-loko-2x.png 2x" alt="Локомотив" class="teams__team-logo">
+                                <p class="teams__team-name">Локомотив</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 10 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-dynamo.png" srcset="assets/img/teams/logo-dynamo-2x.png 2x" alt="Динамо Москва" class="teams__team-logo">
+                                <p class="teams__team-name">Динамо Москва</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 11 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-spartak.png" srcset="assets/img/teams/logo-spartak-2x.png 2x" alt="Спартак" class="teams__team-logo">
+                                <p class="teams__team-name">Спартак</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                        <!-- 12 -->
+                        <li class="teams__team-item">
+                            <a href="#">
+                                <img src="assets/img/teams/logo-csk.png" srcset="assets/img/teams/logo-csk-2x.png 2x" alt="ЦСКА" class="teams__team-logo">
+                                <p class="teams__team-name">ЦСКА</p>
+                                <p class="teams__team-num teams__team-num_1">86</p>
+                                <p class="teams__team-num teams__team-num_2">114</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- players -->
+                <div class="teams__col teams__col_2">
+                    <ul class="teams__players-list">
+                        <!-- 1 -->
+                        <li class="teams__players-item">
+                            <p class="teams__players-role">Нападающие</p>
+                            <img src="assets/img/palyers/player-1.png" srcset="assets/img/palyers/player-1-2x.png 2x" alt="Кацевич Марк" class="teams__players-photo">
+                            <p class="teams__players-stat">Очки</p>
+                            <a href="#"><span>43</span><span>Кацевич Марк</span></a>
+                            <a href="#"><span>14</span><span>Кисаков Андрей</span></a>
+                            <a href="#"><span>6</span><span>Злодеев Дмитрий</span></a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="teams__players-item">
+                            <p class="teams__players-role">Ассистенты</p>
+                            <img src="assets/img/palyers/player-2.png" srcset="assets/img/palyers/player-2-2x.png 2x" alt="Жигалов Иван" class="teams__players-photo">
+                            <p class="teams__players-stat">Передачи</p>
+                            <a href="#"><span>1</span><span>Жигалов Иван</span></a>
+                            <a href="#"><span>13</span><span>Кисаков Андрей</span></a>
+                            <a href="#"><span>5</span><span>Злодеев Дмитрий</span></a>
+                        </li>
+                        <!-- 3 -->
+                        <li class="teams__players-item">
+                            <p class="teams__players-role">Снайперы</p>
+                            <img src="assets/img/palyers/player-2.png" srcset="assets/img/palyers/player-2-2x.png 2x" alt="Косолапов Антон" class="teams__players-photo">
+                            <p class="teams__players-stat">Шайбы</p>
+                            <a href="#"><span>20</span><span>Косолапов Антон</span></a>
+                            <a href="#"><span>25</span><span>Кисаков Андрей</span></a>
+                            <a href="#"><span>7</span><span>Злодеев Дмитрий</span></a>
+                        </li>
+                        <!-- 4 -->
+                        <li class="teams__players-item">
+                            <p class="teams__players-role">Вратари</p>
+                            <img src="assets/img/palyers/player-3.png" srcset="assets/img/palyers/player-3-2x.png 2x" alt="Кацевич Марк" class="teams__players-photo">
+                            <p class="teams__players-stat">Надежность</p>
+                            <a href="#"><span>18</span><span>Кацевич Марк</span></a>
+                            <a href="#"><span>2.2</span><span>Кисаков Андрей</span></a>
+                            <a href="#"><span>2.25</span><span>Злодеев Дмитрий</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="teams__container container container_1">
+                <div class="players__tree">
+                    <a href="#" class="teams__more">
+                        <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#union"></use></svg>
+                        <span>Список команд</span>
+                    </a>
+                    <a href="#" class="teams__more">
+                        <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#chart"></use></svg>
+                        <span>Список игроков</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- banner -->
+        <div class="main__banner-simple banner-simple">
+            <div class="banner-simple__container container container_1">
+                <a href="#"><img src="assets/img/banners/banner-2.jpg" srcset="assets/img/banners/banner-2-2x.jpg 2x" alt="Банк ВТБ - генеральный спонсор ХК 'Динамо' Москва"></a>
+            </div>
+        </div>
+        <!-- banner -->
+        <div class="main__banner-simple banner-simple">
+            <div class="banner-simple__container container container_1">
+                <a href="#"><img src="assets/img/banners/banner-3.jpg" srcset="assets/img/banners/banner-3-2x.jpg 2x" alt="Страховая группа 'Согаз'"></a>
+            </div>
+        </div>
+        <section class="main__gallery gallery">
+            <div class="gallery__container container container_1">
+                <h2 class="gallery__title title-hidden">Галлерея</h2>
+                <div class="gallery__tab-wrapper" data-js-tab-container>
+                    <div class="gallery__tab-select">
+                        <!-- select 1 -->
+                        <a href="#" data-js-tab-select="1">Видео</a>
+                        <!-- select 2 -->
+                        <a href="#" data-js-tab-select="2">Фото</a>
+                        <!-- more -->
+                        <div class="gallery__more">
+                            <a href="#" data-js-tab-content="1"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg><span>Все видео</span></a>
+                            <a href="#" data-js-tab-content="2"><svg width="16" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#photo"></use></svg><span>Все фото</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__tab-content">
+                        <!-- tab 1 -->
+                        <ul class="gallery__list" data-js-tab-content="1">
+                                <!-- 1 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-1.jpg" srcset="assets/img/gallery/preview-gallery-1-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">События</a>
+                                    <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                                </li>
+                                <!-- 2 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-2.jpg" srcset="assets/img/gallery/preview-gallery-2-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">Матчи</a>
+                                    <p class="gallery__name">100 Лучших моментов сезона 2019/2020</p>
+                                </li>
+                                <!-- 3 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-3.jpg" srcset="assets/img/gallery/preview-gallery-3-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">События</a>
+                                    <p class="gallery__name">#Лето2020: Плов от Андрея Миронова</p>
+                                </li>
+                                <!-- 4 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-4.jpg" srcset="assets/img/gallery/preview-gallery-4-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">Другое</a>
+                                    <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                                </li>
+                                <!-- 5 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-3.jpg" srcset="assets/img/gallery/preview-gallery-3-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">События</a>
+                                    <p class="gallery__name">#Лето2020: Плов от Андрея Миронова</p>
+                                </li>
+                                <!-- 6 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-2.jpg" srcset="assets/img/gallery/preview-gallery-2-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">Другое</a>
+                                    <p class="gallery__name">100 Лучших моментов сезона 2019/2020</p>
+                                </li>
+                                <!-- 7 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-4.jpg" srcset="assets/img/gallery/preview-gallery-4-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">События</a>
+                                    <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                                </li>
+                                <!-- 8 -->
+                                <li class="gallery__item">
+                                    <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                    <div class="gallery__photo">
+                                        <img src="assets/img/gallery/preview-gallery-1.jpg" srcset="assets/img/gallery/preview-gallery-1-2x.jpg 2x" alt="Превью события">
+                                        <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#logoYT"></use></svg>
+                                    </div>
+                                    <p class="gallery__date">09 июля</p>
+                                    <a href="#" class="gallery__tag">События</a>
+                                    <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                                </li>
+                        </ul>
+                        <!-- tab 2 -->
+                        <ul class="gallery__list" data-js-tab-content="2">
+                            <!-- 1 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-2.jpg" srcset="assets/img/gallery/preview-gallery-2-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">Матчи</a>
+                                <p class="gallery__name">100 Лучших моментов сезона 2019/2020</p>
+                            </li>
+                            <!-- 2 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-1.jpg" srcset="assets/img/gallery/preview-gallery-1-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">События</a>
+                                <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                            </li>
+                            <!-- 3 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-3.jpg" srcset="assets/img/gallery/preview-gallery-3-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">События</a>
+                                <p class="gallery__name">#Лето2020: Плов от Андрея Миронова</p>
+                            </li>
+                            <!-- 4 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-4.jpg" srcset="assets/img/gallery/preview-gallery-4-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">Другое</a>
+                                <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                            </li>
+                            <!-- 5 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-3.jpg" srcset="assets/img/gallery/preview-gallery-3-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">События</a>
+                                <p class="gallery__name">#Лето2020: Плов от Андрея Миронова</p>
+                            </li>
+                            <!-- 6 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-2.jpg" srcset="assets/img/gallery/preview-gallery-2-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">Другое</a>
+                                <p class="gallery__name">100 Лучших моментов сезона 2019/2020</p>
+                            </li>
+                            <!-- 7 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-4.jpg" srcset="assets/img/gallery/preview-gallery-4-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">События</a>
+                                <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                            </li>
+                            <!-- 8 -->
+                            <li class="gallery__item">
+                                <a href="#" class="gallery__hidden-link">Подробнее</a>
+                                <div class="gallery__photo">
+                                    <img src="assets/img/gallery/preview-gallery-1.jpg" srcset="assets/img/gallery/preview-gallery-1-2x.jpg 2x" alt="Превью события">
+                                </div>
+                                <p class="gallery__date">09 июля</p>
+                                <a href="#" class="gallery__tag">События</a>
+                                <p class="gallery__name">ТОП 10 лучших шайб московского «Динамо» в сезоне 2019/2020</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__page-slider page-slider">
+            <div class="page-slider__container container container_2">
+                <h2 class="page-slider__title title-hidden">Товары</h2>
+                <!-- images -->
+                <div class="page-slider__content">
+                    <ul class="page-slider__slider page-slider__slider_1" data-js-slick-page-1>
+                        <li><a href="#"><img src="assets/img/slider/img-page_slider-1.jpg" srcset="assets/img/slider/img-page_slider-1-2x.jpg 2x" alt="Коллекция футболок"></a></li>
+                        <li><a href="#"><img src="assets/img/slider/img-page_slider-2.jpg" srcset="assets/img/slider/img-page_slider-2-2x.jpg 2x" alt="Lorem ipsum dolor sit"></a></li>
+                    </ul>
+                    <!-- titles -->
+                    <ul class="page-slider__slider page-slider__slider_2" data-js-slick-page-2>
+                        <li>
+                            <h3>Коллекция футболок</h3>
+                            <p>Для взрослых и самых маленьких</p>
+                        </li>
+                        <li>
+                            <h3>Lorem ipsum dolor sit</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, officia.</p>
+                        </li>
+                    </ul>
+                    <nav class="page-slider__arrows">
+                        <button id="pageSliderPrev"><svg width="11" height="20"><use xlink:href="assets/img/sprites/sprite-icons.svg#angleLg"></use></svg></button>
+                        <button id="pageSliderNext"><svg width="11" height="20"><use xlink:href="assets/img/sprites/sprite-icons.svg#angleLg"></use></svg></button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!-- banner -->
+        <div class="main__banner-double banner-double">
+            <div class="banner-double__container container container_1">
+                <a href="#"><img src="assets/img/slider/img-screen_slider-1.jpg" srcset="assets/img/slider/img-screen_slider-1.jpg" alt="Страховая группа 'Согаз'"></a>
+                <a href="#"><img src="assets/img/slider/img-screen_slider-2.jpg" srcset="assets/img/slider/img-screen_slider-2.jpg" alt="Страховая группа 'Согаз'"></a>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="body__footer footer">
+        <!-- top -->
+        <div class="footer__footer-partners footer-partners">
+            <div class="footer-partners__container container container_1">
+                <!-- first -->
+                <div class="footer-partners__content footer-partners__content_1">
+                    <p class="footer-partners__caption">Спонсоры и партнеры клуба</p>
+                    <ul class="footer-partners__list">
+                        <!-- 1 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-3.png" srcset="assets/img/partners/partner-3-2x.png 2x" alt="ВТБ">
+                            </a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-4.png" srcset="assets/img/partners/partner-4-2x.png 2x" alt="Металлоинвест">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- second -->
+                <div class="footer-partners__content footer-partners__content_2">
+                    <p class="footer-partners__caption">Партнеры чемпионата КХЛ сезона 2019/2020</p>
+                    <ul class="footer-partners__list">
+                        <!-- 1 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-5.png" srcset="assets/img/partners/partner-5-2x.png 2x" alt="Генеральный партнер">
+                                <p>Генеральный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-6.png" srcset="assets/img/partners/partner-6-2x.png 2x" alt="Официальный партнер">
+                                <p>Официальный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 3 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-7.png" srcset="assets/img/partners/partner-7-2x.png 2x" alt="Официальный партнер">
+                                <p>Официальный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 4 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-8.png" srcset="assets/img/partners/partner-8-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 5 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-9.png" srcset="assets/img/partners/partner-9-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 6 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-10.png" srcset="assets/img/partners/partner-10-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 7 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-11.png" srcset="assets/img/partners/partner-11-2x.png 2x" alt="Генеральный партнер">
+                                <p>Генеральный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 8 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-12.png" srcset="assets/img/partners/partner-12-2x.png 2x" alt="Официальный партнер">
+                                <p>Официальный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 9 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-13.png" srcset="assets/img/partners/partner-13-2x.png 2x" alt="Официальный партнер">
+                                <p>Официальный партнер</p>
+                            </a>
+                        </li>
+                        <!-- 10 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-14.png" srcset="assets/img/partners/partner-14-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 11 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-15.png" srcset="assets/img/partners/partner-15-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 12 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-16.png" srcset="assets/img/partners/partner-16-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- bot -->
+        <div class="footer__footer-common footer-common">
+            <div class="footer-common__container container container_1">
+                <!-- top -->
+                <div class="footer-common__wrapper footer-common__wrapper_1">
+                    <a href="/" class="footer-common__logo"><img src="assets/img/logo-white-long.png" srcset="assets/img/logo-white-long-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                    <ul class="footer-common__social">
+                        <li><a href="#" aria-label="Facebook"><svg class="fb"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
+                        <li><a href="#" aria-label="Twitter"><svg class="tw"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>
+                        <li><a href="#" aria-label="Instagram"><svg class="in"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg></a></li>
+                        <li><a href="#" aria-label="Vkontakte"><svg class="vk"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg></a></li>
+                        <li><a href="#" aria-label="Odnoklassniki"><svg class="ok"><use xlink:href="assets/img/sprites/sprite-icons.svg#odnoklassniki"></use></svg></a></li>
+                        <li><a href="#" aria-label="Youtube"><svg class="yt"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg></a></li>
+                    </ul>
+                </div>
+                <!-- mid -->
+                <div class="footer-common__wrapper footer-common__wrapper_2">
+                    <!-- nav -->
+                    <nav class="footer-common__nav">
+                        <!-- 1 -->
+                        <ul>
+                            <li><a href="#">Билеты</a></li>
+                            <li><a href="#">Мини-абонемент</a></li>
+                            <li><a href="#">Абонементы</a></li>
+                            <li><a href="#">Правила покупок</a></li>
+                            <li><a href="#">Правила поведения</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <!-- 2 -->
+                        <ul>
+                            <li><a href="#">Наша история</a></li>
+                            <li><a href="#">Высший совет</a></li>
+                            <li><a href="#">Попечительский совет</a></li>
+                            <li><a href="#">Руководство</a></li>
+                            <li><a href="#">База Динамо</a></li>
+                            <li><a href="#">Музей</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Символика</a></li>
+                            <li><a href="#">Стадион</a></li>
+                            <li><a href="#">Спонсоры и партнеры</a></li>
+                        </ul>
+                        <!-- 3 -->
+                        <ul>
+                            <li><a href="#">Состав</a></li>
+                            <li><a href="#">Тренерский штаб</a></li>
+                            <li><a href="#">Персонал</a></li>
+                        </ul>
+                        <!-- 4 -->
+                        <ul>
+                            <li><a href="#">Календарь</a></li>
+                        </ul>
+                        <!-- 5 -->
+                        <ul>
+                            <li><a href="#">Командная статистика</a></li>
+                            <li><a href="#">Персональная статистика</a></li>
+                            <li><a href="#">Сравнение команд</a></li>
+                        </ul>
+                        <!-- 6 -->
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Интервью</a></li>
+                            <li><a href="#">Матч-центр</a></li>
+                            <li><a href="#">События</a></li>
+                            <li><a href="#">Конференции</a></li>
+                        </ul>
+                    </nav>
+                    <!-- contacts -->
+                    <div class="footer-common__contacts">
+                        <a href="tel:+74951209000">(495) 120-90-00</a>
+                        <a href="mailto:info@dynamo.ru">info@dynamo.ru</a>
+                    </div>
+                </div>
+                <!-- bot -->
+                <div class="footer-common__wrapper footer-common__wrapper_3">
+                    <p>1946-2020. Все права защищены</p>
+                    <p>Разработка сайта:  x4.digital</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/focus-visible.js"></script>
+    <script src="assets/js/keyboard-click.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

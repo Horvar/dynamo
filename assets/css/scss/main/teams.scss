@@ -1,0 +1,252 @@
+.teams {}
+
+.teams__container {
+    display: flex;
+}
+.teams__col {
+    &_1 {
+        display: flex;
+        flex-direction: column;
+        margin-right: 105px;
+        flex: 1 1 513px;
+    }
+    &_2 {
+        flex: 1 1 calc(276px * 2 + 31px);
+    }
+}
+
+.teams__title {
+    margin-bottom: 40px;
+    @media (min-width: 1441px) {
+        margin-bottom: 49px;
+    }
+}
+
+.teams__team-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    counter-reset: teamNum;
+}
+.teams__team-item {
+    font-size: 16px;
+    line-height: 16px;
+    flex: 0 1 calc(100% / 12);
+    border-radius: 4px;
+    overflow: hidden;
+    @media (min-width: 1441px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &:nth-of-type(odd) {
+        background: $themeGrayLight;
+    }
+    &>a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 32px 0 24px;
+        box-sizing: border-box;
+        outline-offset: -2px;
+        @media (min-width: 1441px) {
+            padding: 0 38px 0 24px;
+        }
+        &:hover, &:focus {
+            background: rgba($themeBlue, .3);
+        }
+        &:before {
+            counter-increment: teamNum;
+            content: counter(teamNum)'.';
+            width: 15px;
+            margin-right: 28px;
+            opacity: .5;
+        }
+    }
+}
+
+.teams__team-logo {
+    display: block;
+    max-height: 100%;
+    width: 54px;
+    object-fit: contain;
+    margin-right: 9px;
+    @media (min-width: 1600px) {
+        width: 72px;
+    }
+}
+.teams__team-name {}
+.teams__team-num {
+    &_1 {
+        margin-left: auto;
+        margin-right: 24px;
+    }
+    &_2 {
+
+    }
+}
+
+.teams__players-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -31px;
+    margin-bottom: -32px;
+    @media (min-width: 1600px) {
+        padding-top: 89px;
+        margin-right: -40px;
+        margin-bottom: -40px;
+    }
+}
+.teams__players-item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(50% - 31px);
+    margin-right: 31px;
+    margin-bottom: 32px;
+    background: rgba($themeGrayLight, .5);
+    border: 1px solid $themeGrayLight;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px;
+    @media (min-width: 1600px) {
+        flex: 0 1 calc(50% - 40px);
+        margin-right: 40px;
+        margin-bottom: 40px;
+        padding: 28px 24px;
+    }
+    &>a {
+        display: flex;
+        font-size: 14px;
+        line-height: 20px;
+        color: $themeBlue;
+        &:hover, &:focus {
+            color: $themeBlueDark;
+        }
+        &>span {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            &:first-of-type {
+                color: $themeBlack;
+                font-weight: bold;
+                width: 50px;
+                text-align: center;
+                margin-right: 8px;
+            }
+        }
+        @media (min-width: 1600px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        & + a {
+            margin-top: 12px;
+            @media (min-width: 1600px) {
+                margin-top: 18px;
+            }
+        }
+        &:first-of-type {
+            font-size: 20px;
+            line-height: 24px;
+            &>span {
+                &:first-of-type {
+                    font-size: 40px;
+                    line-height: 34px;
+                }
+            }
+            @media (min-width: 1600px) {
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.teams__players-role {
+    font-size: 16px;
+    line-height: 24px;
+    @media (min-width: 1600px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+.teams__players-photo {
+    margin: 0 auto;
+    width: pxToVw(1440, 189px);
+    height: pxToVw(1440, 189px);
+    border-radius: 50%;
+    object-fit: cover;
+    @media (min-width: 1600px) {
+        width: pxToVw(1920, 212px);
+        height: pxToVw(1920, 212px);
+    }
+}
+.teams__players-stat {
+    font-size: 12px;
+    line-height: 20px;
+    opacity: .5;
+    margin-bottom: 6px;
+    @media (min-width: 1600px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+.players__tree {
+    width: calc(100% + 80px - #{pxToVw(1920, 470px)});
+    height: 38px;
+    border: 1px solid rgba($themeBlueDark, .2);
+    border-top: none;
+    border-radius: 0 0 24px 24px;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width: 1441px) {
+        margin-top: 16px;
+    }
+}
+.teams__more {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+
+    border-radius: 64px;
+    padding: 11px 32px 13px 16px;
+    box-sizing: border-box;
+    background: $themeGrayLight;
+
+    overflow: hidden;
+    max-width: 48px;
+    max-height: 48px;
+    transition: max-width .5s;
+    &:first-of-type {
+        transform: translate(-50%, 50%);
+        left: 155px;
+        @media (min-width: 1441px) {
+            left: calc(-40px + #{pxToVw(1920, 252px)});
+        }
+    } 
+    &:last-of-type {
+        transform: translate(50%, 50%);
+        right: 155px;
+        @media (min-width: 1441px) {
+            right: calc(-40px + #{pxToVw(1920, 252px)});
+        }
+    }
+    &:focus, &:hover {
+        max-width: 200px;
+    }
+    &:active {
+        background: $themeBlueLight;
+    }
+    span {
+        font-size: 16px;
+        line-height: 24px;
+        color: $themeBlueDark;
+        white-space: nowrap;
+    }
+    svg {
+        fill: rgba($themeBlueDark, .5);
+        margin: auto 24px auto 0;
+        min-width: 16px;
+    }
+}

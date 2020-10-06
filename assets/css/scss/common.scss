@@ -1,0 +1,130 @@
+:focus {
+    outline: 2px solid $themeRed;
+}
+
+.js-focus-visible :focus:not(.focus-visible), input.focus-visible {
+  outline: 0;
+}
+
+.banner-simple {
+    max-width: 100%;
+    & + & {
+        margin-top: 24px;
+        @media (min-width: 1441px) {
+            margin-top: 40px;
+        }
+    }
+    a {
+        display: block;
+        outline-offset: -2px;
+        &>img {
+            max-width: 100%;
+        }
+    }
+}
+
+.banner-double {
+    a {
+        display: block;
+        flex: 0 1 calc(50% - 16px);
+        @media (min-width: 1600px) {
+            flex: 0 1 calc(50% - 20px);
+        }
+        & + * {
+            margin-left: 32px;
+            @media (min-width: 1600px) {
+                margin-left: 40px;
+            }
+        }
+        &>img {
+            max-width: 100%;
+        }
+    }
+}
+.banner-double__container {
+    display: flex;
+}
+
+.title-hidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+h1 {}
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    @media (min-width: 1600px) {
+        font-size: 40px;
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    &_1 {
+        width: calc(1200px + 40px * 2);
+        padding: 0 40px;
+        @media (min-width: 1441px) {
+            width: 100%;
+            padding: 0 120px;
+        }
+    }
+    &_2 {
+        width: 100%;
+        padding: 0 35px;
+        @media (min-width: 1441px) {
+            padding: 0 52px;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    min-height: 40px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    &_border {
+        color: $themeBlue;
+        border: 1px solid $themeBlue;
+        &:hover, &:focus {
+            color: $themeWhite;
+            background: $themeBlue;
+        }
+        &:active {
+            opacity: .7;
+        }
+        &.button_disabled {
+            pointer-events: none;
+            border-color: $themeGrayLight;
+            color: $themeGrayLight;
+        }
+    }
+    &_fill {
+        color: $themeWhite;
+        background: $themeBlue;
+        &:hover, &:focus {
+            background: $themeBlueDark;
+        }
+        &:active {
+            background: $themeBlue;
+            opacity: .7;
+        }
+        &.button_disabled {
+            pointer-events: none;
+            background: $themeGrayLight;
+        }
+    }
+}
