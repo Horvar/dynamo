@@ -58,12 +58,13 @@
 .header-blue__search {
     position: relative;
     &>a {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         &:hover {
             opacity: .7;
         }
         svg {
+            display: block;
             fill: $themeWhite;
             width: 16px;
             height: 16px;

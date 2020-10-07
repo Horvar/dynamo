@@ -743,9 +743,9 @@ h2 {
   position: relative; }
   /* line 60, scss/header/header-blue.scss */
   .header-blue__search > a {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -754,6 +754,7 @@ h2 {
       opacity: .7; }
     /* line 66, scss/header/header-blue.scss */
     .header-blue__search > a svg {
+      display: block;
       fill: #fff;
       width: 16px;
       height: 16px;
@@ -761,38 +762,38 @@ h2 {
       margin-right: 7px;
       -webkit-transition: .2s;
       transition: .2s; }
-    /* line 74, scss/header/header-blue.scss */
+    /* line 75, scss/header/header-blue.scss */
     .header-blue__search > a span {
       max-width: 100px;
       overflow: hidden;
       -webkit-transition: .5s;
       transition: .5s; }
-  /* line 82, scss/header/header-blue.scss */
+  /* line 83, scss/header/header-blue.scss */
   .header-blue__search_opened > a svg {
     margin-right: 0;
     -webkit-transition: .2s 0s;
     transition: .2s 0s; }
-  /* line 86, scss/header/header-blue.scss */
+  /* line 87, scss/header/header-blue.scss */
   .header-blue__search_opened > a span {
     opacity: 0;
     max-width: 0;
     -webkit-transition: .2s 0s;
     transition: .2s 0s; }
-  /* line 92, scss/header/header-blue.scss */
+  /* line 93, scss/header/header-blue.scss */
   .header-blue__search_opened .header-blue__search-inside {
     pointer-events: all; }
-    /* line 94, scss/header/header-blue.scss */
+    /* line 95, scss/header/header-blue.scss */
     .header-blue__search_opened .header-blue__search-inside input {
       max-width: 250px;
       -webkit-transition: .5s .2s;
       transition: .5s .2s; }
-    /* line 98, scss/header/header-blue.scss */
+    /* line 99, scss/header/header-blue.scss */
     .header-blue__search_opened .header-blue__search-inside svg {
       -webkit-transition: opacity .2s .5s;
       transition: opacity .2s .5s;
       opacity: 1; }
 
-/* line 106, scss/header/header-blue.scss */
+/* line 107, scss/header/header-blue.scss */
 .header-blue__search-inside {
   position: absolute;
   top: 0;
@@ -804,7 +805,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   pointer-events: none; }
-  /* line 113, scss/header/header-blue.scss */
+  /* line 114, scss/header/header-blue.scss */
   .header-blue__search-inside > a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -813,7 +814,7 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 17px; }
-    /* line 117, scss/header/header-blue.scss */
+    /* line 118, scss/header/header-blue.scss */
     .header-blue__search-inside > a svg {
       fill: #0033A0;
       width: 8px;
@@ -824,7 +825,7 @@ h2 {
       -webkit-transition: 0s;
       transition: 0s;
       opacity: 0; }
-  /* line 128, scss/header/header-blue.scss */
+  /* line 129, scss/header/header-blue.scss */
   .header-blue__search-inside input {
     max-width: 0;
     width: 250px;
@@ -837,10 +838,10 @@ h2 {
     font-size: 14px;
     line-height: 20px; }
 
-/* line 142, scss/header/header-blue.scss */
+/* line 143, scss/header/header-blue.scss */
 .header-blue__social {
   position: relative; }
-  /* line 144, scss/header/header-blue.scss */
+  /* line 145, scss/header/header-blue.scss */
   .header-blue__social > a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -848,10 +849,10 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    /* line 147, scss/header/header-blue.scss */
+    /* line 148, scss/header/header-blue.scss */
     .header-blue__social > a:hover {
       opacity: .7; }
-    /* line 150, scss/header/header-blue.scss */
+    /* line 151, scss/header/header-blue.scss */
     .header-blue__social > a svg {
       stroke: #fff;
       fill: transparent;
@@ -859,15 +860,15 @@ h2 {
       height: 9px;
       margin-top: 2px;
       margin-left: 10px; }
-    /* line 158, scss/header/header-blue.scss */
+    /* line 159, scss/header/header-blue.scss */
     .header-blue__social > a[data-js-dropdown-trigger=active] {
       opacity: .7; }
-      /* line 160, scss/header/header-blue.scss */
+      /* line 161, scss/header/header-blue.scss */
       .header-blue__social > a[data-js-dropdown-trigger=active] svg {
         -webkit-transform: rotate(90deg);
                 transform: rotate(90deg); }
 
-/* line 166, scss/header/header-blue.scss */
+/* line 167, scss/header/header-blue.scss */
 .header-blue__social-dropdown {
   position: absolute;
   left: calc(50% + 18px);
@@ -875,11 +876,11 @@ h2 {
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%); }
 
-/* line 175, scss/header/header-blue.scss */
+/* line 176, scss/header/header-blue.scss */
 .header-blue__language > a:hover {
   opacity: .7; }
 
-/* line 182, scss/header/header-blue.scss */
+/* line 183, scss/header/header-blue.scss */
 .header-blue__sign > a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -887,16 +888,16 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  /* line 185, scss/header/header-blue.scss */
+  /* line 186, scss/header/header-blue.scss */
   .header-blue__sign > a:hover {
     opacity: .7; }
-  /* line 188, scss/header/header-blue.scss */
+  /* line 189, scss/header/header-blue.scss */
   .header-blue__sign > a svg {
     fill: #fff;
     width: 17px;
     height: 24px;
     position: absolute; }
-  /* line 194, scss/header/header-blue.scss */
+  /* line 195, scss/header/header-blue.scss */
   .header-blue__sign > a span {
     padding-left: 23px; }
 
