@@ -61,7 +61,7 @@ h2 {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1920px;
     margin: 0 auto;
     box-sizing: border-box;
     &_1 {
@@ -116,9 +116,12 @@ h2 {
         color: $themeWhite;
         background: $themeBlue;
         &:hover, &:focus {
-            background: $themeBlueDark;
+            background: transparent;
+            color: $themeBlue;
+            border: 1px solid $themeBlue;
         }
         &:active {
+            color: $themeWhite;
             background: $themeBlue;
             opacity: .7;
         }

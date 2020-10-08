@@ -53,12 +53,13 @@
 
 .news-cards__photo {
     width: 100%;
-    max-height: pxToVw(1440, 160px);
+    height: pxToVw(1440, 160px);
     object-fit: cover;
     object-position: top;
     margin-bottom: 12px;
     @media (min-width: 1600px) {
-        max-height: pxToVw(1920, 263px);
+        height: pxToVw(1920, 263px);
+        max-height: 263px;
         margin-bottom: 20px;
     }
 }

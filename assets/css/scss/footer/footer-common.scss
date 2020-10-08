@@ -28,10 +28,17 @@
         &>p {
             font-size: 16px;
             line-height: 16px;
-            opacity: .5;
+            color: rgba($themeWhite, .5);
             @media (min-width: 1600px) {
                 font-size: 18px;
                 line-height: 20px;
+            }
+            &>a {
+                text-decoration: underline;
+                &:hover, &:focus {
+                    text-decoration: none;
+                    color: $themeWhite;
+                }
             }
         }
     }
@@ -123,7 +130,7 @@
             }
             &>a {
                 display: block;
-                color: $themeBlueLight;
+                color: rgba($themeWhite, .5);
                 &:hover {
                     color: $themeWhite;
                 }
@@ -137,7 +144,7 @@
         display: block;
         font-size: 16px;
         line-height: 16px;
-        color: $themeBlueLight;
+        color: rgba($themeWhite, .5);
         text-align: right;
         @media (min-width: 1600px) {
             font-size: 18px;

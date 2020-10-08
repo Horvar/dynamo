@@ -34,45 +34,154 @@
     flex: 0 1 calc(100% / 12);
     border-radius: 4px;
     overflow: hidden;
+
+    background: rgba($themeGrayLight, .3);
+    display: flex;
+    align-items: center;
+    padding: 0 32px 0 24px;
+    box-sizing: border-box;
+    outline-offset: -2px;
+    @media (min-width: 1600px) {
+        padding: 0 38px 0 24px;
+    }
+    &:before {
+        counter-increment: teamNum;
+        content: counter(teamNum)'.';
+        width: 15px;
+        margin-right: 16px;
+        opacity: .5;
+        @media (min-width: 1600px) {
+            margin-right: 34px;
+        }
+    }
     @media (min-width: 1441px) {
         font-size: 20px;
         line-height: 24px;
     }
+    &_selected {
+        background: rgba($themeBlue, .3);
+    }
     &:nth-of-type(odd) {
         background: $themeGrayLight;
-    }
-    &>a {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 32px 0 24px;
-        box-sizing: border-box;
-        outline-offset: -2px;
-        @media (min-width: 1441px) {
-            padding: 0 38px 0 24px;
-        }
-        &:hover, &:focus {
-            background: rgba($themeBlue, .3);
-        }
-        &:before {
-            counter-increment: teamNum;
-            content: counter(teamNum)'.';
-            width: 15px;
-            margin-right: 28px;
-            opacity: .5;
-        }
     }
 }
 
 .teams__team-logo {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     max-height: 100%;
-    width: 54px;
     object-fit: contain;
+    width: 54px;
     margin-right: 9px;
     @media (min-width: 1600px) {
-        width: 72px;
+        width: 80px;
+    }
+    img {
+        display: block;
+        object-fit: contain;
+    }
+    &_admiral {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_avangard {
+        img {
+            width: 54px;
+            height: 54px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_dynamo {
+        img {
+            width: 23px;
+            height: 26px;
+            margin-left: 11px;
+            @media (min-width: 1600px) {
+                width: 42px;
+                height: 42px;
+                margin-left: 12px;
+            } 
+        }
+    }
+    &_dynamo-mn {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_csk {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_ska {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_salavat {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_loko {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_traktor {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
+    }
+    &_spartak {
+        img {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 1600px) {
+                width: 64px;
+                height: 73px;
+            }
+        }
     }
 }
 .teams__team-name {}
@@ -199,8 +308,15 @@
     border-radius: 0 0 24px 24px;
     margin: 0 auto;
     position: relative;
-    @media (min-width: 1441px) {
-        margin-top: 16px;
+    &:before {
+        content: '';
+        width: calc(100% + 100px - #{pxToVw(1920, 950px)});
+        height: 100%;
+        border-right: 1px solid rgba($themeBlueDark, .2);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .teams__more {
@@ -217,7 +333,7 @@
     overflow: hidden;
     max-width: 48px;
     max-height: 48px;
-    transition: max-width .5s;
+    transition: max-width .75s;
     &:first-of-type {
         transform: translate(-50%, 50%);
         left: 155px;
@@ -233,7 +349,7 @@
         }
     }
     &:focus, &:hover {
-        max-width: 200px;
+        max-width: 270px;
     }
     &:active {
         background: $themeBlueLight;

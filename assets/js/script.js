@@ -19,8 +19,28 @@ function screenSliderBlurred(next) {
 }
 
 function slickTabIndexFix() {
-  $('*[data-js-slick-screen-2]').find('.slick-slide').attr('tabindex', 0)
+  $('*[data-js-slick-screen-2]').find('.slick-slide').attr('tabindex', 0).find('a').attr('tabindex', -1)
 }
+
+function dropdownEvent(target, e) {
+  let trigger = target
+  let menu = 'data-js-dropdown-menu'
+  if ( $(e).attr(''+trigger+'')=='active' ) {
+    $(e).attr(''+trigger+'', '')
+  } else {
+    $(e).attr(''+trigger+'', 'active')
+  }
+  $(e).parent().find('*['+menu+']').attr(''+menu+'', function(e){
+     if ( $(this).attr(''+menu+'')=='opened' ) {
+       $(this).attr(''+menu+'', '')
+     } else {
+       $(this).attr(''+menu+'', 'opened').fadeIn(0)
+       $(this).css('height', ''+$(this).children().children().outerHeight()+'px')
+     }
+  })
+}
+
+
 
 $(document).ready(function(){
 
@@ -44,23 +64,12 @@ $(document).ready(function(){
     })
 
     //dropdown trigger
-    $('*[data-js-dropdown-trigger]').click(function(e){
-       let trigger = 'data-js-dropdown-trigger'
-       let menu = 'data-js-dropdown-menu'
-       if ( $(this).attr(''+trigger+'')=='active' ) {
-         $(this).attr(''+trigger+'', '')
-       } else {
-         $(this).attr(''+trigger+'', 'active')
-       }
-       $(this).parent().find('*['+menu+']').attr(''+menu+'', function(){
-          if ( $(this).attr(''+menu+'')=='opened' ) {
-            $(this).attr(''+menu+'', '').fadeOut(0)
-          } else {
-            $(this).attr(''+menu+'', 'opened').fadeIn(0)
-            $(this).css('height', ''+$(this).children().children().outerHeight()+'px')
-          }
-       })
-       return false
+    $('*[data-js-dropdown-click]').click(function(){
+      dropdownEvent('data-js-dropdown-click', this)
+      return false
+    })
+    $('*[data-js-dropdown-hover]').click(function(){
+      return false
     })
 
     //slick init
@@ -69,12 +78,13 @@ $(document).ready(function(){
       arrows: false,
       fade: true,
       accessibility: false,
-      
-      autoplaySpeed: 5000
+      autoplay: true,
+      autoplaySpeed: 3000
     })
     $('*[data-js-slick-screen-2]').slick({
       slidesToShow: 4,
       asNavFor: '*[data-js-slick-screen-1]',
+      accessibility: false,
       focusOnSelect: true,
     })
     $('*[data-js-slick-page-1]').slick({
@@ -83,7 +93,7 @@ $(document).ready(function(){
       nextArrow: '#pageSliderNext',
       autoplay: true,
       accessibility: false,
-      autoplaySpeed: 15000,
+      autoplaySpeed: 3000,
       dots: true
     })
     $('*[data-js-slick-page-2]').slick({
@@ -108,6 +118,18 @@ $(document).ready(function(){
       setTimeout(slickTabIndexFix, 750)
     })
 
+    //screen-slider using
+    $('*[data-js-slick-screen-2] li').hover(function(){
+      $(this).click()
+    })
+    $('*[data-js-slick-screen-2] li').focus(function(){
+      $(this).click()
+    })
+    $('*[data-js-slick-screen-2] li').on('keypress',function(e) {
+      if (e.which == 13) {
+        window.location.href = $(this).find('a').attr('href');
+      }
+    })
     //tab select
     if ( $('*[data-js-tab-container]').length && $('*[data-js-tab-select]').length && $('*[data-js-tab-content]').length ) {
 

@@ -2,6 +2,7 @@
     min-height: 48px;
     background: $themeBlue;
     color: $themeWhite;
+    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
 }
@@ -145,9 +146,6 @@
     &>a {
         display: inline-flex;
         align-items: center;
-        &:hover {
-            opacity: .7;
-        }
         svg {
             stroke: $themeWhite;
             fill: transparent;
@@ -156,10 +154,11 @@
             margin-top: 2px;
             margin-left: 10px;
         }
-        &[data-js-dropdown-trigger=active] {
-            opacity: .7;
+        &:hover, &[data-js-dropdown-trigger=active] {
+            color: rgba($themeWhite, .7);
             svg {
                 transform: rotate(90deg);
+                opacity: .7;
             }
         }
     }
@@ -167,7 +166,7 @@
 .header-blue__social-dropdown {
     position: absolute;
     left: calc(50% + 18px);
-    bottom: -3px;
+    bottom: 0;
     transform: translate(-50%, 100%);
 }
 
@@ -183,6 +182,7 @@
     &>a {
         display: inline-flex;
         align-items: center;
+        position: relative;
         &:hover {
             opacity: .7;
         }
@@ -191,6 +191,9 @@
             width: 17px;
             height: 24px;
             position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
         }
         span {
             padding-left: 23px;

@@ -50,7 +50,7 @@
 
 .matches__date {
     background: $themeGrayLight;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 
@@ -215,9 +215,6 @@
     border-radius: 0 0 24px 24px;
     margin: 0 auto;
     position: relative;
-    @media (min-width: 1441px) {
-        margin-top: 16px;
-    }
     &:before {
         content: '';
         width: calc(100% + 100px - #{pxToVw(1920, 950px)});

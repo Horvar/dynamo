@@ -15,10 +15,14 @@
         position: absolute;
         bottom: 0;
         li {
+            display: flex;
             height: 142px;
             cursor: pointer;
             background: rgba(#0F1C35, .75);
             position: relative;
+            &:hover, &:focus {
+                text-shadow: 0 0 1px $themeWhite, 0 0 1px $themeWhite, 0 0 1px $themeWhite;
+            }
             &.slick-current {
                 position: relative;
                 &:after {
@@ -34,18 +38,7 @@
                 }
             }
             &.focus-visible {
-                outline: none;
-                &:after {
-                    content: '';
-                    width: 6px;
-                    height: 6px;
-                    border: 2px solid $themeRed;
-                    border-radius: 50%;
-                    position: absolute;
-                    bottom: 16px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
+                outline-offset: -4px;
             }
             &::before {
                 content: '';
