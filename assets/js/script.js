@@ -130,6 +130,7 @@ $(document).ready(function(){
         window.location.href = $(this).find('a').attr('href');
       }
     })
+
     //tab select
     if ( $('*[data-js-tab-container]').length && $('*[data-js-tab-select]').length && $('*[data-js-tab-content]').length ) {
 
@@ -150,5 +151,14 @@ $(document).ready(function(){
       })
 
     }
-    
+
+    //svg number swap
+    $('*[data-js-number]').each(function(){
+      let length = $(this).text().length
+      let number =  $(this).text()
+      $(this).text('')
+      for (var i=0; i<length; i++) {
+        $('<svg><use xlink:href="assets/img/sprites/sprite-numbers.svg#'+number[i]+'"></use></svg>').appendTo(this)
+      }
+    })
 })

@@ -80,6 +80,7 @@
 .matches__team-item {
     display: flex;
     flex-direction: column;
+    width: 50%;
     height: 95px;
     @media (min-width: 1600px) {
         height: 125px;
@@ -109,12 +110,22 @@
         margin: 0 auto 46px;
     }
     span {
+        display: inline-block;
         font-size: 35px;
         line-height: 35px;
         font-weight: bold;
         @media (min-width: 1600px) {
             font-size: 60px;
             line-height: 60px;
+        }
+        svg {
+            fill: $themeBlack;
+            width: 24px;
+            height: 40px;
+            @media (min-width: 1600px) {
+                width: 40px;
+                height: 64px;
+            }
         }
         & + span {
             position: relative;

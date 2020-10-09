@@ -1327,53 +1327,65 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 50%;
   height: 95px; }
   @media (min-width: 1600px) {
     /* line 80, scss/main/matches.scss */
     .matches__team-item {
       height: 125px; } }
-  /* line 87, scss/main/matches.scss */
+  /* line 88, scss/main/matches.scss */
   .matches__team-item img {
     margin: auto;
     max-width: 89px;
     max-height: 74px; }
     @media (min-width: 1600px) {
-      /* line 87, scss/main/matches.scss */
+      /* line 88, scss/main/matches.scss */
       .matches__team-item img {
         max-width: 125px;
         max-height: 105px; } }
-  /* line 96, scss/main/matches.scss */
+  /* line 97, scss/main/matches.scss */
   .matches__team-item p {
     font-size: 14px;
     line-height: 20px;
     text-align: center; }
     @media (min-width: 1600px) {
-      /* line 96, scss/main/matches.scss */
+      /* line 97, scss/main/matches.scss */
       .matches__team-item p {
         font-size: 16px; } }
 
-/* line 106, scss/main/matches.scss */
+/* line 107, scss/main/matches.scss */
 .matches__score {
   margin: 0 auto 24px; }
   @media (min-width: 1600px) {
-    /* line 106, scss/main/matches.scss */
+    /* line 107, scss/main/matches.scss */
     .matches__score {
       margin: 0 auto 46px; } }
-  /* line 111, scss/main/matches.scss */
+  /* line 112, scss/main/matches.scss */
   .matches__score span {
+    display: inline-block;
     font-size: 35px;
     line-height: 35px;
     font-weight: bold; }
     @media (min-width: 1600px) {
-      /* line 111, scss/main/matches.scss */
+      /* line 112, scss/main/matches.scss */
       .matches__score span {
         font-size: 60px;
         line-height: 60px; } }
-    /* line 119, scss/main/matches.scss */
+    /* line 121, scss/main/matches.scss */
+    .matches__score span svg {
+      fill: #11181F;
+      width: 24px;
+      height: 40px; }
+      @media (min-width: 1600px) {
+        /* line 121, scss/main/matches.scss */
+        .matches__score span svg {
+          width: 40px;
+          height: 64px; } }
+    /* line 130, scss/main/matches.scss */
     .matches__score span + span {
       position: relative;
       margin-left: 27px; }
-      /* line 122, scss/main/matches.scss */
+      /* line 133, scss/main/matches.scss */
       .matches__score span + span:before {
         content: ':';
         font-size: 35px;
@@ -1383,28 +1395,28 @@ h2 {
         top: 0;
         left: -21px; }
         @media (min-width: 1600px) {
-          /* line 122, scss/main/matches.scss */
+          /* line 133, scss/main/matches.scss */
           .matches__score span + span:before {
             font-size: 60px;
             line-height: 60px;
             left: -24px; } }
-  /* line 139, scss/main/matches.scss */
+  /* line 150, scss/main/matches.scss */
   .matches__score_small span {
     font-size: 32px;
     line-height: 35px; }
     @media (min-width: 1600px) {
-      /* line 139, scss/main/matches.scss */
+      /* line 150, scss/main/matches.scss */
       .matches__score_small span {
         font-size: 56px;
         line-height: 60px; } }
-  /* line 148, scss/main/matches.scss */
+  /* line 159, scss/main/matches.scss */
   .matches__score p {
     font-size: 12px;
     line-height: 20px;
     margin-top: 9px;
     text-align: center; }
 
-/* line 156, scss/main/matches.scss */
+/* line 167, scss/main/matches.scss */
 .matches__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1413,10 +1425,10 @@ h2 {
   margin: 0 auto 21px;
   z-index: 2; }
   @media (min-width: 1600px) {
-    /* line 156, scss/main/matches.scss */
+    /* line 167, scss/main/matches.scss */
     .matches__links {
       margin: 0 auto 24px; } }
-  /* line 164, scss/main/matches.scss */
+  /* line 175, scss/main/matches.scss */
   .matches__links > a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1433,44 +1445,44 @@ h2 {
     border-radius: 50%;
     pointer-events: all; }
     @media (min-width: 1600px) {
-      /* line 164, scss/main/matches.scss */
+      /* line 175, scss/main/matches.scss */
       .matches__links > a {
         width: 40px;
         height: 40px; } }
-    /* line 177, scss/main/matches.scss */
+    /* line 188, scss/main/matches.scss */
     .matches__links > a + * {
       margin-left: 24px; }
       @media (min-width: 1600px) {
-        /* line 177, scss/main/matches.scss */
+        /* line 188, scss/main/matches.scss */
         .matches__links > a + * {
           margin-left: 30px; } }
-    /* line 183, scss/main/matches.scss */
+    /* line 194, scss/main/matches.scss */
     .matches__links > a:hover {
       background: #0033A0; }
-      /* line 185, scss/main/matches.scss */
+      /* line 196, scss/main/matches.scss */
       .matches__links > a:hover > svg {
         fill: #fff; }
-    /* line 189, scss/main/matches.scss */
+    /* line 200, scss/main/matches.scss */
     .matches__links > a:active {
       opacity: .7; }
-    /* line 192, scss/main/matches.scss */
+    /* line 203, scss/main/matches.scss */
     .matches__links > a > svg {
       fill: rgba(0, 32, 91, 0.5); }
 
-/* line 197, scss/main/matches.scss */
+/* line 208, scss/main/matches.scss */
 .matches__button {
   z-index: 1;
   max-width: 180px;
   margin: 0 auto 17px; }
 
-/* line 203, scss/main/matches.scss */
+/* line 214, scss/main/matches.scss */
 .matches__info {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
   opacity: 0.5; }
 
-/* line 210, scss/main/matches.scss */
+/* line 221, scss/main/matches.scss */
 .matches__tree {
   width: calc(100% + 80px - 24.4791666667vw);
   height: 38px;
@@ -1479,7 +1491,7 @@ h2 {
   border-radius: 0 0 24px 24px;
   margin: 0 auto;
   position: relative; }
-  /* line 218, scss/main/matches.scss */
+  /* line 229, scss/main/matches.scss */
   .matches__tree:before {
     content: '';
     width: calc(100% + 100px - 49.4791666667vw);
@@ -1492,7 +1504,7 @@ h2 {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
 
-/* line 231, scss/main/matches.scss */
+/* line 242, scss/main/matches.scss */
 .matches__more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1512,19 +1524,19 @@ h2 {
   max-height: 48px;
   -webkit-transition: max-width .5s;
   transition: max-width .5s; }
-  /* line 248, scss/main/matches.scss */
+  /* line 259, scss/main/matches.scss */
   .matches__more:focus, .matches__more:hover {
     max-width: 200px; }
-  /* line 251, scss/main/matches.scss */
+  /* line 262, scss/main/matches.scss */
   .matches__more:active {
     background: #D9E0F1; }
-  /* line 254, scss/main/matches.scss */
+  /* line 265, scss/main/matches.scss */
   .matches__more span {
     font-size: 16px;
     line-height: 24px;
     color: #00205B;
     white-space: nowrap; }
-  /* line 260, scss/main/matches.scss */
+  /* line 271, scss/main/matches.scss */
   .matches__more svg {
     fill: rgba(0, 32, 91, 0.5);
     margin: auto 24px auto 0;
