@@ -116,6 +116,7 @@
                 }
             }
             &>a {
+                outline-offset: 0;
                 display: block;
                 padding-top: 8px;
                 font-weight: bold;
@@ -128,8 +129,8 @@
                     font-size: 18px;
                     line-height: 22px;
                 }
-                &:hover {
-                    color: $themeBlack;
+                &:hover, &:focus {
+                    color: $themeBlueDark;
                 }
             }
         }
@@ -149,4 +150,10 @@
             }
         }
     }
+}
+
+.header-common__dropdown {
+    min-width: calc(100% + 24px * 2);
+    left: -24px;
+    transform: translate(0, 100%);
 }

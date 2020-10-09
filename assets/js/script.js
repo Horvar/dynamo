@@ -25,10 +25,11 @@ function slickTabIndexFix() {
 function dropdownEvent(target, e) {
   let trigger = target
   let menu = 'data-js-dropdown-menu'
-  if ( $(e).attr(''+trigger+'')=='active' ) {
-    $(e).attr(''+trigger+'', '')
+  if ( $(e).parent('*[data-js-dropdown-container]').attr('data-js-dropdown-container')=='active' ) {
+    $(e).parent('*[data-js-dropdown-container]').attr('data-js-dropdown-container', '')
   } else {
-    $(e).attr(''+trigger+'', 'active')
+    $(e).parent('*[data-js-dropdown-container]').siblings('*[data-js-dropdown-container]').attr('data-js-dropdown-container', '').find('*['+menu+']').attr(''+menu+'', '')
+    $(e).parent('*[data-js-dropdown-container]').attr('data-js-dropdown-container', 'active')
   }
   $(e).parent().find('*['+menu+']').attr(''+menu+'', function(e){
      if ( $(this).attr(''+menu+'')=='opened' ) {
@@ -71,6 +72,14 @@ $(document).ready(function(){
     $('*[data-js-dropdown-hover]').click(function(){
       return false
     })
+
+    //close all dropdowns
+    $(window).click(function() {
+      $('*[data-js-dropdown-container]').attr('data-js-dropdown-container', '').find('*[data-js-dropdown-menu]').attr('data-js-dropdown-menu', '')
+    });
+    $('*[data-js-dropdown-container]').click(function(event){
+      event.stopPropagation();
+    });
 
     //slick init
     $('*[data-js-slick-screen-1]').slick({
