@@ -165,6 +165,7 @@ $(document).ready(function(){
     $('*[data-js-number]').each(function(){
       let length = $(this).text().length
       let number =  $(this).text()
+      $(this).attr('aria-label', number)
       $(this).text('')
       for (var i=0; i<length; i++) {
         $('<svg><use xlink:href="assets/img/sprites/sprite-numbers.svg#'+number[i]+'"></use></svg>').appendTo(this)
