@@ -1164,17 +1164,17 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 142px;
+    height: 115px;
     cursor: pointer;
     background: rgba(15, 28, 53, 0.75);
     position: relative; }
-    /* line 23, scss/main/screen-slider.scss */
-    .screen-slider__slider_2 li:hover, .screen-slider__slider_2 li:focus {
-      text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; }
-    /* line 26, scss/main/screen-slider.scss */
+    /* line 24, scss/main/screen-slider.scss */
+    .screen-slider__slider_2 li:hover p, .screen-slider__slider_2 li:focus p {
+      color: #D9E0F1; }
+    /* line 28, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li.slick-current {
       position: relative; }
-      /* line 28, scss/main/screen-slider.scss */
+      /* line 30, scss/main/screen-slider.scss */
       .screen-slider__slider_2 li.slick-current:after {
         content: '';
         width: 6px;
@@ -1186,10 +1186,10 @@ h2 {
         left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%); }
-    /* line 40, scss/main/screen-slider.scss */
+    /* line 42, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li.focus-visible {
       outline-offset: -4px; }
-    /* line 43, scss/main/screen-slider.scss */
+    /* line 45, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li::before {
       content: '';
       background: rgba(217, 224, 241, 0.3);
@@ -1202,7 +1202,7 @@ h2 {
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
       z-index: 0; }
-    /* line 55, scss/main/screen-slider.scss */
+    /* line 57, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li p {
       color: #fff;
       font-size: 16px;
@@ -1214,7 +1214,7 @@ h2 {
       top: 0;
       left: 0;
       z-index: 1; }
-    /* line 66, scss/main/screen-slider.scss */
+    /* line 68, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li *[data-js-slick-screen-blurred] {
       position: relative;
       width: 100%;
@@ -1222,7 +1222,7 @@ h2 {
       -webkit-filter: blur(5px);
               filter: blur(5px);
       mix-blend-mode: multiply; }
-  /* line 74, scss/main/screen-slider.scss */
+  /* line 76, scss/main/screen-slider.scss */
   .screen-slider__slider_2 .slick-track {
     -webkit-transform: translate3d(0px, 0px, 0px) !important;
             transform: translate3d(0px, 0px, 0px) !important; }

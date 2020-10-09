@@ -16,12 +16,14 @@
         bottom: 0;
         li {
             display: flex;
-            height: 142px;
+            height: 115px;
             cursor: pointer;
             background: rgba(#0F1C35, .75);
             position: relative;
             &:hover, &:focus {
-                text-shadow: 0 0 1px $themeWhite, 0 0 1px $themeWhite, 0 0 1px $themeWhite;
+                p {
+                    color: $themeBlueLight;
+                }
             }
             &.slick-current {
                 position: relative;
