@@ -1741,28 +1741,27 @@ h2 {
 .news-rows__item > a {
   display: block;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 500; }
+  line-height: 20px; }
   @media (min-width: 1600px) {
     /* line 12, scss/main/news-rows.scss */
     .news-rows__item > a {
       font-size: 18px;
       line-height: 24px; } }
-  /* line 21, scss/main/news-rows.scss */
+  /* line 20, scss/main/news-rows.scss */
   .news-rows__item > a:hover {
     color: #0033A0; }
-  /* line 24, scss/main/news-rows.scss */
+  /* line 23, scss/main/news-rows.scss */
   .news-rows__item > a + * {
     margin-top: 1em; }
 
-/* line 30, scss/main/news-rows.scss */
+/* line 29, scss/main/news-rows.scss */
 .news-rows__date {
   font-size: 14px;
   line-height: 20px;
   opacity: .5;
   margin-bottom: 12px; }
   @media (min-width: 1600px) {
-    /* line 30, scss/main/news-rows.scss */
+    /* line 29, scss/main/news-rows.scss */
     .news-rows__date {
       font-size: 16px;
       line-height: 20px;
