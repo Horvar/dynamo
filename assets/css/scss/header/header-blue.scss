@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-    padding-top: 12px;
+    padding-top: 13px;
 }
 .header-blue__col {
     display: flex;
@@ -69,7 +69,6 @@
             fill: $themeWhite;
             width: 16px;
             height: 16px;
-            margin-top: 2px;
             margin-right: 7px;
             transition: .2s;
         }
@@ -151,7 +150,6 @@
             fill: transparent;
             width: 5px;
             height: 9px;
-            margin-top: 2px;
             margin-left: 10px;
         }
         &:hover, &[data-js-dropdown-trigger=active] {
