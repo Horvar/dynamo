@@ -1451,8 +1451,13 @@ h2 {
     line-height: 20px;
     margin-top: 9px;
     text-align: center; }
+    /* line 164, scss/main/matches.scss */
+    .matches__score p:first-of-type {
+      width: 0;
+      height: 0;
+      overflow: hidden; }
 
-/* line 167, scss/main/matches.scss */
+/* line 172, scss/main/matches.scss */
 .matches__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1461,10 +1466,10 @@ h2 {
   margin: 0 auto 21px;
   z-index: 2; }
   @media (min-width: 1600px) {
-    /* line 167, scss/main/matches.scss */
+    /* line 172, scss/main/matches.scss */
     .matches__links {
       margin: 0 auto 24px; } }
-  /* line 175, scss/main/matches.scss */
+  /* line 180, scss/main/matches.scss */
   .matches__links > a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1481,44 +1486,44 @@ h2 {
     border-radius: 50%;
     pointer-events: all; }
     @media (min-width: 1600px) {
-      /* line 175, scss/main/matches.scss */
+      /* line 180, scss/main/matches.scss */
       .matches__links > a {
         width: 40px;
         height: 40px; } }
-    /* line 188, scss/main/matches.scss */
+    /* line 193, scss/main/matches.scss */
     .matches__links > a + * {
       margin-left: 24px; }
       @media (min-width: 1600px) {
-        /* line 188, scss/main/matches.scss */
+        /* line 193, scss/main/matches.scss */
         .matches__links > a + * {
           margin-left: 30px; } }
-    /* line 194, scss/main/matches.scss */
+    /* line 199, scss/main/matches.scss */
     .matches__links > a:hover {
       background: #0033A0; }
-      /* line 196, scss/main/matches.scss */
+      /* line 201, scss/main/matches.scss */
       .matches__links > a:hover > svg {
         fill: #fff; }
-    /* line 200, scss/main/matches.scss */
+    /* line 205, scss/main/matches.scss */
     .matches__links > a:active {
       opacity: .7; }
-    /* line 203, scss/main/matches.scss */
+    /* line 208, scss/main/matches.scss */
     .matches__links > a > svg {
       fill: rgba(0, 32, 91, 0.5); }
 
-/* line 208, scss/main/matches.scss */
+/* line 213, scss/main/matches.scss */
 .matches__button {
   z-index: 1;
   max-width: 180px;
   margin: 0 auto 17px; }
 
-/* line 214, scss/main/matches.scss */
+/* line 219, scss/main/matches.scss */
 .matches__info {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
   opacity: 0.5; }
 
-/* line 221, scss/main/matches.scss */
+/* line 226, scss/main/matches.scss */
 .matches__tree {
   width: calc(100% + 80px - 24.4791666667vw);
   height: 38px;
@@ -1527,7 +1532,7 @@ h2 {
   border-radius: 0 0 24px 24px;
   margin: 0 auto;
   position: relative; }
-  /* line 229, scss/main/matches.scss */
+  /* line 234, scss/main/matches.scss */
   .matches__tree:before {
     content: '';
     width: calc(100% + 100px - 49.4791666667vw);
@@ -1540,7 +1545,7 @@ h2 {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
 
-/* line 242, scss/main/matches.scss */
+/* line 247, scss/main/matches.scss */
 .matches__more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1560,19 +1565,19 @@ h2 {
   max-height: 48px;
   -webkit-transition: max-width .5s;
   transition: max-width .5s; }
-  /* line 259, scss/main/matches.scss */
+  /* line 264, scss/main/matches.scss */
   .matches__more:focus, .matches__more:hover {
     max-width: 200px; }
-  /* line 262, scss/main/matches.scss */
+  /* line 267, scss/main/matches.scss */
   .matches__more:active {
     background: #D9E0F1; }
-  /* line 265, scss/main/matches.scss */
+  /* line 270, scss/main/matches.scss */
   .matches__more span {
     font-size: 16px;
     line-height: 24px;
     color: #00205B;
     white-space: nowrap; }
-  /* line 271, scss/main/matches.scss */
+  /* line 276, scss/main/matches.scss */
   .matches__more svg {
     fill: rgba(0, 32, 91, 0.5);
     margin: auto 24px auto 0;
