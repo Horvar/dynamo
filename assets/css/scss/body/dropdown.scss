@@ -1,28 +1,33 @@
 .dropdown {
     pointer-events: none;
+    color: rgba($themeBlack, .5);
 }
 .dropdown__content {
     pointer-events: all;
-    color: rgba($themeBlack, .5);
     background: $themeGrayLight;
     border-radius: 4px;
     margin-top: 10px;
 }
 
 .dropdown__menu {
-    &>ul {
-        li {
-            a {
-                display: block;
-                padding: 5px 24px;
-                &:hover {
-                    background: rgba($themeBlue, 0.2);
-                    color: $themeBlack;
-                }
-                &:active {
-                    background: $themeBlueDark;
-                    color: $themeWhite;
-                }
+    &>li {
+        &>a {
+            display: block;
+            padding: 4px 24px;
+            &:hover, &:focus {
+                background: $themeBlue;
+                color: $themeWhite;
+            }
+            &:active {
+                background: $themeBlueDark;
+                color: $themeWhite;
+            }
+        }
+    }
+    &_social {
+        &>li {
+            &>a {
+                padding-right: 54px;
             }
         }
     }
@@ -50,7 +55,7 @@
 }
 
 *[data-js-dropdown-hover] {
-    &:hover {
+    &:hover, &:focus {
         & + *[data-js-dropdown-menu] {
             &>* {
                 visibility: visible;
@@ -61,7 +66,7 @@
     }
 }
 *[data-js-dropdown-menu] {
-    &:hover {
+    &:hover, &:focus {
         &>* {
             visibility: visible;
             max-height: 100%;

@@ -617,44 +617,47 @@ h2 {
 
 /* line 1, scss/body/dropdown.scss */
 .dropdown {
-  pointer-events: none; }
+  pointer-events: none;
+  color: rgba(17, 24, 31, 0.5); }
 
-/* line 4, scss/body/dropdown.scss */
+/* line 5, scss/body/dropdown.scss */
 .dropdown__content {
   pointer-events: all;
-  color: rgba(17, 24, 31, 0.5);
   background: #ECF0F7;
   border-radius: 4px;
   margin-top: 10px; }
 
-/* line 15, scss/body/dropdown.scss */
-.dropdown__menu > ul li a {
+/* line 14, scss/body/dropdown.scss */
+.dropdown__menu > li > a {
   display: block;
-  padding: 5px 24px; }
-  /* line 18, scss/body/dropdown.scss */
-  .dropdown__menu > ul li a:hover {
-    background: rgba(0, 51, 160, 0.2);
-    color: #11181F; }
-  /* line 22, scss/body/dropdown.scss */
-  .dropdown__menu > ul li a:active {
+  padding: 4px 24px; }
+  /* line 17, scss/body/dropdown.scss */
+  .dropdown__menu > li > a:hover, .dropdown__menu > li > a:focus {
+    background: #0033A0;
+    color: #fff; }
+  /* line 21, scss/body/dropdown.scss */
+  .dropdown__menu > li > a:active {
     background: #00205B;
     color: #fff; }
+/* line 29, scss/body/dropdown.scss */
+.dropdown__menu_social > li > a {
+  padding-right: 54px; }
 
-/* line 31, scss/body/dropdown.scss */
+/* line 36, scss/body/dropdown.scss */
 .dropdown__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 16px 24px; }
-  /* line 34, scss/body/dropdown.scss */
+  /* line 39, scss/body/dropdown.scss */
   .dropdown__social li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    /* line 36, scss/body/dropdown.scss */
+    /* line 41, scss/body/dropdown.scss */
     .dropdown__social li + * {
       margin-left: 16px; }
-    /* line 39, scss/body/dropdown.scss */
+    /* line 44, scss/body/dropdown.scss */
     .dropdown__social li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -662,28 +665,28 @@ h2 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      /* line 42, scss/body/dropdown.scss */
+      /* line 47, scss/body/dropdown.scss */
       .dropdown__social li a svg {
         fill: #0033A0; }
-        /* line 44, scss/body/dropdown.scss */
+        /* line 49, scss/body/dropdown.scss */
         .dropdown__social li a svg:hover {
           fill: #11181F; }
 
-/* line 55, scss/body/dropdown.scss */
-*[data-js-dropdown-hover]:hover + *[data-js-dropdown-menu] > * {
+/* line 60, scss/body/dropdown.scss */
+*[data-js-dropdown-hover]:hover + *[data-js-dropdown-menu] > *, *[data-js-dropdown-hover]:focus + *[data-js-dropdown-menu] > * {
   visibility: visible;
   max-height: 100%;
   -webkit-transition: .5s;
   transition: .5s; }
 
-/* line 65, scss/body/dropdown.scss */
-*[data-js-dropdown-menu]:hover > * {
+/* line 70, scss/body/dropdown.scss */
+*[data-js-dropdown-menu]:hover > *, *[data-js-dropdown-menu]:focus > * {
   visibility: visible;
   max-height: 100%;
   -webkit-transition: .5s;
   transition: .5s; }
 
-/* line 74, scss/body/dropdown.scss */
+/* line 79, scss/body/dropdown.scss */
 *[data-js-dropdown-menu] > * {
   visibility: hidden;
   overflow: hidden;
@@ -691,7 +694,7 @@ h2 {
   -webkit-transition: .2s;
   transition: .2s; }
 
-/* line 83, scss/body/dropdown.scss */
+/* line 88, scss/body/dropdown.scss */
 *[data-js-dropdown-menu=opened] > * {
   visibility: visible;
   max-height: 100%;
@@ -889,13 +892,14 @@ h2 {
   left: calc(50% + 18px);
   bottom: 0;
   -webkit-transform: translate(-50%, 100%);
-          transform: translate(-50%, 100%); }
+          transform: translate(-50%, 100%);
+  color: #11181F; }
 
-/* line 173, scss/header/header-blue.scss */
+/* line 174, scss/header/header-blue.scss */
 .header-blue__language > a:hover {
   opacity: .7; }
 
-/* line 180, scss/header/header-blue.scss */
+/* line 181, scss/header/header-blue.scss */
 .header-blue__sign > a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -904,10 +908,10 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   position: relative; }
-  /* line 184, scss/header/header-blue.scss */
+  /* line 185, scss/header/header-blue.scss */
   .header-blue__sign > a:hover {
     opacity: .7; }
-  /* line 187, scss/header/header-blue.scss */
+  /* line 188, scss/header/header-blue.scss */
   .header-blue__sign > a svg {
     fill: #fff;
     width: 17px;
@@ -917,7 +921,7 @@ h2 {
     left: 0;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-  /* line 196, scss/header/header-blue.scss */
+  /* line 197, scss/header/header-blue.scss */
   .header-blue__sign > a span {
     padding-left: 23px; }
 
