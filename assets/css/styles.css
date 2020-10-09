@@ -1687,7 +1687,6 @@ h2 {
 /* line 12, scss/main/news-rows.scss */
 .news-rows__item > a {
   display: block;
-  color: #00205B;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500; }
@@ -1696,21 +1695,21 @@ h2 {
     .news-rows__item > a {
       font-size: 18px;
       line-height: 24px; } }
-  /* line 22, scss/main/news-rows.scss */
+  /* line 21, scss/main/news-rows.scss */
   .news-rows__item > a:hover {
     color: #0033A0; }
-  /* line 25, scss/main/news-rows.scss */
+  /* line 24, scss/main/news-rows.scss */
   .news-rows__item > a + * {
     margin-top: 1em; }
 
-/* line 31, scss/main/news-rows.scss */
+/* line 30, scss/main/news-rows.scss */
 .news-rows__date {
   font-size: 14px;
   line-height: 20px;
   opacity: .5;
   margin-bottom: 12px; }
   @media (min-width: 1600px) {
-    /* line 31, scss/main/news-rows.scss */
+    /* line 30, scss/main/news-rows.scss */
     .news-rows__date {
       font-size: 16px;
       line-height: 20px;
