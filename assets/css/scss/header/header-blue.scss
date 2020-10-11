@@ -152,7 +152,16 @@
             height: 9px;
             margin-left: 10px;
         }
-        &:hover, &[data-js-dropdown-trigger=active] {
+        &:hover {
+            color: rgba($themeWhite, .7);
+            svg {
+                transform: rotate(90deg);
+                opacity: .7;
+            }
+        }
+    }
+    &[data-js-dropdown-hover=active] {
+        &>a {
             color: rgba($themeWhite, .7);
             svg {
                 transform: rotate(90deg);

@@ -99,9 +99,8 @@
         display: flex;
         justify-content: space-between;
         &>li {
-            &.current {
-                a {
-                    position: relative;
+            &[data-js-dropdown-hover=active] {
+                &>a {
                     pointer-events: none;
                     &:before {
                         content: '';
