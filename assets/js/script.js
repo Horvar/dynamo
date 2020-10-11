@@ -69,6 +69,9 @@ $(document).ready(function(){
       dropdownEvent('data-js-dropdown-click', this)
       return false
     })
+    $('*[data-js-dropdown-hover]').hover(function(){
+      dropdownEvent('data-js-dropdown-click', this)
+    })
     $('*[data-js-dropdown-hover]').click(function(){
       return false
     })
@@ -76,10 +79,14 @@ $(document).ready(function(){
     //close all dropdowns
     $(window).click(function() {
       $('*[data-js-dropdown-container]').attr('data-js-dropdown-container', '').find('*[data-js-dropdown-menu]').attr('data-js-dropdown-menu', '')
-    });
+    })
     $('*[data-js-dropdown-container]').click(function(event){
       event.stopPropagation();
-    });
+    })
+
+    $('*[data-js-dropdown-container]').mousemove(function(event){
+      event.stopPropagation();
+    })
 
     //slick init
     $('*[data-js-slick-screen-1]').slick({
@@ -125,6 +132,20 @@ $(document).ready(function(){
     $('*[data-js-slick-screen-2]').on("beforeChange", function (){
       screenSliderBlurred(1)
       setTimeout(slickTabIndexFix, 750)
+    })
+    //slick-screen nav height
+    $('*[data-js-slick-screen-2]').each(function(){
+      let navHeight = 0
+      let maxHeight = 0
+      let slide = $(this).find('li')
+      let navNumber = slide.length
+      for(let i=0; i<navNumber; i++) {
+        navHeight = slide.eq(i).outerHeight()
+        if ( navHeight>maxHeight ) {
+          maxHeight = navHeight
+        }
+      }
+      slide.height(maxHeight) //set slide height by highest slide
     })
 
     //screen-slider using

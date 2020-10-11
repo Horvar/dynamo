@@ -16,7 +16,7 @@
         bottom: 0;
         li {
             display: flex;
-            height: 115px;
+            min-height: 115px;
             cursor: pointer;
             background: rgba(#0F1C35, .75);
             position: relative;
@@ -58,11 +58,8 @@
                 color: $themeWhite;
                 font-size: 16px;
                 line-height: 22px;
-                padding: 26px 32px;
+                padding: 26px 32px 32px;
                 box-sizing: border-box;
-                position: absolute;
-                top: 0;
-                left: 0;
                 z-index: 1;
             }
             *[data-js-slick-screen-blurred] {
@@ -71,6 +68,10 @@
                 height: 100%;
                 filter: blur(5px);
                 mix-blend-mode: multiply;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
             }
         }
         .slick-track {

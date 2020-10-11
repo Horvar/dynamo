@@ -692,26 +692,27 @@ h2 {
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 100%);
-          transform: translate(-50%, 100%); }
+          transform: translate(-50%, 100%);
+  pointer-events: visible; }
 
-/* line 87, scss/body/dropdown.scss */
+/* line 88, scss/body/dropdown.scss */
 *[data-js-dropdown-hover]:hover + *[data-js-dropdown-menu] > *, *[data-js-dropdown-hover]:focus + *[data-js-dropdown-menu] > * {
   visibility: visible;
   max-height: 100%;
   -webkit-transition: .5s;
   transition: .5s; }
 
-/* line 95, scss/body/dropdown.scss */
+/* line 96, scss/body/dropdown.scss */
 *[data-js-dropdown-menu] {
   z-index: 1; }
-  /* line 98, scss/body/dropdown.scss */
+  /* line 99, scss/body/dropdown.scss */
   *[data-js-dropdown-menu]:hover > *, *[data-js-dropdown-menu]:focus > * {
     visibility: visible;
     max-height: 100%;
     -webkit-transition: .5s;
     transition: .5s; }
 
-/* line 107, scss/body/dropdown.scss */
+/* line 108, scss/body/dropdown.scss */
 *[data-js-dropdown-menu] > * {
   visibility: hidden;
   overflow: hidden;
@@ -719,7 +720,7 @@ h2 {
   -webkit-transition: .2s;
   transition: .2s; }
 
-/* line 116, scss/body/dropdown.scss */
+/* line 117, scss/body/dropdown.scss */
 *[data-js-dropdown-menu=opened] > * {
   visibility: visible;
   max-height: 100%;
@@ -1105,7 +1106,7 @@ h2 {
           line-height: 22px; } }
       /* line 132, scss/header/header-common.scss */
       .header-common__nav > ul > li > a:hover, .header-common__nav > ul > li > a:focus {
-        color: #00205B; }
+        color: #11181F; }
 
 /* line 140, scss/header/header-common.scss */
 .header-common__partners {
@@ -1200,7 +1201,7 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 115px;
+    min-height: 115px;
     cursor: pointer;
     background: rgba(15, 28, 53, 0.75);
     position: relative; }
@@ -1243,22 +1244,23 @@ h2 {
       color: #fff;
       font-size: 16px;
       line-height: 22px;
-      padding: 26px 32px;
+      padding: 26px 32px 32px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
       z-index: 1; }
-    /* line 68, scss/main/screen-slider.scss */
+    /* line 65, scss/main/screen-slider.scss */
     .screen-slider__slider_2 li *[data-js-slick-screen-blurred] {
       position: relative;
       width: 100%;
       height: 100%;
       -webkit-filter: blur(5px);
               filter: blur(5px);
-      mix-blend-mode: multiply; }
-  /* line 76, scss/main/screen-slider.scss */
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; }
+  /* line 77, scss/main/screen-slider.scss */
   .screen-slider__slider_2 .slick-track {
     -webkit-transform: translate3d(0px, 0px, 0px) !important;
             transform: translate3d(0px, 0px, 0px) !important; }
