@@ -44,10 +44,6 @@ function dropdownToggle(target, that) {
   }
 }
 
-
-
-
-
 $(document).ready(function(){
 
   dropdownHeight()
@@ -194,5 +190,17 @@ $(document).ready(function(){
     for (var i=0; i<length; i++) {
       $('<svg><use xlink:href="assets/img/sprites/sprite-numbers.svg#'+number[i]+'"></use></svg>').appendTo(this)
     }
+  })
+
+  //close elements by window click
+  $(window).click(function(){
+    //close search
+      $('.header-blue__search').removeClass('header-blue__search_opened')
+      $('#searchInput').val('')
+      $('#searchInput, #searchCloseBtn').attr('tabindex', -1)
+      $('#searchOpenBtn').attr('tabindex', 0)
+  })
+  $('.header-blue__search').click(function(e){ //prevent closing
+    e.stopPropagation();
   })
 })

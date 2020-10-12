@@ -597,15 +597,13 @@ h2 {
     background: #0033A0; }
     /* line 118, scss/common.scss */
     .button_fill:hover, .button_fill:focus {
-      background: transparent;
-      color: #0033A0;
-      border: 1px solid #0033A0; }
-    /* line 123, scss/common.scss */
+      background: #00205B; }
+    /* line 121, scss/common.scss */
     .button_fill:active {
       color: #fff;
       background: #0033A0;
       opacity: .7; }
-    /* line 128, scss/common.scss */
+    /* line 126, scss/common.scss */
     .button_fill.button_disabled {
       pointer-events: none;
       background: #ECF0F7; }
@@ -644,36 +642,52 @@ h2 {
 .dropdown__menu > li > a {
   outline: none;
   display: block;
-  padding: 4px 24px;
+  padding: 4px 16px;
   font-size: 16px;
   line-height: 24px; }
   /* line 37, scss/body/dropdown.scss */
   .dropdown__menu > li > a:hover, .dropdown__menu > li > a:focus {
     background: #0033A0;
     color: #fff; }
-  /* line 41, scss/body/dropdown.scss */
+    /* line 40, scss/body/dropdown.scss */
+    .dropdown__menu > li > a:hover svg, .dropdown__menu > li > a:focus svg {
+      fill: #fff;
+      opacity: 1; }
+    /* line 44, scss/body/dropdown.scss */
+    .dropdown__menu > li > a:hover span, .dropdown__menu > li > a:focus span {
+      opacity: 1; }
+  /* line 48, scss/body/dropdown.scss */
   .dropdown__menu > li > a:active {
     background: #00205B;
     color: #fff; }
-/* line 49, scss/body/dropdown.scss */
+  /* line 52, scss/body/dropdown.scss */
+  .dropdown__menu > li > a svg {
+    fill: #11181F;
+    opacity: .8;
+    width: 20px;
+    margin-right: 12px; }
+  /* line 58, scss/body/dropdown.scss */
+  .dropdown__menu > li > a span {
+    opacity: .8; }
+/* line 65, scss/body/dropdown.scss */
 .dropdown__menu_social > li > a {
   padding-right: 54px; }
 
-/* line 59, scss/body/dropdown.scss */
+/* line 75, scss/body/dropdown.scss */
 .dropdown__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 16px 24px; }
-  /* line 62, scss/body/dropdown.scss */
+  /* line 78, scss/body/dropdown.scss */
   .dropdown__social li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    /* line 64, scss/body/dropdown.scss */
+    /* line 80, scss/body/dropdown.scss */
     .dropdown__social li + * {
       margin-left: 16px; }
-    /* line 67, scss/body/dropdown.scss */
+    /* line 83, scss/body/dropdown.scss */
     .dropdown__social li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -681,21 +695,21 @@ h2 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      /* line 70, scss/body/dropdown.scss */
+      /* line 86, scss/body/dropdown.scss */
       .dropdown__social li a svg {
         fill: #0033A0; }
-        /* line 72, scss/body/dropdown.scss */
+        /* line 88, scss/body/dropdown.scss */
         .dropdown__social li a svg:hover {
           fill: #11181F; }
 
-/* line 80, scss/body/dropdown.scss */
+/* line 96, scss/body/dropdown.scss */
 [data-js-dropdown-hover], [data-js-dropdown-click] {
   position: relative; }
 
-/* line 85, scss/body/dropdown.scss */
+/* line 101, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] .dropdown, [data-js-dropdown-click=active] .dropdown {
   visibility: visible; }
-/* line 89, scss/body/dropdown.scss */
+/* line 105, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] [data-js-dropdown-menu] .dropdown__content, [data-js-dropdown-click=active] [data-js-dropdown-menu] .dropdown__content {
   max-height: 100%;
   -webkit-transition: .5s;
@@ -1638,13 +1652,10 @@ h2 {
     .news-cards__item {
       margin-bottom: 58px; } }
   /* line 32, scss/main/news-cards.scss */
-  .news-cards__item:hover .news-cards__name {
-    color: #0033A0; }
-  /* line 37, scss/main/news-cards.scss */
   .news-cards__item:active .news-cards__name {
     color: #00205B; }
 
-/* line 43, scss/main/news-cards.scss */
+/* line 38, scss/main/news-cards.scss */
 .news-cards__hidden-link {
   display: block;
   width: 100%;
@@ -1653,25 +1664,42 @@ h2 {
   top: 0;
   left: 0;
   color: transparent;
-  z-index: 0; }
+  z-index: 1; }
+  /* line 48, scss/main/news-cards.scss */
+  .news-cards__hidden-link:hover + .news-cards__name, .news-cards__hidden-link:focus + .news-cards__name {
+    color: #0033A0; }
+  /* line 52, scss/main/news-cards.scss */
+  .news-cards__hidden-link:hover + .news-cards__photo img, .news-cards__hidden-link:focus + .news-cards__photo img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
 
-/* line 54, scss/main/news-cards.scss */
+/* line 59, scss/main/news-cards.scss */
 .news-cards__photo {
-  width: 100%;
   height: 11.1111111111vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  margin-bottom: 12px; }
+  position: relative;
+  overflow: hidden;
+  z-index: -1; }
   @media (min-width: 1600px) {
-    /* line 54, scss/main/news-cards.scss */
+    /* line 59, scss/main/news-cards.scss */
     .news-cards__photo {
       height: 13.6979166667vw;
-      max-height: 263px;
-      margin-bottom: 20px; } }
+      max-height: 263px; } }
+  /* line 68, scss/main/news-cards.scss */
+  .news-cards__photo img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    margin-bottom: 12px;
+    -webkit-transition: 1s;
+    transition: 1s; }
+    @media (min-width: 1600px) {
+      /* line 68, scss/main/news-cards.scss */
+      .news-cards__photo img {
+        margin-bottom: 20px; } }
 
-/* line 66, scss/main/news-cards.scss */
+/* line 79, scss/main/news-cards.scss */
 .news-cards__date {
   display: inline-block;
   font-size: 14px;
@@ -1679,13 +1707,13 @@ h2 {
   opacity: .5;
   margin-right: 16px; }
   @media (min-width: 1600px) {
-    /* line 66, scss/main/news-cards.scss */
+    /* line 79, scss/main/news-cards.scss */
     .news-cards__date {
       font-size: 16px;
       line-height: 24px;
       margin-right: 9px; } }
 
-/* line 78, scss/main/news-cards.scss */
+/* line 91, scss/main/news-cards.scss */
 .news-cards__tag {
   position: relative;
   display: inline-block;
@@ -1694,21 +1722,21 @@ h2 {
   line-height: 20px;
   z-index: 12; }
   @media (min-width: 1600px) {
-    /* line 78, scss/main/news-cards.scss */
+    /* line 91, scss/main/news-cards.scss */
     .news-cards__tag {
       font-size: 16px;
       line-height: 24px; } }
-  /* line 89, scss/main/news-cards.scss */
+  /* line 102, scss/main/news-cards.scss */
   .news-cards__tag:hover {
     text-decoration: underline; }
 
-/* line 93, scss/main/news-cards.scss */
+/* line 106, scss/main/news-cards.scss */
 .news-cards__name {
   font-size: 20px;
   line-height: 24px;
   margin-top: 8px; }
   @media (min-width: 1600px) {
-    /* line 93, scss/main/news-cards.scss */
+    /* line 106, scss/main/news-cards.scss */
     .news-cards__name {
       font-size: 24px;
       line-height: 28px; } }
@@ -2268,20 +2296,27 @@ h2 {
   left: 0;
   color: transparent;
   z-index: 0; }
+  /* line 89, scss/main/gallery.scss */
+  .gallery__hidden-link:hover + .gallery__photo img, .gallery__hidden-link:focus + .gallery__photo img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
 
-/* line 89, scss/main/gallery.scss */
+/* line 96, scss/main/gallery.scss */
 .gallery__photo {
+  overflow: hidden;
   margin-bottom: 12px;
   z-index: -1;
   position: relative; }
   @media (min-width: 1600px) {
-    /* line 89, scss/main/gallery.scss */
+    /* line 96, scss/main/gallery.scss */
     .gallery__photo {
       margin-bottom: 16px; } }
-  /* line 96, scss/main/gallery.scss */
+  /* line 104, scss/main/gallery.scss */
   .gallery__photo img {
-    max-width: 100%; }
-  /* line 99, scss/main/gallery.scss */
+    max-width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s; }
+  /* line 108, scss/main/gallery.scss */
   .gallery__photo svg {
     width: 49px;
     height: 49px;
@@ -2293,12 +2328,12 @@ h2 {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
     @media (min-width: 1600px) {
-      /* line 99, scss/main/gallery.scss */
+      /* line 108, scss/main/gallery.scss */
       .gallery__photo svg {
         width: 69px;
         height: 69px; } }
 
-/* line 114, scss/main/gallery.scss */
+/* line 123, scss/main/gallery.scss */
 .gallery__date {
   display: inline-block;
   font-size: 14px;
@@ -2306,12 +2341,12 @@ h2 {
   opacity: .5;
   margin-right: 16px; }
   @media (min-width: 1600px) {
-    /* line 114, scss/main/gallery.scss */
+    /* line 123, scss/main/gallery.scss */
     .gallery__date {
       font-size: 16px;
       line-height: 24px; } }
 
-/* line 125, scss/main/gallery.scss */
+/* line 134, scss/main/gallery.scss */
 .gallery__tag {
   position: relative;
   display: inline-block;
@@ -2320,29 +2355,29 @@ h2 {
   line-height: 20px;
   z-index: 12; }
   @media (min-width: 1600px) {
-    /* line 125, scss/main/gallery.scss */
+    /* line 134, scss/main/gallery.scss */
     .gallery__tag {
       font-size: 16px;
       line-height: 24px; } }
-  /* line 136, scss/main/gallery.scss */
+  /* line 145, scss/main/gallery.scss */
   .gallery__tag:hover {
     text-decoration: underline; }
 
-/* line 140, scss/main/gallery.scss */
+/* line 149, scss/main/gallery.scss */
 .gallery__name {
   font-size: 20px;
   line-height: 24px;
   margin-top: 8px; }
   @media (min-width: 1600px) {
-    /* line 140, scss/main/gallery.scss */
+    /* line 149, scss/main/gallery.scss */
     .gallery__name {
       font-size: 24px;
       line-height: 30px; } }
 
-/* line 150, scss/main/gallery.scss */
+/* line 159, scss/main/gallery.scss */
 .gallery__more {
   margin-left: auto; }
-  /* line 152, scss/main/gallery.scss */
+  /* line 161, scss/main/gallery.scss */
   .gallery__more > a {
     background: #ECF0F7;
     color: #00205B;
@@ -2355,21 +2390,21 @@ h2 {
             align-items: center;
     padding: 0 20px 0 16px;
     border-radius: 100px; }
-    /* line 160, scss/main/gallery.scss */
+    /* line 169, scss/main/gallery.scss */
     .gallery__more > a:hover, .gallery__more > a:focus {
       background: #0033A0;
       color: #fff; }
-      /* line 163, scss/main/gallery.scss */
+      /* line 172, scss/main/gallery.scss */
       .gallery__more > a:hover > svg, .gallery__more > a:focus > svg {
         fill: #fff; }
-    /* line 167, scss/main/gallery.scss */
+    /* line 176, scss/main/gallery.scss */
     .gallery__more > a:active {
       opacity: .7; }
-    /* line 170, scss/main/gallery.scss */
+    /* line 179, scss/main/gallery.scss */
     .gallery__more > a > svg {
       fill: rgba(0, 32, 91, 0.5);
       margin-right: 16px; }
-    /* line 174, scss/main/gallery.scss */
+    /* line 183, scss/main/gallery.scss */
     .gallery__more > a > span {
       font-size: 16px;
       line-height: 32px; }

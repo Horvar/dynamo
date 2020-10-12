@@ -116,9 +116,7 @@ h2 {
         color: $themeWhite;
         background: $themeBlue;
         &:hover, &:focus {
-            background: transparent;
-            color: $themeBlue;
-            border: 1px solid $themeBlue;
+            background: $themeBlueDark;
         }
         &:active {
             color: $themeWhite;

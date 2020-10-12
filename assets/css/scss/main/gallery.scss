@@ -84,9 +84,17 @@
     left: 0;
     color: transparent;
     z-index: 0;
+    &:hover, &:focus {
+        & + .gallery__photo {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 .gallery__photo {
+    overflow: hidden;
     margin-bottom: 12px;
     z-index: -1;
     position: relative;
@@ -95,6 +103,7 @@
     }
     img {
         max-width: 100%;
+        transition: 1s;
     }
     svg {
         width: 49px;

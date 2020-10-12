@@ -28,11 +28,6 @@
     @media (min-width: 1600px) {
         margin-bottom: 58px;
     }
-    &:hover {
-        .news-cards__name {
-            color: $themeBlue;
-        }
-    }
     &:active {
         .news-cards__name {
             color: $themeBlueDark;
@@ -48,19 +43,37 @@
     top: 0;
     left: 0;
     color: transparent;
-    z-index: 0;
+    z-index: 1;
+    &:hover, &:focus {
+        & + .news-cards__name {
+            color: $themeBlue;
+        }
+        & + .news-cards__photo {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 .news-cards__photo {
-    width: 100%;
     height: pxToVw(1440, 160px);
-    object-fit: cover;
-    object-position: top;
-    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
     @media (min-width: 1600px) {
         height: pxToVw(1920, 263px);
         max-height: 263px;
-        margin-bottom: 20px;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 12px;
+        transition: 1s;
+        @media (min-width: 1600px) {
+            margin-bottom: 20px;
+        }
     }
 }
 .news-cards__date {
