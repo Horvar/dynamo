@@ -641,53 +641,58 @@ h2 {
 /* line 31, scss/body/dropdown.scss */
 .dropdown__menu > li > a {
   outline: none;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 4px 16px;
   font-size: 16px;
   line-height: 24px; }
-  /* line 37, scss/body/dropdown.scss */
+  /* line 38, scss/body/dropdown.scss */
   .dropdown__menu > li > a:hover, .dropdown__menu > li > a:focus {
     background: #0033A0;
     color: #fff; }
-    /* line 40, scss/body/dropdown.scss */
+    /* line 41, scss/body/dropdown.scss */
     .dropdown__menu > li > a:hover svg, .dropdown__menu > li > a:focus svg {
       fill: #fff;
       opacity: 1; }
-    /* line 44, scss/body/dropdown.scss */
+    /* line 45, scss/body/dropdown.scss */
     .dropdown__menu > li > a:hover span, .dropdown__menu > li > a:focus span {
       opacity: 1; }
-  /* line 48, scss/body/dropdown.scss */
+  /* line 49, scss/body/dropdown.scss */
   .dropdown__menu > li > a:active {
     background: #00205B;
     color: #fff; }
-  /* line 52, scss/body/dropdown.scss */
+  /* line 53, scss/body/dropdown.scss */
   .dropdown__menu > li > a svg {
     fill: #11181F;
     opacity: .8;
     width: 20px;
     margin-right: 12px; }
-  /* line 58, scss/body/dropdown.scss */
+  /* line 59, scss/body/dropdown.scss */
   .dropdown__menu > li > a span {
     opacity: .8; }
-/* line 65, scss/body/dropdown.scss */
+/* line 66, scss/body/dropdown.scss */
 .dropdown__menu_social > li > a {
   padding-right: 54px; }
 
-/* line 75, scss/body/dropdown.scss */
+/* line 76, scss/body/dropdown.scss */
 .dropdown__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 16px 24px; }
-  /* line 78, scss/body/dropdown.scss */
+  /* line 79, scss/body/dropdown.scss */
   .dropdown__social li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    /* line 80, scss/body/dropdown.scss */
+    /* line 81, scss/body/dropdown.scss */
     .dropdown__social li + * {
       margin-left: 16px; }
-    /* line 83, scss/body/dropdown.scss */
+    /* line 84, scss/body/dropdown.scss */
     .dropdown__social li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -695,21 +700,21 @@ h2 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      /* line 86, scss/body/dropdown.scss */
+      /* line 87, scss/body/dropdown.scss */
       .dropdown__social li a svg {
         fill: #0033A0; }
-        /* line 88, scss/body/dropdown.scss */
+        /* line 89, scss/body/dropdown.scss */
         .dropdown__social li a svg:hover {
           fill: #11181F; }
 
-/* line 96, scss/body/dropdown.scss */
+/* line 97, scss/body/dropdown.scss */
 [data-js-dropdown-hover], [data-js-dropdown-click] {
   position: relative; }
 
-/* line 101, scss/body/dropdown.scss */
+/* line 102, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] .dropdown, [data-js-dropdown-click=active] .dropdown {
   visibility: visible; }
-/* line 105, scss/body/dropdown.scss */
+/* line 106, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] [data-js-dropdown-menu] .dropdown__content, [data-js-dropdown-click=active] [data-js-dropdown-menu] .dropdown__content {
   max-height: 100%;
   -webkit-transition: .5s;
@@ -1678,28 +1683,25 @@ h2 {
   height: 11.1111111111vw;
   position: relative;
   overflow: hidden;
-  z-index: -1; }
+  z-index: -1;
+  margin-bottom: 12px; }
   @media (min-width: 1600px) {
     /* line 59, scss/main/news-cards.scss */
     .news-cards__photo {
       height: 13.6979166667vw;
-      max-height: 263px; } }
-  /* line 68, scss/main/news-cards.scss */
+      max-height: 263px;
+      margin-bottom: 20px; } }
+  /* line 70, scss/main/news-cards.scss */
   .news-cards__photo img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: top;
        object-position: top;
-    margin-bottom: 12px;
     -webkit-transition: 1s;
     transition: 1s; }
-    @media (min-width: 1600px) {
-      /* line 68, scss/main/news-cards.scss */
-      .news-cards__photo img {
-        margin-bottom: 20px; } }
 
-/* line 79, scss/main/news-cards.scss */
+/* line 77, scss/main/news-cards.scss */
 .news-cards__date {
   display: inline-block;
   font-size: 14px;
@@ -1707,13 +1709,13 @@ h2 {
   opacity: .5;
   margin-right: 16px; }
   @media (min-width: 1600px) {
-    /* line 79, scss/main/news-cards.scss */
+    /* line 77, scss/main/news-cards.scss */
     .news-cards__date {
       font-size: 16px;
       line-height: 24px;
       margin-right: 9px; } }
 
-/* line 91, scss/main/news-cards.scss */
+/* line 89, scss/main/news-cards.scss */
 .news-cards__tag {
   position: relative;
   display: inline-block;
@@ -1722,21 +1724,21 @@ h2 {
   line-height: 20px;
   z-index: 12; }
   @media (min-width: 1600px) {
-    /* line 91, scss/main/news-cards.scss */
+    /* line 89, scss/main/news-cards.scss */
     .news-cards__tag {
       font-size: 16px;
       line-height: 24px; } }
-  /* line 102, scss/main/news-cards.scss */
+  /* line 100, scss/main/news-cards.scss */
   .news-cards__tag:hover {
     text-decoration: underline; }
 
-/* line 106, scss/main/news-cards.scss */
+/* line 104, scss/main/news-cards.scss */
 .news-cards__name {
   font-size: 20px;
   line-height: 24px;
   margin-top: 8px; }
   @media (min-width: 1600px) {
-    /* line 106, scss/main/news-cards.scss */
+    /* line 104, scss/main/news-cards.scss */
     .news-cards__name {
       font-size: 24px;
       line-height: 28px; } }

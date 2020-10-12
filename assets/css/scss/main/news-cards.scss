@@ -61,19 +61,17 @@
     position: relative;
     overflow: hidden;
     z-index: -1;
+    margin-bottom: 12px;
     @media (min-width: 1600px) {
         height: pxToVw(1920, 263px);
         max-height: 263px;
+        margin-bottom: 20px;
     }
     img {
         width: 100%;
         object-fit: cover;
         object-position: top;
-        margin-bottom: 12px;
         transition: 1s;
-        @media (min-width: 1600px) {
-            margin-bottom: 20px;
-        }
     }
 }
 .news-cards__date {
