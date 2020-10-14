@@ -15,6 +15,7 @@ function screenSliderBlurred(next) {
     //use img from this slide
       $(this).css('background', 'url('+$('*[data-js-slick-screen-1]').find('.slick-slide.slick-current').find('img').attr('src')+') -'+x+'px -'+y+'px no-repeat')
     }
+    $(this).css('background-size', ''+$('*[data-js-slick-screen-1]').find('.slick-slide.slick-current').find('img').outerWidth()+'px '+$('*[data-js-slick-screen-1]').find('.slick-slide.slick-current').find('img').outerHeight()+'px') //blurred img size
   })
 }
 
@@ -24,7 +25,7 @@ function slickTabIndexFix() {
 
 function dropdownHeight(){
   $('[data-js-dropdown-hover]').each(function(){
-    $(this).find('*[data-js-dropdown-menu]').height( $(this).find('.dropdown__menu').outerHeight() )
+    $(this).find('*[data-js-dropdown-menu]').height( $(this).find('.dropdown__content>*').outerHeight() )
   })
 }
 
@@ -102,6 +103,17 @@ $(document).ready(function(){
     asNavFor: '*[data-js-slick-screen-1]',
     accessibility: false,
     focusOnSelect: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          fade: true
+        }
+      }
+    ]
   })
   $('*[data-js-slick-page-1]').slick({
     asNavFor: '[data-js-slick-page-2]',
@@ -110,7 +122,15 @@ $(document).ready(function(){
     autoplay: true,
     accessibility: false,
     autoplaySpeed: 3000,
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   })
   $('*[data-js-slick-page-2]').slick({
     asNavFor: '*[data-js-slick-page-1]',
@@ -203,4 +223,14 @@ $(document).ready(function(){
   $('.header-blue__search').click(function(e){ //prevent closing
     e.stopPropagation();
   })
+
+  //matches mobile scroll
+  if ( $('.matches__item_ended').length ) {
+    var offset = $('.matches__item_ended:last + .matches__item').offset().left
+    var item = $('.matches__item').outerWidth()
+    var window = $('.matches__list').outerWidth()
+    console.log(  offset, item, window )
+
+    $('.matches__list').scrollLeft(offset + item / 2 - window / 2)
+  }
 })

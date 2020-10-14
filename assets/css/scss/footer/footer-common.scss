@@ -6,6 +6,10 @@
 .footer-common__container {
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width: 540px) {
+        padding-top: 24px;
+        padding-bottom: 65px;
+    }
 }
 
 .footer-common__wrapper {
@@ -17,14 +21,25 @@
         @media (min-width: 1600px) {
             margin-bottom: 67px;
         }
+        @media (max-width: 992px) {
+            flex-direction: column;
+            margin-bottom: 48px;
+        }
     }
     &_2 {
         margin-bottom: 56px;
         @media (min-width: 1600px) {
             margin-bottom: 58px;
         }
+        @media (max-width: 992px) {
+            margin-bottom: 40px;
+        }
     }
     &_3 {
+        @media (max-width: 540px) {
+            display: flex;
+            flex-direction: column;
+        }
         &>p {
             font-size: 16px;
             line-height: 16px;
@@ -32,6 +47,11 @@
             @media (min-width: 1600px) {
                 font-size: 18px;
                 line-height: 20px;
+            }
+            & + * {
+                @media (max-width: 540px) {
+                    margin-top: 16px;
+                }
             }
             &>a {
                 text-decoration: underline;
@@ -46,6 +66,9 @@
 
 .footer-common__social {
     display: flex;
+    @media (max-width: 992px) {
+        margin-left: auto;
+    }
     &>li {
         display: flex;
         align-items: center;
@@ -114,11 +137,17 @@
 
 .footer-common__nav {
     display: flex;
+    @media (max-width: 992px) {
+        display: none;
+    }
     &>ul {
         & + * {
             margin-left: 56px;
             @media (min-width: 1600px) {
                 margin-left: pxToVw(1920, 75px);
+            }
+            @media (max-width: 1200px) {
+                margin-left: pxToVw(992, 20px);
             }
         }
         &>li {
@@ -131,6 +160,7 @@
             &>a {
                 display: block;
                 color: rgba($themeWhite, .5);
+                white-space: nowrap;
                 &:hover {
                     color: $themeWhite;
                 }
@@ -150,11 +180,34 @@
             font-size: 18px;
             line-height: 20px;
         }
+        @media (max-width: 992px) {
+            color: $themeWhite;
+        }
         &:hover {
             color: $themeWhite;
         }
         & + * {
             margin-top: 10px;
         }
+    }
+}
+
+.footer-common__logo {
+    @media (max-width: 992px) {
+        margin-right: auto;
+        margin-bottom: 52px;
+    }
+    @media (max-width: 540px) {
+        display: none;
+    }
+    &_mobile {
+        display: none;
+        margin-right: auto;
+        @media (max-width: 540px) {
+            display: block;
+        }
+    }
+    &>img {
+        max-width: 100%;
     }
 }

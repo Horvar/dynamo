@@ -94,6 +94,29 @@
     }
 }
 
+.dropdown__trophy {
+    display: flex;
+    img {
+        width: auto;
+        height: 100%;
+    }
+    &>div {
+        padding: 24px 34px 15px 16px;
+        box-sizing: border-box;
+        &>h3 {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+        &>p {
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba($themeBlack, .7);
+            white-space: break-spaces;
+        }
+    }
+}
+
 [data-js-dropdown-hover], [data-js-dropdown-click] {
     position: relative;
 }

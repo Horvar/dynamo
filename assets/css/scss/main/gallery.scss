@@ -8,12 +8,20 @@
     margin-bottom: 41px;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+        margin-bottom: 24px;
+    }
+}
+.gallery__tab-buttons {
+    display: flex;
+    border-bottom: 1px solid rgba($themeBlack, .3);
     &>a {
         display: block;
         font-size: 24px;
         line-height: 32px;
         color: $themeBlue;
         opacity: .5;
+        margin-bottom: -1px;
         @media (min-width: 1600px) {
             font-size: 28px;
             line-height: 32px;
@@ -25,16 +33,8 @@
             pointer-events: none;
             opacity: 1;
             position: relative;
-            &:before {
-                content: '';
-                width: 100%;
-                height: 2px;
-                background: $themeBlue;
-                border-radius: 4px;
-                position: absolute;
-                bottom: -6px;
-                left: 0;
-            }
+            padding-bottom: 6px;
+            border-bottom: 2px solid $themeBlue;
         }
         & + a {
             margin-left: 32px;
@@ -53,6 +53,19 @@
     @media (min-width: 1600px) {
         margin-right: -43px;
     }
+    @media (max-width: 1200px) {
+        margin-right: -16px;
+    }
+    @media (max-width: 992px) {
+        margin-right: -40px;
+        margin-bottom: -24px;
+    }
+    @media (max-width: 768px) {
+        margin-right: -24px;
+    }
+    @media (max-width: 420px) {
+        margin-right: 0;
+    }
 }
 .gallery__item {
     flex: 0 1 calc(25% - 33px);
@@ -62,6 +75,23 @@
     @media (min-width: 1600px) {
         flex: 0 1 calc(25% - 43px);
         margin-right: 43px;
+    }
+    @media (max-width: 1200px) {
+        flex: 0 1 calc(25% - 16px);
+        margin-right: 16px;
+    }
+    @media (max-width: 992px) {
+        flex: 0 1 calc(50% - 40px);
+        margin-right: 40px;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+        flex: 0 1 calc(50% - 24px);
+        margin-right: 24px;
+    }
+    @media (max-width: 420px) {
+        flex: 0 1 100%;
+        margin-right: 0;
     }
     &:hover {
         .gallery__name {
@@ -154,15 +184,37 @@
         font-size: 24px;
         line-height: 30px;
     }
+    @media (max-width: 1440px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    @media (max-width: 992px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .gallery__more {
     margin-left: auto;
+    @media (max-width: 420px) {
+        display: none;
+    }
+    &_mobile {
+        margin-top: 40px;
+        display: none;
+        @media (max-width: 420px) {
+            display: block;
+        }  
+    }
     &>a {
         background: $themeGrayLight;
         color: $themeBlueDark;
         height: 48px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         padding: 0 20px 0 16px;
         border-radius: 100px;

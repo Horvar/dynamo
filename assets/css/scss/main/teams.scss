@@ -2,6 +2,9 @@
 
 .teams__container {
     display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 .teams__col {
     &_1 {
@@ -9,9 +12,33 @@
         flex-direction: column;
         margin-right: 105px;
         flex: 1 1 513px;
+        @media (max-width: 1440px) {
+            margin-right: pxToVw(1440, 105px);
+        }
+        @media (max-width: 1200px) {
+            margin-right: pxToVw(1200, 31px);
+        }
+        @media (max-width: 992px) {
+            margin-right: 24px;
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 54px;
+        }
     }
     &_2 {
         flex: 1 1 calc(276px * 2 + 31px);
+        @media (max-width: 992px) {
+            flex: 1 1 450px;
+        }
+        @media (max-width: 768px) {
+            width: 100vw;
+            margin-left: -24px;
+        }
+        @media (max-width: 540px) {
+            margin-left: -16px;
+        }
     }
 }
 
@@ -19,6 +46,9 @@
     margin-bottom: 40px;
     @media (min-width: 1441px) {
         margin-bottom: 49px;
+    }
+    @media (max-width: 540px) {
+        margin-bottom: 24px;
     }
 }
 
@@ -44,6 +74,14 @@
     @media (min-width: 1600px) {
         padding: 0 38px 0 24px;
     }
+    @media (max-width: 768px) {
+        flex: 0 1 40px;
+    }
+    @media (max-width: 540px) {
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 20px;
+    }
     &:before {
         counter-increment: teamNum;
         content: counter(teamNum)'.';
@@ -52,6 +90,9 @@
         opacity: .5;
         @media (min-width: 1600px) {
             margin-right: 34px;
+        }
+        @media (max-width: 540px) {
+            margin-right: 8px;
         }
     }
     @media (min-width: 1441px) {
@@ -77,6 +118,9 @@
     @media (min-width: 1600px) {
         width: 80px;
     }
+    @media (max-width: 540px) {
+        width: 32px;
+    }
     img {
         display: block;
         object-fit: contain;
@@ -89,6 +133,10 @@
                 width: 64px;
                 height: 73px;
             }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     &_avangard {
@@ -98,6 +146,10 @@
             @media (min-width: 1600px) {
                 width: 64px;
                 height: 73px;
+            }
+            @media (max-width: 540px) {
+                width: 34px;
+                height: 34px;
             }
         }
     }
@@ -110,7 +162,12 @@
                 width: 42px;
                 height: 42px;
                 margin-left: 12px;
-            } 
+            }
+            @media (max-width: 540px) {
+                width: 20px;
+                height: 24px;
+                margin-left: 6px;
+            }
         }
     }
     &_dynamo-mn {
@@ -120,6 +177,10 @@
             @media (min-width: 1600px) {
                 width: 64px;
                 height: 73px;
+            }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
             }
         }
     }
@@ -131,6 +192,10 @@
                 width: 64px;
                 height: 73px;
             }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     &_ska {
@@ -140,6 +205,10 @@
             @media (min-width: 1600px) {
                 width: 64px;
                 height: 73px;
+            }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
             }
         }
     }
@@ -151,6 +220,10 @@
                 width: 64px;
                 height: 73px;
             }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     &_loko {
@@ -160,6 +233,10 @@
             @media (min-width: 1600px) {
                 width: 64px;
                 height: 73px;
+            }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
             }
         }
     }
@@ -171,6 +248,10 @@
                 width: 64px;
                 height: 73px;
             }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     &_spartak {
@@ -181,6 +262,10 @@
                 width: 64px;
                 height: 73px;
             }
+            @media (max-width: 540px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 }
@@ -189,6 +274,9 @@
     &_1 {
         margin-left: auto;
         margin-right: 24px;
+        @media (max-width: 540px) {
+            margin-right: 19px;
+        }
     }
     &_2 {
 
@@ -205,8 +293,13 @@
         margin-right: -40px;
         margin-bottom: -40px;
     }
+    @media (max-width: 992px) {
+        margin-right: 0;
+        margin-bottom: -8px;
+    }
 }
 .teams__players-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 0 1 calc(50% - 31px);
@@ -223,11 +316,34 @@
         margin-bottom: 40px;
         padding: 28px 24px;
     }
+    @media (max-width: 992px) {
+        flex: 0 1 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 14px 16px;
+        margin-right: 0;
+        margin-bottom: 8px;
+        border: none;
+    }
+}
+
+.teams__players-links {
+    @media (max-width: 992px) {
+        padding-top: 29px;
+    }
     &>a {
         display: flex;
         font-size: 14px;
         line-height: 20px;
         color: $themeBlue;
+        @media (max-width: 992px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        &:not(:last-child) {
+            padding-bottom: 4px;
+            border-bottom: 1px solid $themeBlueLight;
+        }
         &:hover, &:focus {
             color: $themeBlueDark;
         }
@@ -241,6 +357,10 @@
                 width: 50px;
                 text-align: center;
                 margin-right: 8px;
+                @media (max-width: 992px) {
+                    margin-right: 0;
+                    text-align: right;
+                }
             }
         }
         @media (min-width: 1600px) {
@@ -252,20 +372,32 @@
             @media (min-width: 1600px) {
                 margin-top: 18px;
             }
+            @media (max-width: 992px) {
+                margin-top: 8px;
+            }
         }
         &:first-of-type {
             font-size: 20px;
             line-height: 24px;
-            &>span {
-                &:first-of-type {
-                    font-size: 40px;
-                    line-height: 34px;
-                }
-            }
             @media (min-width: 1600px) {
                 font-size: 24px;
                 line-height: 24px;
             }
+            @media (max-width: 992px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            &>span {
+                &:first-of-type {
+                    font-size: 40px;
+                    line-height: 34px;
+                    @media (max-width: 992px) {
+                        font-size: 20px;
+                        line-height: inherit;
+                    }
+                }
+            }
+
         }
     }
 }
@@ -276,6 +408,11 @@
     @media (min-width: 1600px) {
         font-size: 18px;
         line-height: 24px;
+    }
+    @media (max-width: 992px) {
+        position: absolute;
+        top: 14px;
+        left: 16px;
     }
 }
 .teams__players-photo {
@@ -288,6 +425,11 @@
         width: pxToVw(1920, 212px);
         height: pxToVw(1920, 212px);
     }
+    @media (max-width: 992px) {
+        margin: 36px 0 0;
+        width: 72px;
+        height: 72px;
+    }
 }
 .teams__players-stat {
     font-size: 12px;
@@ -298,16 +440,42 @@
         font-size: 14px;
         margin-bottom: 20px;
     }
+    @media (max-width: 992px) {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+    }
 }
 
-.players__tree {
-    width: calc(100% + 80px - #{pxToVw(1920, 470px)});
+.teams__tree {
+    width: calc(100% - 130px - #{pxToVw(1920, 500px)});
     height: 38px;
     border: 1px solid rgba($themeBlueDark, .2);
     border-top: none;
     border-radius: 0 0 24px 24px;
     margin: 0 auto;
     position: relative;
+    @media (max-width: 1440px) {
+        width: calc(100% + 840px - #{pxToVw(1440, 1330px)});
+    }
+    @media (max-width: 1300px) {
+        width: calc(100% + 0px - #{pxToVw(1300, 370px)});
+    }
+    @media (max-width: 992px) {
+        display: none;
+    }
+    &_tablet {
+        display: none;
+        height: 0;
+        margin-top: calc(24px + 16px);
+        @media (max-width: 992px) {
+            display: flex;
+            border: none;
+            &:before {
+                display: none;
+            }
+        }
+    }
     &:before {
         content: '';
         width: calc(100% + 100px - #{pxToVw(1920, 950px)});
@@ -317,6 +485,15 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        @media (max-width: 1440px) {
+            width: calc(100% - 500px - #{pxToVw(1440, 100px)});
+        }
+        @media (max-width: 1300px) {
+            width: calc(100% + 00px - #{pxToVw(1300, 600px)});
+        }
+        @media (max-width: 1200px) {
+            width: calc(100% + 00px - #{pxToVw(1300, 670px)});
+        }
     }
 }
 .teams__more {
@@ -334,6 +511,12 @@
     max-width: 48px;
     max-height: 48px;
     transition: max-width .75s;
+    @media (max-width: 992px) {
+        right: auto!important;
+        left: 50%!important;
+        max-width: 270px;
+        transform: translate(-50%, 50%)!important;
+    }
     &:first-of-type {
         transform: translate(-50%, 50%);
         left: 155px;

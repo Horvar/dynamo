@@ -10,7 +10,7 @@
 </head>
 <body class="body">
     <!-- gray header -->
-    <div style="display: flex; justify-content: center; background: #262F36;">
+    <div style="display: flex; justify-content: center; background: #262F36; max-width: 100%; overflow: hidden;">
         <img src="assets/img/heading.png" alt="Хедер КХЛ">
     </div>
     <!-- header -->
@@ -28,6 +28,8 @@
                             <li><a href="#">Хоккейная академия «Динамо»</a></li>
                         </ul>
                     </nav>
+                    <!-- hamburger -->
+                    <a href="#" class="header-blue__hamburger"><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#hamburger"></use></svg></a>
                 </div>
                 <div class="header-blue__col header-blue__col_2">
                     <!-- search -->
@@ -80,19 +82,163 @@
                     <div class="header-common__row header-common__row_1">
                         <!-- logo -->
                         <a href="/" class="header-common__logo"><img src="assets/img/logo.png" srcset="assets/img/logo-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                        <a href="/" class="header-common__logo header-common__logo_long"><img src="assets/img/logo-long.png" srcset="assets/img/logo-long-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
                         <!-- trophys -->
                         <ul class="header-common__trophies">
-                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a></li>
-                            <li><a href="#"><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a></li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.jpg" srcset="assets/img/trophies/trophy-detail.jpg" alt="Фото трофея">
+                                            <div>
+                                                <h3>Кубок мэра Москвы</h3>
+                                                <p>ежегодная однодневная шоссейная велогонка, проходящая в Москве в начале мая. Впервые была проведена в 2005 году, она вошла в календарь UCI Europe Tour под категорией 1.2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="header-common__row header-common__row_2">
@@ -223,7 +369,7 @@
                 <h2 class="matches__title title-hidden">Матчи</h2>
                 <ul class="matches__list">
                     <!-- 1 -->
-                    <li class="matches__item">
+                    <li class="matches__item matches__item_ended">
                         <a href="#">Подробнее о матче</a>
                         <p class="matches__date">12 сентября, чт</p>
                         <ul class="matches__team-list">
@@ -250,7 +396,7 @@
                         <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
                     </li>
                     <!-- 2 -->
-                    <li class="matches__item">
+                    <li class="matches__item matches__item_ended">
                         <a href="#">Подробнее о матче</a>
                         <p class="matches__date">18 сентября, сб</p>
                         <ul class="matches__team-list">
@@ -277,7 +423,7 @@
                         <p class="matches__info">Плей-офф, “ЦСКА Арена”</p>
                     </li>
                     <!-- 3 -->
-                    <li class="matches__item">
+                    <li class="matches__item matches__item_ended">
                         <a href="#">Подробнее о матче</a>
                         <p class="matches__date">23 сентября, пт</p>
                         <ul class="matches__team-list">
@@ -402,17 +548,17 @@
                         <!-- 1 -->
                         <li class="news-rows__item">
                             <p class="news-rows__date">09 сентября</p>
-                            <a href="#">Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</a>
-                            <a href="#">Марковин покинет «Северсталь»</a>
-                            <a href="#">Кирилл Кольцов: после небольшой паузы я полон сил для возвращения в хоккей</a>
-                            <a href="#">Бывший форвард «Авангарда» Андригетто близок к переходу в «Лозанну»</a>
+                            <a href="#"><p>Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</p><p class="news-rows__source">Спорт.ру</p></a>
+                            <a href="#"><p>Марковин покинет «Северсталь»</p><p class="news-rows__source">Спорт.ру</p></a>
+                            <a href="#"><p>Кирилл Кольцов: после небольшой паузы я полон сил для возвращения в хоккей</p><p class="news-rows__source">Спорт.ру</p></a>
+                            <a href="#"><p>Бывший форвард «Авангарда» Андригетто близок к переходу в «Лозанну»</p><p class="news-rows__source">Спорт.ру</p></a>
                         </li>
                         <!-- 2 -->
                         <li class="news-rows__item">
                             <p class="news-rows__date">08 сентября</p>
-                            <a href="#">Кирилл Кольцов — об окончании карьеры: «Полон сил для возвращения в хоккей еще минимум на сезон»</a>
-                            <a href="#">Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</a>
-                            <a href="#">Марковин покинет «Северсталь»</a>
+                            <a href="#"><p>Кирилл Кольцов — об окончании карьеры: «Полон сил для возвращения в хоккей еще минимум на сезон»</p><p class="news-rows__source">Спорт.ру</p></a>
+                            <a href="#"><p>Овечкин: за время карантина мы достроили дом, посадили дерево и родили ребенка</p><p class="news-rows__source">Спорт.ру</p></a>
+                            <a href="#"><p>Марковин покинет «Северсталь»</p><p class="news-rows__source">Спорт.ру</p></a>
                         </li>
                     </ul>
                 </div>
@@ -533,6 +679,12 @@
                             <p class="teams__team-num teams__team-num_2">114</p>
                         </li>
                     </ul>
+                    <div class="teams__tree teams__tree_tablet">
+                        <a href="#" class="teams__more">
+                            <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#union"></use></svg>
+                            <span>Командная статистика</span>
+                        </a>
+                    </div>
                 </div>
                 <!-- players -->
                 <div class="teams__col teams__col_2">
@@ -542,51 +694,63 @@
                             <p class="teams__players-role">Нападающие</p>
                             <img src="assets/img/palyers/player-1.png" srcset="assets/img/palyers/player-1-2x.png 2x" alt="Кацевич Марк" class="teams__players-photo">
                             <p class="teams__players-stat">Очки</p>
-                            <a href="#"><span>43</span><span>Кацевич Марк</span></a>
-                            <a href="#"><span>14</span><span>Кисаков Андрей</span></a>
-                            <a href="#"><span>6</span><span>Злодеев Дмитрий</span></a>
+                            <div class="teams__players-links">
+                                <a href="#"><span>43</span><span>Кацевич Марк</span></a>
+                                <a href="#"><span>14</span><span>Кисаков Андрей</span></a>
+                                <a href="#"><span>6</span><span>Злодеев Дмитрий</span></a>
+                            </div>
                         </li>
                         <!-- 2 -->
                         <li class="teams__players-item">
                             <p class="teams__players-role">Ассистенты</p>
                             <img src="assets/img/palyers/player-2.png" srcset="assets/img/palyers/player-2-2x.png 2x" alt="Жигалов Иван" class="teams__players-photo">
                             <p class="teams__players-stat">Передачи</p>
-                            <a href="#"><span>1</span><span>Жигалов Иван</span></a>
-                            <a href="#"><span>13</span><span>Кисаков Андрей</span></a>
-                            <a href="#"><span>5</span><span>Злодеев Дмитрий</span></a>
+                            <div class="teams__players-links">
+                                <a href="#"><span>1</span><span>Жигалов Иван</span></a>
+                                <a href="#"><span>13</span><span>Кисаков Андрей</span></a>
+                                <a href="#"><span>5</span><span>Злодеев Дмитрий</span></a>
+                            </div>
                         </li>
                         <!-- 3 -->
                         <li class="teams__players-item">
                             <p class="teams__players-role">Снайперы</p>
                             <img src="assets/img/palyers/player-2.png" srcset="assets/img/palyers/player-2-2x.png 2x" alt="Косолапов Антон" class="teams__players-photo">
                             <p class="teams__players-stat">Шайбы</p>
-                            <a href="#"><span>20</span><span>Косолапов Антон</span></a>
-                            <a href="#"><span>25</span><span>Кисаков Андрей</span></a>
-                            <a href="#"><span>7</span><span>Злодеев Дмитрий</span></a>
+                            <div class="teams__players-links">
+                                <a href="#"><span>20</span><span>Косолапов Антон</span></a>
+                                <a href="#"><span>25</span><span>Кисаков Андрей</span></a>
+                                <a href="#"><span>7</span><span>Злодеев Дмитрий</span></a>
+                            </div>
                         </li>
                         <!-- 4 -->
                         <li class="teams__players-item">
                             <p class="teams__players-role">Вратари</p>
                             <img src="assets/img/palyers/player-3.png" srcset="assets/img/palyers/player-3-2x.png 2x" alt="Кацевич Марк" class="teams__players-photo">
                             <p class="teams__players-stat">Надежность</p>
-                            <a href="#"><span>18</span><span>Кацевич Марк</span></a>
-                            <a href="#"><span>2.2</span><span>Кисаков Андрей</span></a>
-                            <a href="#"><span>2.25</span><span>Злодеев Дмитрий</span></a>
+                            <div class="teams__players-links">
+                                <a href="#"><span>18</span><span>Кацевич Марк</span></a>
+                                <a href="#"><span>2.2</span><span>Кисаков Андрей</span></a>
+                                <a href="#"><span>2.25</span><span>Злодеев Дмитрий</span></a>
+                            </div>
                         </li>
                     </ul>
+                    <div class="teams__tree teams__tree_tablet">
+                        <a href="#" class="teams__more">
+                            <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#chart"></use></svg>
+                            <span>Персональная статистика</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="teams__container container container_1">
-                <div class="players__tree">
-                    <a href="#" class="teams__more">
-                        <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#union"></use></svg>
-                        <span>Командная статистика</span>
-                    </a>
-                    <a href="#" class="teams__more">
-                        <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#chart"></use></svg>
-                        <span>Персональная статистика</span>
-                    </a>
-                </div>
+            <div class="teams__tree">
+                <a href="#" class="teams__more">
+                    <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#union"></use></svg>
+                    <span>Командная статистика</span>
+                </a>
+                <a href="#" class="teams__more">
+                    <svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#chart"></use></svg>
+                    <span>Персональная статистика</span>
+                </a>
             </div>
         </section>
         <!-- banner -->
@@ -606,10 +770,12 @@
                 <h2 class="gallery__title title-hidden">Галлерея</h2>
                 <div class="gallery__tab-wrapper" data-js-tab-container>
                     <div class="gallery__tab-select">
-                        <!-- select 1 -->
-                        <a href="#" data-js-tab-select="1">Видео</a>
-                        <!-- select 2 -->
-                        <a href="#" data-js-tab-select="2">Фото</a>
+                        <div class="gallery__tab-buttons">
+                            <!-- select 1 -->
+                            <a href="#" data-js-tab-select="1">Видео</a>
+                            <!-- select 2 -->
+                            <a href="#" data-js-tab-select="2">Фото</a>
+                        </div>
                         <!-- more -->
                         <div class="gallery__more">
                             <a href="#" data-js-tab-content="1"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg><span>Все видео</span></a>
@@ -792,6 +958,10 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="gallery__more gallery__more_mobile">
+                        <a href="#" data-js-tab-content="1"><svg width="16" height="16"><use xlink:href="assets/img/sprites/sprite-icons.svg#play"></use></svg><span>Все видео</span></a>
+                        <a href="#" data-js-tab-content="2"><svg width="16" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#photo"></use></svg><span>Все фото</span></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -951,6 +1121,7 @@
                 <!-- top -->
                 <div class="footer-common__wrapper footer-common__wrapper_1">
                     <a href="/" class="footer-common__logo"><img src="assets/img/logo-white-long.png" srcset="assets/img/logo-white-long-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                    <a href="/" class="footer-common__logo_mobile"><img src="assets/img/logo-white-long-mobile.png" srcset="assets/img/logo-white-long-2x-mobile.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
                     <ul class="footer-common__social">
                         <li><a href="#" aria-label="Facebook"><svg class="fb"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
                         <li><a href="#" aria-label="Twitter"><svg class="tw"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>

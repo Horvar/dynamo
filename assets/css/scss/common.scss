@@ -13,6 +13,12 @@
         @media (min-width: 1441px) {
             margin-top: 40px;
         }
+        @media (max-width: 992px) {
+            margin-top: 16px;
+        }
+        @media (max-width: 540px) {
+            margin-top: 8px;
+        }
     }
     a {
         display: block;
@@ -30,10 +36,20 @@
         @media (min-width: 1600px) {
             flex: 0 1 calc(50% - 20px);
         }
+        @media (max-width: 768px) {
+            flex: 0 1 100%;
+        }
         & + * {
             margin-left: 32px;
             @media (min-width: 1600px) {
                 margin-left: 40px;
+            }
+            @media (max-width: 768px) {
+                margin-left: 0;
+                margin-top: 16px;
+            }
+            @media (max-width: 540px) {
+                margin-top: 8px;
             }
         }
         &>img {
@@ -43,6 +59,9 @@
 }
 .banner-double__container {
     display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .title-hidden {
@@ -58,25 +77,38 @@ h2 {
     @media (min-width: 1600px) {
         font-size: 40px;
     }
+    @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 .container {
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     &_1 {
         width: calc(1200px + 40px * 2);
         padding: 0 40px;
         @media (min-width: 1441px) {
-            width: 100%;
+            width: 1920px;
             padding: 0 120px;
+        }
+        @media (max-width: 768px) {
+            padding: 0 24px;
+        }
+        @media (max-width: 540px) {
+            padding: 0 16px;
         }
     }
     &_2 {
-        width: 100%;
+        width: 1920px;
         padding: 0 35px;
         @media (min-width: 1441px) {
             padding: 0 52px;
+        }
+        @media (max-width: 1200px) {
+            padding: 0;
         }
     }
 }

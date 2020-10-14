@@ -8,6 +8,10 @@
     @media (min-width: 1600px) {
         padding-bottom: 137px;
     }
+    @media (max-width: 768px) {
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
 }
 
 .footer-partners__content {
@@ -15,6 +19,11 @@
         margin-top: 65px;
         @media (min-width: 1600px) {
             margin-top: 43px;
+        }
+        @media (max-width: 540px) {
+            margin-top: 24px;
+            padding-top: 32px;
+            border-top: 1px solid rgba($themeWhite, .2);
         }
     }
     &_1 {
@@ -24,10 +33,17 @@
         .footer-partners__list {
             justify-content: center;
             margin-right: -77px;
+            @media (max-width: 992px) {
+                margin-right: pxToVw(320, -31px);
+            }
         }
         .footer-partners__item {
             margin-right: 77px;
             flex: 0 1 calc(100% / 4 - 77px);
+            min-width: 122px;
+            @media (max-width: 992px) {
+                margin-right: pxToVw(320, 31px);
+            }
             &>a {
                 &>img {
                     max-height: 183px;
@@ -42,6 +58,22 @@
         .footer-partners__caption {
             margin-bottom: 49px;
         }
+        .footer-partners__list {
+            @media (max-width: 620px) {
+                margin-right: -16px;
+                margin-bottom: -40px;
+            }
+        }
+        .footer-partners__item {
+            @media (max-width: 620px) {
+                flex: 0 1 calc(100% / 2 - 16px);
+                margin-right: 16px;
+                margin-bottom: 40px;
+            }
+            img {
+                max-width: 110px;
+            }
+        }
     }
 }
 .footer-partners__caption {
@@ -55,6 +87,14 @@
         font-size: 28px;
         line-height: 32px;
     }
+    @media (max-width: 992px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    @media (max-width: 540px) {
+        padding: 0;
+        border: none;
+    }
 }
 
 .footer-partners__list {
@@ -64,7 +104,7 @@
     margin-bottom: -80px;
 }
 .footer-partners__item {
-    flex: 0 1 calc(100% / 6 - 45px);
+    flex: 1 1 calc(100% / 6 - 45px);
     margin-right: 45px;
     margin-bottom: 80px;
     &>a {
@@ -81,6 +121,11 @@
             text-align: center;
             opacity: .5;
             margin-top: 24px;
+            @media (max-width: 540px) {
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 16px;
+            }
         }
     }
 }

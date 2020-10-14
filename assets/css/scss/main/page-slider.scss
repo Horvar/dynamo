@@ -17,13 +17,18 @@
                 height: pxToVw(1920, 658px);
                 max-height: 658px;
             }
+            @media (max-width: 540px) {
+                height: pxToVw(320, 375px);
+            }
             &>a {
                 display: block;
                 width: 100%;
+                height: 100%;
                 outline-offset: -2px;
                 &>img {
                     display: block;
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
@@ -33,6 +38,9 @@
             display: flex;
             justify-content: center;
             margin-top: 24px;
+            @media (max-width: 768px) {
+                margin-top: 16px;
+            }
             &>li {
                 width: auto;
                 height: auto;
@@ -65,18 +73,44 @@
         bottom: calc(50px + 44px);
         left: 0;
         pointer-events: none;
+        @media (max-width: 768px) {
+            bottom: calc(20px + 44px);
+        }
         li {
             margin-top: 10px;
             padding: 0 68px;
             box-sizing: border-box;
+            @media (max-width: 992px) {
+                padding: 0 24px;
+            }
+            @media (max-width: 540px) {
+                padding: 0 16px;
+            }
             h3 {
                 font-size: 48px;
                 line-height: 32px;
                 margin-bottom: 33px;
+                @media (max-width: 768px) {
+                    font-size: 32px;
+                    line-height: 32px;
+                    margin-bottom: 16px;
+                }
+                @media (max-width: 540px) {
+                    font-size: 24px;
+                    line-height: 24px;
+                }
             }
             p {
                 font-size: 24px;
-                line-height: 24px
+                line-height: 24px;
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                @media (max-width: 540px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
             }
         }
     }
@@ -94,6 +128,12 @@
     box-sizing: border-box;
 
     pointer-events: none;
+    @media (max-width: 992px) {
+        padding: 0 24px;
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
     &>button {
         width: 46px;
         height: 46px;
