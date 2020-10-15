@@ -29,7 +29,100 @@
                         </ul>
                     </nav>
                     <!-- hamburger -->
-                    <a href="#" class="header-blue__hamburger"><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#hamburger"></use></svg></a>
+                    <div class="header-blue__hamburger" data-js-hamburger-container>
+                        <a href="#" class="header-blue__hamburger-button" data-js-hamburger-button><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#hamburger"></use></svg></a>
+                        <div class="header-blue__hamburger-overlay" data-js-hamburger-menu data-js-hamburger-close></div>
+                        <div class="header-blue__hamburger-menu" data-js-hamburger-menu>
+                            <a href="#" class="header-blue__hamburger-close" aria-label="Закрыть меню" data-js-hamburger-close><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#cross"></use></svg></a>
+                            <ul class="header-blue__hamburger-social">
+                                <li><a href="#" aria-label="Facebook"><svg width="8" height="15"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
+                                <li><a href="#" aria-label="Twitter"><svg width="15" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>
+                                <li><a href="#" aria-label="Instagram"><svg width="14" height="14"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg></a></li>
+                                <li><a href="#" aria-label="ВКонтакте"><svg width="19" height="11"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg></a></li>
+                                <li><a href="#" aria-label="YouTube"><svg width="18" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg></a></li>
+                            </ul>
+                            <div class="header-blue__hamburger-search">
+                                <p><svg width="18" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#search"></use></svg><span>Поиск</span></p>
+                                <input type="search">
+                            </div>
+                            <nav class="header-blue__hamburger-nav">
+                                <ul>
+                                    <li><a href="#"><span>Билеты</span></a></li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Клуб</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Наша история</a></li>
+                                                    <li><a href="#">Высший совет</a></li>
+                                                    <li><a href="#">Попечительский совет</a></li>
+                                                    <li><a href="#">Руководство</a></li>
+                                                    <li><a href="#">База</a></li>
+                                                    <li><a href="#">Контакты</a></li>
+                                                    <li><a href="#">Документы</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Команда</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Состав</a></li>
+                                                    <li><a href="#">Тренерский штаб</a></li>
+                                                    <li><a href="#">Персонал</a></li>
+                                                    <li><a href="#">Лазарет</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#"><span>Календарь</span></a></li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Статистика</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Командная</a></li>
+                                                    <li><a href="#">Персональная</a></li>
+                                                    <li><a href="#">Сравнение команд</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Пресс-центр</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Новости</a></li>
+                                                    <li><a href="#">Интервью</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Медиа</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Фото</a></li>
+                                                    <li><a href="#">Динамо ТВ</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#"><span>Фан-зона</span></a></li>
+                                    <li><a href="#"><span>Магазин</span></a></li>
+                                </ul>
+                            </nav>
+                            <ul class="header-blue__hamburger-links">
+                                <li><a href="#">«Динамо» МО</a></li>
+                                <li><a href="#">MХК «Динамо» </a></li>
+                                <li><a href="#">Хоккейная академия «Динамо»</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="header-blue__col header-blue__col_2">
                     <!-- search -->
