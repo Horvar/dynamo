@@ -8,6 +8,9 @@
 .news-rows__item {
     & + & {
         margin-top: 3em;
+        @media (max-width: 768px) {
+            margin-top: 2em;
+        }
     }
     &>a {
         display: block;

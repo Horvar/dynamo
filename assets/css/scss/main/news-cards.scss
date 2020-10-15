@@ -16,6 +16,17 @@
     @media (min-width: 1600px) {
         margin-bottom: -58px;
     }
+    @media (max-width: 1200px) {
+        margin-right: -16px;
+        margin-bottom: -40px;
+    }
+    @media (max-width: 992px) {
+        margin-right: -24px;
+    }
+    @media (max-width: 420px) {
+        margin-right: 0;
+        margin-bottom: -24px;
+    }
 }
 .news-cards__item {
     flex: 0 1 calc(33% - 32px);
@@ -27,6 +38,20 @@
     }
     @media (min-width: 1600px) {
         margin-bottom: 58px;
+    }
+    @media (max-width: 1200px) {
+        flex: 0 1 calc(33% - 16px);
+        margin-right: 16px;
+        margin-bottom: 40px;
+    }
+    @media (max-width: 992px) {
+        flex: 0 1 calc(50% - 24px);
+        margin-right: 24px;
+    }
+    @media (max-width: 420px) {
+        flex: 0 1 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
     }
     &:active {
         .news-cards__name {
@@ -66,6 +91,15 @@
         height: pxToVw(1920, 263px);
         max-height: 263px;
         margin-bottom: 20px;
+    }
+    @media (max-width: 992px) {
+        height: pxToVw(992, 160px);
+    }
+    @media (max-width: 768px) {
+        height: pxToVw(768, 200px);
+    }
+    @media (max-width: 420px) {
+        height: pxToVw(320, 180px);
     }
     img {
         width: 100%;
@@ -108,5 +142,9 @@
     @media (min-width: 1600px) {
         font-size: 24px;
         line-height: 28px;
+    }
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
     }
 }

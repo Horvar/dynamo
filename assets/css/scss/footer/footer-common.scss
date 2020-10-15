@@ -15,6 +15,7 @@
 .footer-common__wrapper {
     display: flex;
     justify-content: space-between;
+    position: relative;
     &_1 {
         align-items: center;
         margin-bottom: 36px;
@@ -209,5 +210,78 @@
     }
     &>img {
         max-width: 100%;
+    }
+}
+
+.footer-common__hamburger {
+    position: absolute;
+    top: 107px;
+    left: 0;
+    display: none;
+    @media (max-width: 992px) {
+        display: block;
+    }
+    @media (max-width: 540px) {
+        top: 85px;
+    }
+}
+
+.footer-common__hamburger-button {
+    display: inline-block;
+    &>svg {
+        width: 24px;
+        height: 24px;
+        fill: $themeWhite;
+    }
+}
+
+.footer-common__hamburger-menu {
+    background: $themeBlueDark;
+    width: 100vw;
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    padding-bottom: 80px;
+    z-index: 1;
+
+    display: none;
+    @media (max-width: 540px) {
+        left: -16px;
+        top: -12px;
+    }
+    &.is-active {
+        display: block;
+    }
+    &>ul {
+        margin: 0 40px;
+        @media (max-width: 540px) {
+            margin: 0 16px;
+        }
+        & + ul {
+            border-top: 1px solid rgba($themeWhite, .2);
+            padding-top: 16px;
+            margin-top: 16px;
+        }
+        &>li {
+            &>a {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.footer-common__hamburger-close {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    @media (max-width: 540px) {
+        margin-left: 6px;
+    }
+    &>svg {
+        width: 16px;
+        height: 16px;
+        fill: $themeWhite;
     }
 }

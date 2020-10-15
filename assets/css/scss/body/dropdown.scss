@@ -95,15 +95,18 @@
 }
 
 .dropdown__trophy {
+    background: $themeBlue;
     display: flex;
+    border: 1px solid $themeBlue;
     img {
         width: auto;
         height: 100%;
     }
     &>div {
-        padding: 24px 34px 15px 16px;
+        padding: 32px 30px 16px 32px;
         box-sizing: border-box;
         &>h3 {
+            color: $themeWhite;
             font-size: 20px;
             line-height: 24px;
             margin-bottom: 8px;
@@ -111,7 +114,7 @@
         &>p {
             font-size: 14px;
             line-height: 20px;
-            color: rgba($themeBlack, .7);
+            color: rgba($themeWhite, .8);
             white-space: break-spaces;
         }
     }

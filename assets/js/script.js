@@ -188,7 +188,7 @@ $(document).ready(function(){
     $('*[data-js-tab-select=1]').addClass('is-active').attr('tabindex', -1) //active first select
 
     $('*[data-js-tab-select]').click(function(){
-      $('*[data-js-tab-container] *').removeClass('is-active'); $('*[data-js-tab-content]').fadeOut(0) //disable all
+      $(this).parents('*[data-js-tab-container]').find('*').removeClass('is-active'); $(this).parents('*[data-js-tab-container]').find('*[data-js-tab-content]').fadeOut(0) //disable all
       
       $('*[data-js-tab-select]').attr('tabindex', '') //make all selects focusable
       $(this)
@@ -213,7 +213,7 @@ $(document).ready(function(){
   })
 
   //close elements by window click
-  $(window).click(function(){
+  $(document).click(function(){
     //close search
       $('.header-blue__search').removeClass('header-blue__search_opened')
       $('#searchInput').val('')
@@ -224,8 +224,18 @@ $(document).ready(function(){
     e.stopPropagation();
   })
 
+  //hamburger
+  $('[data-js-hamburger-button]').click(function(){
+    $(this).parents('[data-js-hamburger-container]').find('[data-js-hamburger-menu]').addClass('is-active')
+    return false
+  })
+  $('[data-js-hamburger-close]').click(function(){
+    $(this).parents('[data-js-hamburger-container]').find('[data-js-hamburger-menu]').removeClass('is-active')
+    return false
+  })
+
   //matches mobile scroll
-  if ( $('.matches__item_ended').length ) {
+  if ( $('.matches__item_ended').length && $(document).width() <= 540 ) {
     var offset = $('.matches__item_ended:last + .matches__item').offset().left
     var item = $('.matches__item').outerWidth()
     var window = $('.matches__list').outerWidth()
