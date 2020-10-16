@@ -259,19 +259,24 @@
 .header-blue__hamburger-menu {
     background: $themeBlue;
     width: 300px;
-    position: absolute;
-    top: -13px;
-    left: -40px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
     padding: 0 40px;
     box-sizing: border-box;
     display: none;
+    flex-direction: column;
     @media (max-width: 540px) {
         width: 208px;
         padding: 0 16px;
-        left: -16px;
+    }
+    &::-webkit-scrollbar {
+        display: none;
     }
     &.is-active {
-        display: block;
+        display: flex;
     }
 }
 .header-blue__hamburger-close {
@@ -409,6 +414,7 @@
 }
 
 .header-blue__hamburger-links {
+    height: 100%;
     width: calc(100% + 40px * 2);
     margin-left: -40px;
     padding: 24px 40px 27px;

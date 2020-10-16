@@ -79,6 +79,7 @@
     @media (max-width: 1200px) {
         flex: 0 1 calc(25% - 16px);
         margin-right: 16px;
+        margin-bottom: 28px;
     }
     @media (max-width: 992px) {
         flex: 0 1 calc(50% - 40px);
@@ -125,7 +126,7 @@
 
 .gallery__photo {
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     z-index: -1;
     position: relative;
     @media (min-width: 1600px) {
@@ -167,7 +168,7 @@
     color: $themeBlue;
     font-size: 14px;
     line-height: 20px;
-    z-index: 12;
+    z-index: 1;
     @media (min-width: 1600px) {
         font-size: 16px;
         line-height: 24px;
@@ -178,8 +179,8 @@
 }
 .gallery__name {
     font-size: 20px;
-    line-height: 24px;
-    margin-top: 8px;
+    line-height: 22px;
+    margin-top: 2px;
     @media (min-width: 1600px) {
         font-size: 24px;
         line-height: 30px;

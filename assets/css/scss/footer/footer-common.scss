@@ -238,15 +238,20 @@
 .footer-common__hamburger-menu {
     background: $themeBlueDark;
     width: 100vw;
-    position: absolute;
-    left: -40px;
-    top: -6px;
+    height: 100vh;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding-bottom: 80px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    box-sizing: border-box;
     z-index: 1;
 
     display: none;
-    @media (max-width: 540px) {
-        left: -16px;
+    &::-webkit-scrollbar {
+        display: none;
     }
     &.is-active {
         display: block;
