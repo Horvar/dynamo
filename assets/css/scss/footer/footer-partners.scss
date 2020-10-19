@@ -29,7 +29,7 @@
     }
     &_1 {
         .footer-partners__caption {
-            margin-bottom: 24px;
+            margin-bottom: 0;
         }
         .footer-partners__list {
             justify-content: center;
@@ -41,7 +41,7 @@
         .footer-partners__item {
             margin-right: 77px;
             flex: 0 1 calc(100% / 4 - 77px);
-            min-width: 122px;
+            min-width: 120px;
             @media (max-width: 992px) {
                 margin-right: pxToVw(320, 28px);
             }
@@ -49,7 +49,7 @@
                 &>img {
                     max-height: 183px;
                     @media (min-width: 1600px) {
-                        max-height: 227px;
+                        max-height: 170px;
                     }
                 }
             }
