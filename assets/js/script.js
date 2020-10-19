@@ -254,4 +254,15 @@ $(document).ready(function(){
     })
   }
 
+  //news/gallery item hover expand
+  // $('.gallery__item').mouseenter(function(){
+  //   let startH = $(this).find('img').outerHeight()
+  //   let endH = startH + 20
+  //   $(this).find('.gallery__photo').height(endH)
+
+  //   $(this).mouseleave(function(){
+  //     $(this).find('.gallery__photo').height('')
+  //   })
+  // })
+
 })

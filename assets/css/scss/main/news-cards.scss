@@ -74,8 +74,9 @@
             color: $themeBlue;
         }
         & + .news-cards__photo {
+            transform: scaleY(1.1);
             img {
-                transform: scale(1.1);
+                transform: scaleY(.91);
             }
         }
     }
@@ -86,6 +87,8 @@
     position: relative;
     overflow: hidden;
     z-index: -1;
+    transition: .5s;
+    height: pxToVw(1440, 160px);
     margin-bottom: 10px;
     @media (min-width: 1600px) {
         height: pxToVw(1920, 263px);
@@ -102,10 +105,13 @@
         height: pxToVw(320, 180px);
     }
     img {
-        width: 100%;
+        transition: .5s;
+        margin-top: pxToVw(1440, -10px);
         object-fit: cover;
-        object-position: top;
-        transition: 1s;
+        object-position: center;
+        width: 100%;
+        min-height: calc(100% + #{pxToVw(1440, 20px)});
+        margin-top: -20px;
     }
 }
 .news-cards__date {
