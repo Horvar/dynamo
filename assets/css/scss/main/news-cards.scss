@@ -73,26 +73,39 @@
         & + .news-cards__name {
             color: $themeBlue;
         }
-        & + .news-cards__photo {
-            transform: scaleY(1.1);
-            img {
-                transform: scaleY(.91);
+    }
+    @media (min-width: 993px) {
+        &:hover, &:focus {
+            & + .news-cards__photo {
+                height: pxToVw(1440, 180px);
+                margin-top: pxToVw(1440, -10px);
+                @media (min-width: 1600px) {
+                    margin-top: pxToVw(1920, -20px);
+                    height: pxToVw(1920, 300px);
+                }
+                img {
+                    margin-top: 0;
+                }
+                svg {
+                }
             }
+        }
+    }
+    &:active {
+        & ~ .gallery__photo {
+            opacity: .5;
         }
     }
 }
 
 .news-cards__photo {
-    height: pxToVw(1440, 160px);
     position: relative;
     overflow: hidden;
     z-index: -1;
-    transition: .5s;
+    transition: .5s, opacity 0s;
     height: pxToVw(1440, 160px);
-    margin-bottom: 10px;
     @media (min-width: 1600px) {
-        height: pxToVw(1920, 263px);
-        max-height: 263px;
+        height: pxToVw(1920, 260px);
         margin-bottom: 20px;
     }
     @media (max-width: 992px) {
@@ -110,8 +123,15 @@
         object-fit: cover;
         object-position: center;
         width: 100%;
-        min-height: calc(100% + #{pxToVw(1440, 20px)});
-        margin-top: -20px;
+        height: pxToVw(1440, 180px);
+        @media (min-width: 1600px) {
+            margin-top: pxToVw(1920, -20px);
+            height: pxToVw(1920, 300px);
+            max-height: 320px;
+        }
+        @media (max-width: 992px) {
+            height: 100%;
+        }
     }
 }
 .news-cards__date {
