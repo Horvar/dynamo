@@ -58,28 +58,20 @@
             color: $themeBlueDark;
         }
     }
-}
-
-.news-cards__hidden-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: transparent;
-    z-index: 1;
     &:hover, &:focus {
-        & + .news-cards__name {
+        & > .news-cards__name {
             color: $themeBlue;
+            margin-bottom: -10px;
+            transition: .25s;
         }
-        & + .news-cards__photo {
+        & > .news-cards__photo {
             height: calc(#{pxToVw(1440, 160px)} + 20px);
             margin-top: -10px;
-            margin-bottom: calc(10px - 10px);
+            margin-bottom: calc(10px - 0px);
+            transition: .25s;
             @media (min-width: 1600px) {
                 height: calc(#{pxToVw(1920, 263px)} + 20px);
-                margin-bottom: calc(20px - 10px);
+                margin-bottom: calc(20px - 0px);
             }
             @media (max-width: 992px) {
                 height: calc(#{pxToVw(992, 160px)} + 20px);
@@ -92,9 +84,24 @@
             }
             img {
                 margin-top: 0;
+                transition: .25s;
             }
         }
+        .news-cards__hidden-link {
+            padding-bottom: 10px;
+        }
     }
+}
+
+.news-cards__hidden-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    z-index: 1;
 }
 
 .news-cards__photo {
@@ -102,7 +109,9 @@
     position: relative;
     overflow: hidden;
     z-index: -1;
-    transition: .25s;
+    transition: .15s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
     margin-bottom: 10px;
     @media (min-width: 1600px) {
         height: pxToVw(1920, 263px);
@@ -118,7 +127,9 @@
         height: pxToVw(320, 180px);
     }
     img {
-        transition: .25s;
+        transition: .15s;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
         margin-top: pxToVw(1440, -10px);
         object-fit: cover;
         object-position: center;
@@ -170,6 +181,7 @@
     font-size: 20px;
     line-height: 22px;
     margin-top: 2px;
+    transition: .15s;
     @media (min-width: 1600px) {
         font-size: 24px;
         line-height: 28px;
