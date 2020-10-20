@@ -72,7 +72,7 @@
     margin-bottom: 35px;
     position: relative;
     overflow: hidden;
-    padding-top: pxToVw(1440, 10px);
+    padding-top: 10px;
     @media (min-width: 1600px) {
         flex: 0 1 calc(25% - 43px);
         margin-right: 43px;
@@ -116,22 +116,32 @@
     left: 0;
     color: transparent;
     z-index: 0;
-    @media (min-width: 993px) {
-        &:hover, &:focus {
-            & + .gallery__photo {
-                height: pxToVw(1440, 180px);
-                margin-top: pxToVw(1440, -10px);
-                img {
-                    margin-top: 0;
+    &:hover, &:focus {
+        & + .gallery__photo {
+            height: calc(#{pxToVw(1440, 160px)} + 20px);
+            margin-top: -10px;
+            margin-bottom: calc(10px - 10px);
+            @media (min-width: 1600px) {
+                margin-bottom: calc(16px  - 10px);
+            }
+            @media (max-width: 992px) {
+                height: calc(#{pxToVw(992, 220px)} + 20px);
+            }
+            @media (max-width: 420px) {
+                height: calc(#{pxToVw(320, 162px)} + 20px);
+            }
+            img {
+                margin-top: 0;
+                @media (min-width: 1600px) {
+                    margin-bottom: calc(16px  - 10px);
                 }
-                svg {
+                @media (max-width: 992px) {
+                    height: calc(#{pxToVw(992, 220px)} + 20px);
+                }
+                @media (max-width: 420px) {
+                    height: calc(#{pxToVw(320, 162px)} + 20px);
                 }
             }
-        }
-    }
-    &:active {
-        & ~ .gallery__photo {
-            opacity: .5;
         }
     }
 }
@@ -141,7 +151,7 @@
     margin-bottom: 10px;
     z-index: -1;
     position: relative;
-    transition: .5s, opacity 0s;
+    transition: .25s;
     height: pxToVw(1440, 160px);
     @media (min-width: 1600px) {
         margin-bottom: 16px;
@@ -153,16 +163,12 @@
         height: pxToVw(320, 162px);
     }
     img {
-        transition: .5s;
-        margin-top: pxToVw(1440, -10px);
+        transition: .25s;
+        margin-top: -10px;
         object-fit: cover;
         object-position: center;
         width: 100%;
-        height: pxToVw(1440, 180px);
-        @media (max-width: 992px) {
-            margin-top: 0;
-            height: 100%;
-        }
+        height: calc(#{pxToVw(1440, 160px)} + 20px);
     }
     svg {
         width: 49px;
