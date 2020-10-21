@@ -94,8 +94,8 @@ $(document).ready(function(){
     arrows: false,
     fade: true,
     accessibility: false,
-    autoplay: true,
-    autoplaySpeed: 3000
+    // autoplay: true,
+    // autoplaySpeed: 3000
   })
   $('*[data-js-slick-screen-2]').slick({
     slidesToShow: 4,
@@ -119,8 +119,8 @@ $(document).ready(function(){
     prevArrow: '#pageSliderPrev',
     nextArrow: '#pageSliderNext',
     accessibility: false,
-        // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: true,
     responsive: [
       {
