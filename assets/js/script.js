@@ -254,4 +254,15 @@ $(document).ready(function(){
     })
   }
 
+  //fixing blue-header on scroll
+  var startHeaderOffset = $('.header__header-blue').offset().top
+  $(document).scroll(function(){
+    console.log(startHeaderOffset)
+    if ( $('.header__header-blue').length && $(document).scrollTop() >= startHeaderOffset ) {
+      $('.header__header-blue').addClass('header__header-blue_fixed')
+    } else {
+      $('.header__header-blue').removeClass('header__header-blue_fixed')
+    }
+  })
+
 })

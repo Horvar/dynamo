@@ -797,6 +797,20 @@ h2 {
   -webkit-transition: .5s;
   transition: .5s; }
 
+/* line 1, scss/header/header.scss */
+.header {
+  z-index: 1; }
+
+/* line 7, scss/header/header.scss */
+.header__header-blue {
+  z-index: 2; }
+  /* line 9, scss/header/header.scss */
+  .header__header-blue_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
+
 /* line 1, scss/header/header-blue.scss */
 .header-blue {
   min-height: 48px;
@@ -4548,4 +4562,5 @@ h2 {
     width: 16px;
     height: 16px;
     fill: #fff; }
+
 /*# sourceMappingURL=styles.css.map */
