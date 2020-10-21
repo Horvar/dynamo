@@ -94,8 +94,8 @@ $(document).ready(function(){
     arrows: false,
     fade: true,
     accessibility: false,
-    // autoplay: true,
-    // autoplaySpeed: 3000
+    autoplay: true,
+    autoplaySpeed: 3000
   })
   $('*[data-js-slick-screen-2]').slick({
     slidesToShow: 4,
