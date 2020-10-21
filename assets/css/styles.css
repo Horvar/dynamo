@@ -2428,8 +2428,7 @@ h2 {
     display: block;
     font-size: 24px;
     line-height: 32px;
-    color: #0033A0;
-    opacity: .5;
+    color: #11181F;
     margin-bottom: -1px; }
     @media (min-width: 1600px) {
       /* line 50, scss/main/news.scss */
@@ -2441,17 +2440,17 @@ h2 {
       .news__tab-buttons > a {
         font-size: 20px;
         line-height: 24px; } }
-    /* line 65, scss/main/news.scss */
+    /* line 64, scss/main/news.scss */
     .news__tab-buttons > a:hover, .news__tab-buttons > a:focus {
-      opacity: 1; }
-    /* line 68, scss/main/news.scss */
+      color: #0033A0; }
+    /* line 67, scss/main/news.scss */
     .news__tab-buttons > a.is-active {
       pointer-events: none;
-      opacity: 1;
+      color: #0033A0;
       position: relative;
       padding-bottom: 6px;
       border-bottom: 2px solid #0033A0; }
-    /* line 75, scss/main/news.scss */
+    /* line 74, scss/main/news.scss */
     .news__tab-buttons > a + a {
       margin-left: 32px; }
 
