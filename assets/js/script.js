@@ -118,9 +118,9 @@ $(document).ready(function(){
     asNavFor: '[data-js-slick-page-2]',
     prevArrow: '#pageSliderPrev',
     nextArrow: '#pageSliderNext',
-    autoplay: true,
     accessibility: false,
-    autoplaySpeed: 3000,
+        // autoplay: true,
+    // autoplaySpeed: 3000,
     dots: true,
     responsive: [
       {
@@ -253,16 +253,5 @@ $(document).ready(function(){
       }
     })
   }
-
-  //news/gallery item hover expand
-  // $('.gallery__item').mouseenter(function(){
-  //   let startH = $(this).find('img').outerHeight()
-  //   let endH = startH + 20
-  //   $(this).find('.gallery__photo').height(endH)
-
-  //   $(this).mouseleave(function(){
-  //     $(this).find('.gallery__photo').height('')
-  //   })
-  // })
 
 })
