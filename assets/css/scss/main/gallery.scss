@@ -1,8 +1,43 @@
 .gallery {}
 
-.gallery__container {}
+.gallery__container {
+    display: none;
+    &_mobile {
+        @media (max-width: 992px) {
+            display: flex;
+        }
+    }
+    &_desktop {
+        @media (min-width: 993px) {
+            display: flex;
+        }
+    }
+}
 
-.gallery__title {}
+.gallery__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery__col {
+    &_1 {
+        margin-right: 33px;
+        @media (min-width: 1600px) {
+            margin-right: 43px;
+        }
+        @media (max-width: 1200px) {
+            margin-right: 16px;
+        }
+    }
+    &_2 {}
+}
+
+.gallery__title {
+    margin-bottom: 24px;
+    @media (min-width: 1600px) {
+        margin-bottom: 32px;
+    }
+}
 
 .gallery__tab-select {
     margin-bottom: 41px;
@@ -49,11 +84,15 @@
     flex-wrap: wrap;
     margin-right: -33px;
     margin-bottom: -35px;
+    @media (min-width: 993px) {
+        margin-right: -43px;
+    }
     @media (min-width: 1600px) {
         margin-right: -43px;
     }
     @media (max-width: 1200px) {
         margin-right: -16px;
+        margin-bottom: -18px;
     }
     @media (max-width: 992px) {
         margin-right: -40px;
@@ -71,14 +110,18 @@
     margin-right: 33px;
     margin-bottom: 35px;
     position: relative;
-    padding-top: 10px;
     transition: .15s;
+    @media (min-width: 993px) {
+        flex: 0 1 calc(50% - 33px);
+        margin-right: 33px;
+        margin-bottom: 35px;
+    }
     @media (min-width: 1600px) {
-        flex: 0 1 calc(25% - 43px);
+        flex: 0 1 calc(50% - 43px);
         margin-right: 43px;
     }
     @media (max-width: 1200px) {
-        flex: 0 1 calc(25% - 16px);
+        flex: 0 1 calc(50% - 16px);
         margin-right: 16px;
         margin-bottom: 18px;
     }
@@ -151,6 +194,7 @@
     height: pxToVw(1440, 160px);
     @media (min-width: 993px) {
         padding: 20px 0;
+        margin-top: -40px;
         transform: translateY(20px);
     }
     @media (min-width: 1600px) {
@@ -258,7 +302,13 @@
 }
 
 .gallery__more {
-    margin-left: auto;
+    margin-top: 24px;
+    @media (min-width: 1600px) {
+        margin-top: 32px;
+    }
+    @media (max-width: 992px) {
+        margin-left: auto;
+    }
     @media (max-width: 420px) {
         display: none;
     }

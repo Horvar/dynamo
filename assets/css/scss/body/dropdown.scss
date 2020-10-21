@@ -95,27 +95,47 @@
 }
 
 .dropdown__trophy {
-    background: $themeBlue;
     display: flex;
-    border: 1px solid $themeBlue;
+    background: url(../img/trophies/trophy-bg.png) $themeWhite;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding: 30px 42px 18px 24px;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $themeBlue;
+        border-radius: 4px 4px 0 0;
+    }
+    @media 
+    (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        background: url(../img/trophies/trophy-bg-2x.png) $themeWhite;
+    }
     img {
         width: auto;
         height: 100%;
     }
     &>div {
-        padding: 32px 30px 16px 32px;
-        box-sizing: border-box;
+        margin-left: 45px;
         &>h3 {
-            color: $themeWhite;
-            font-size: 20px;
-            line-height: 24px;
-            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;            
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: $themeBlue;
         }
         &>p {
-            font-size: 14px;
-            line-height: 20px;
-            color: rgba($themeWhite, .8);
-            white-space: break-spaces;
+            font-size: 70px;
+            line-height: 84px;            
+            letter-spacing: -0.04em;
+            text-align: center;          
+            color: rgba($themeBlue, .2);
         }
     }
 }
