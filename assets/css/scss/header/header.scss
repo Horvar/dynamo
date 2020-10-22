@@ -1,15 +1,60 @@
 .header {
-    // position: sticky;
-    // top: 0;
     z-index: 1;
 }
 
 .header__header-blue {
-    z-index: 2;
+    z-index: 100;
     &_fixed {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        .header-blue__social {
+            display: none;
+        }
+        .header-blue__language {
+            @media (min-width: 993px) {
+                display: none;
+            }
+        }
+        .header-blue__nav {
+            display: none;
+        }
+        .header-blue__nav-fixed {
+            @media (min-width: 993px) {
+                display: flex;
+            }
+        }
+        .header-blue__search {
+            a {
+                opacity: .7;
+                &:hover, &:focus {
+                    opacity: 1;
+                }
+            }
+            &_opened {
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+        .header-blue__sign {
+            @media (min-width: 993px) {
+                a {
+                    opacity: .7;
+                    &:hover, &:focus {
+                        opacity: 1;
+                    }
+                    &:before {
+                        opacity: .7;  
+                    }
+                }
+            }
+        }
+        .header-blue__logo {
+            @media (min-width: 993px) {
+                display: block;
+            }
+        }
     }
 }

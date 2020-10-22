@@ -552,57 +552,63 @@ button {
   height: 0;
   overflow: hidden; }
 
-/* line 74, scss/common.scss */
+/* line 73, scss/common.scss */
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 46px; }
+
+/* line 78, scss/common.scss */
 h2 {
   font-size: 32px;
   line-height: 40px; }
   @media (min-width: 1600px) {
-    /* line 74, scss/common.scss */
+    /* line 78, scss/common.scss */
     h2 {
       font-size: 40px; } }
   @media (max-width: 992px) {
-    /* line 74, scss/common.scss */
+    /* line 78, scss/common.scss */
     h2 {
       font-size: 24px;
       line-height: 32px; } }
 
-/* line 86, scss/common.scss */
+/* line 90, scss/common.scss */
 .container {
   max-width: 100%;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  /* line 90, scss/common.scss */
+  /* line 94, scss/common.scss */
   .container_1 {
     width: calc(1200px + 40px * 2);
     padding: 0 40px; }
     @media (min-width: 1441px) {
-      /* line 90, scss/common.scss */
+      /* line 94, scss/common.scss */
       .container_1 {
         width: 1920px;
         padding: 0 120px; } }
     @media (max-width: 768px) {
-      /* line 90, scss/common.scss */
+      /* line 94, scss/common.scss */
       .container_1 {
         padding: 0 24px; } }
     @media (max-width: 540px) {
-      /* line 90, scss/common.scss */
+      /* line 94, scss/common.scss */
       .container_1 {
         padding: 0 16px; } }
-  /* line 104, scss/common.scss */
+  /* line 108, scss/common.scss */
   .container_2 {
     width: 1920px;
     padding: 0 35px; }
     @media (min-width: 1441px) {
-      /* line 104, scss/common.scss */
+      /* line 108, scss/common.scss */
       .container_2 {
         padding: 0 52px; } }
     @media (max-width: 1200px) {
-      /* line 104, scss/common.scss */
+      /* line 108, scss/common.scss */
       .container_2 {
         padding: 0; } }
 
-/* line 116, scss/common.scss */
+/* line 120, scss/common.scss */
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -623,35 +629,35 @@ h2 {
   padding: 0 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  /* line 131, scss/common.scss */
+  /* line 135, scss/common.scss */
   .button_border {
     color: #0033A0;
     border: 1px solid #0033A0; }
-    /* line 134, scss/common.scss */
+    /* line 138, scss/common.scss */
     .button_border:hover, .button_border:focus {
       color: #fff;
       background: #0033A0; }
-    /* line 138, scss/common.scss */
+    /* line 142, scss/common.scss */
     .button_border:active {
       opacity: .7; }
-    /* line 141, scss/common.scss */
+    /* line 145, scss/common.scss */
     .button_border.button_disabled {
       pointer-events: none;
       border-color: #ECF0F7;
       color: #ECF0F7; }
-  /* line 147, scss/common.scss */
+  /* line 151, scss/common.scss */
   .button_fill {
     color: #fff;
     background: #0033A0; }
-    /* line 150, scss/common.scss */
+    /* line 154, scss/common.scss */
     .button_fill:hover, .button_fill:focus {
       background: #00205B; }
-    /* line 153, scss/common.scss */
+    /* line 157, scss/common.scss */
     .button_fill:active {
       color: #fff;
       background: #0033A0;
       opacity: .7; }
-    /* line 158, scss/common.scss */
+    /* line 162, scss/common.scss */
     .button_fill.button_disabled {
       pointer-events: none;
       background: #ECF0F7; }
@@ -820,15 +826,54 @@ h2 {
 .header {
   z-index: 1; }
 
-/* line 7, scss/header/header.scss */
+/* line 5, scss/header/header.scss */
 .header__header-blue {
-  z-index: 2; }
-  /* line 9, scss/header/header.scss */
+  z-index: 100; }
+  /* line 7, scss/header/header.scss */
   .header__header-blue_fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0; }
+    /* line 12, scss/header/header.scss */
+    .header__header-blue_fixed .header-blue__social {
+      display: none; }
+    @media (min-width: 993px) {
+      /* line 15, scss/header/header.scss */
+      .header__header-blue_fixed .header-blue__language {
+        display: none; } }
+    /* line 20, scss/header/header.scss */
+    .header__header-blue_fixed .header-blue__nav {
+      display: none; }
+    @media (min-width: 993px) {
+      /* line 23, scss/header/header.scss */
+      .header__header-blue_fixed .header-blue__nav-fixed {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+    /* line 29, scss/header/header.scss */
+    .header__header-blue_fixed .header-blue__search a {
+      opacity: .7; }
+      /* line 31, scss/header/header.scss */
+      .header__header-blue_fixed .header-blue__search a:hover, .header__header-blue_fixed .header-blue__search a:focus {
+        opacity: 1; }
+    /* line 36, scss/header/header.scss */
+    .header__header-blue_fixed .header-blue__search_opened a {
+      opacity: 1; }
+    @media (min-width: 993px) {
+      /* line 43, scss/header/header.scss */
+      .header__header-blue_fixed .header-blue__sign a {
+        opacity: .7; }
+        /* line 45, scss/header/header.scss */
+        .header__header-blue_fixed .header-blue__sign a:hover, .header__header-blue_fixed .header-blue__sign a:focus {
+          opacity: 1; }
+        /* line 48, scss/header/header.scss */
+        .header__header-blue_fixed .header-blue__sign a:before {
+          opacity: .7; } }
+    @media (min-width: 993px) {
+      /* line 54, scss/header/header.scss */
+      .header__header-blue_fixed .header-blue__logo {
+        display: block; } }
 
 /* line 1, scss/header/header-blue.scss */
 .header-blue {
@@ -1309,6 +1354,69 @@ h2 {
     font-size: 14px;
     line-height: 20px; }
 
+/* line 439, scss/header/header-blue.scss */
+.header-blue__nav-fixed {
+  width: 100%;
+  border-top: 1px solid rgba(0, 51, 160, 0.3);
+  display: none; }
+  /* line 443, scss/header/header-blue.scss */
+  .header-blue__nav-fixed > ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    /* line 449, scss/header/header-blue.scss */
+    .header-blue__nav-fixed > ul > li[data-js-dropdown-hover=active] > a {
+      pointer-events: none; }
+      /* line 451, scss/header/header-blue.scss */
+      .header-blue__nav-fixed > ul > li[data-js-dropdown-hover=active] > a:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        border-radius: 5px; }
+    /* line 463, scss/header/header-blue.scss */
+    .header-blue__nav-fixed > ul > li + li {
+      margin-left: 24px; }
+    /* line 466, scss/header/header-blue.scss */
+    .header-blue__nav-fixed > ul > li > a {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7); }
+      /* line 472, scss/header/header-blue.scss */
+      .header-blue__nav-fixed > ul > li > a:hover, .header-blue__nav-fixed > ul > li > a:focus {
+        color: #fff; }
+
+/* line 479, scss/header/header-blue.scss */
+.header-blue__dropdown {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  left: -24px;
+  bottom: -10px;
+  min-width: calc(100% + 24px * 2); }
+  /* line 484, scss/header/header-blue.scss */
+  .header-blue__dropdown .dropdown__content {
+    margin-top: 0; }
+
+/* line 489, scss/header/header-blue.scss */
+.header-blue__logo {
+  margin-top: -4px;
+  margin-right: 45px;
+  display: none; }
+  /* line 493, scss/header/header-blue.scss */
+  .header-blue__logo svg {
+    width: 25px;
+    height: 28px;
+    fill: #fff; }
+
 /* line 3, scss/header/header-common.scss */
 .header-common__container {
   display: -webkit-box;
@@ -1640,11 +1748,11 @@ h2 {
 /* line 57, scss/main/main.scss */
 .main__gallery {
   margin-top: 109px;
-  margin-bottom: 96px; }
+  margin-bottom: 88px; }
   @media (min-width: 1600px) {
     /* line 57, scss/main/main.scss */
     .main__gallery {
-      margin-bottom: 165px; } }
+      margin-bottom: 97px; } }
   @media (max-width: 992px) {
     /* line 57, scss/main/main.scss */
     .main__gallery {
@@ -1675,6 +1783,11 @@ h2 {
     /* line 76, scss/main/main.scss */
     .main__page-slider {
       margin-bottom: 40px; } }
+
+/* line 89, scss/main/main.scss */
+.main__calendar {
+  padding-top: 53px;
+  padding-bottom: 153px; }
 
 /* line 6, scss/main/screen-slider.scss */
 .screen-slider__content {
@@ -2122,12 +2235,13 @@ h2 {
 
 /* line 181, scss/main/matches.scss */
 .matches__score {
-  margin: 0 auto 24px; }
+  margin: 0 auto 24px;
+  position: relative; }
   @media (min-width: 1600px) {
     /* line 181, scss/main/matches.scss */
     .matches__score {
       margin: 0 auto 46px;
-      height: 113px; } }
+      height: 92px; } }
   @media (max-width: 540px) {
     /* line 181, scss/main/matches.scss */
     .matches__score {
@@ -2136,53 +2250,106 @@ h2 {
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); } }
-  /* line 193, scss/main/matches.scss */
+  /* line 195, scss/main/matches.scss */
+  .matches__score_letter-ot:before, .matches__score_letter-b:before {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #11181F;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 9px;
+    right: -35px; }
+    @media (min-width: 1600px) {
+      /* line 195, scss/main/matches.scss */
+      .matches__score_letter-ot:before, .matches__score_letter-b:before {
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+        top: 20px;
+        right: -42px; } }
+    @media (min-width: 768px) and (max-width: 992px) {
+      /* line 195, scss/main/matches.scss */
+      .matches__score_letter-ot:before, .matches__score_letter-b:before {
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+        top: 20px;
+        right: -42px; } }
+    @media (max-width: 768px) {
+      /* line 195, scss/main/matches.scss */
+      .matches__score_letter-ot:before, .matches__score_letter-b:before {
+        right: 50%;
+        top: -20px;
+        -webkit-transform: translateX(50%);
+                transform: translateX(50%); } }
+  /* line 228, scss/main/matches.scss */
+  .matches__score_letter-ot:before {
+    content: 'от'; }
+  /* line 231, scss/main/matches.scss */
+  .matches__score_letter-ot p {
+    visibility: hidden; }
+  /* line 236, scss/main/matches.scss */
+  .matches__score_letter-b:before {
+    content: 'б'; }
+  /* line 240, scss/main/matches.scss */
   .matches__score span {
     display: inline-block;
     font-size: 35px;
     line-height: 35px;
     font-weight: bold; }
     @media (min-width: 1600px) {
-      /* line 193, scss/main/matches.scss */
+      /* line 240, scss/main/matches.scss */
       .matches__score span {
         font-size: 60px;
-        line-height: 60px; } }
+        line-height: 64px;
+        height: 64px; } }
     @media (max-width: 992px) and (min-width: 769px) {
-      /* line 193, scss/main/matches.scss */
+      /* line 240, scss/main/matches.scss */
       .matches__score span {
         font-size: 60px;
         line-height: 60px; } }
     @media (max-width: 540px) {
-      /* line 193, scss/main/matches.scss */
+      /* line 240, scss/main/matches.scss */
       .matches__score span {
         font-size: 30px;
         line-height: 30px;
         height: 30px; } }
-    /* line 211, scss/main/matches.scss */
+    /* line 259, scss/main/matches.scss */
     .matches__score span svg {
       fill: #11181F;
       width: 24px;
       height: 40px; }
       @media (min-width: 1600px) {
-        /* line 211, scss/main/matches.scss */
+        /* line 259, scss/main/matches.scss */
         .matches__score span svg {
           width: 40px;
           height: 64px; } }
       @media (max-width: 992px) and (min-width: 769px) {
-        /* line 211, scss/main/matches.scss */
+        /* line 259, scss/main/matches.scss */
         .matches__score span svg {
           width: 40px;
           height: 64px; } }
       @media (max-width: 540px) {
-        /* line 211, scss/main/matches.scss */
+        /* line 259, scss/main/matches.scss */
         .matches__score span svg {
           width: 20px;
           height: 30px; } }
-    /* line 228, scss/main/matches.scss */
+    /* line 276, scss/main/matches.scss */
     .matches__score span + span {
       position: relative;
       margin-left: 27px; }
-      /* line 231, scss/main/matches.scss */
+      /* line 279, scss/main/matches.scss */
       .matches__score span + span:before {
         content: ':';
         font-size: 35px;
@@ -2192,60 +2359,60 @@ h2 {
         top: 0;
         left: -21px; }
         @media (min-width: 1600px) {
-          /* line 231, scss/main/matches.scss */
+          /* line 279, scss/main/matches.scss */
           .matches__score span + span:before {
             font-size: 60px;
-            line-height: 60px;
+            line-height: 64px;
             left: -24px; } }
         @media (max-width: 992px) and (min-width: 769px) {
-          /* line 231, scss/main/matches.scss */
+          /* line 279, scss/main/matches.scss */
           .matches__score span + span:before {
             font-size: 60px;
             line-height: 60px;
             left: -24px; } }
         @media (max-width: 540px) {
-          /* line 231, scss/main/matches.scss */
+          /* line 279, scss/main/matches.scss */
           .matches__score span + span:before {
             line-height: 30px; } }
-  /* line 256, scss/main/matches.scss */
-  .matches__score_small span {
-    font-size: 32px;
-    line-height: 47px; }
-    @media (min-width: 1600px) {
-      /* line 256, scss/main/matches.scss */
-      .matches__score_small span {
-        font-size: 56px;
-        line-height: 75px; } }
-    @media (max-width: 992px) and (min-width: 769px) {
-      /* line 256, scss/main/matches.scss */
-      .matches__score_small span {
-        font-size: 56px;
-        line-height: 75px; } }
-    @media (max-width: 540px) {
-      /* line 256, scss/main/matches.scss */
-      .matches__score_small span {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 3px; } }
-  /* line 274, scss/main/matches.scss */
+  /* line 303, scss/main/matches.scss */
   .matches__score p {
     font-size: 12px;
     line-height: 20px;
     margin-top: 9px;
     text-align: center; }
     @media (max-width: 540px) {
-      /* line 274, scss/main/matches.scss */
+      /* line 303, scss/main/matches.scss */
       .matches__score p {
         margin-top: 0;
         line-height: 12px; } }
-    /* line 283, scss/main/matches.scss */
+    /* line 312, scss/main/matches.scss */
     .matches__score p:first-child {
       width: 0;
       height: 0;
       overflow: hidden;
       margin: 0; }
+  /* line 320, scss/main/matches.scss */
+  .matches__score_small span {
+    font-size: 32px;
+    line-height: 47px; }
+    @media (min-width: 1600px) {
+      /* line 320, scss/main/matches.scss */
+      .matches__score_small span {
+        font-size: 56px;
+        line-height: 75px; } }
+    @media (max-width: 992px) and (min-width: 769px) {
+      /* line 320, scss/main/matches.scss */
+      .matches__score_small span {
+        font-size: 56px;
+        line-height: 75px; } }
+    @media (max-width: 540px) {
+      /* line 320, scss/main/matches.scss */
+      .matches__score_small span {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 3px; } }
 
-/* line 292, scss/main/matches.scss */
+/* line 340, scss/main/matches.scss */
 .matches__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2254,14 +2421,14 @@ h2 {
   margin: 0 auto 21px;
   z-index: 2; }
   @media (min-width: 1600px) {
-    /* line 292, scss/main/matches.scss */
+    /* line 340, scss/main/matches.scss */
     .matches__links {
       margin: 0 auto 24px; } }
   @media (max-width: 540px) {
-    /* line 292, scss/main/matches.scss */
+    /* line 340, scss/main/matches.scss */
     .matches__links {
       margin: -6px auto 0; } }
-  /* line 303, scss/main/matches.scss */
+  /* line 351, scss/main/matches.scss */
   .matches__links > a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2278,65 +2445,65 @@ h2 {
     border-radius: 50%;
     pointer-events: all; }
     @media (min-width: 1600px) {
-      /* line 303, scss/main/matches.scss */
+      /* line 351, scss/main/matches.scss */
       .matches__links > a {
         width: 40px;
         height: 40px; } }
-    /* line 316, scss/main/matches.scss */
+    /* line 364, scss/main/matches.scss */
     .matches__links > a + * {
       margin-left: 24px; }
       @media (min-width: 1600px) {
-        /* line 316, scss/main/matches.scss */
+        /* line 364, scss/main/matches.scss */
         .matches__links > a + * {
           margin-left: 30px; } }
-    /* line 322, scss/main/matches.scss */
+    /* line 370, scss/main/matches.scss */
     .matches__links > a:hover {
       background: #0033A0; }
-      /* line 324, scss/main/matches.scss */
+      /* line 372, scss/main/matches.scss */
       .matches__links > a:hover > svg {
         fill: #fff; }
-    /* line 328, scss/main/matches.scss */
+    /* line 376, scss/main/matches.scss */
     .matches__links > a:active {
       opacity: .7; }
-    /* line 331, scss/main/matches.scss */
+    /* line 379, scss/main/matches.scss */
     .matches__links > a > svg {
       fill: rgba(0, 32, 91, 0.5); }
 
-/* line 336, scss/main/matches.scss */
+/* line 384, scss/main/matches.scss */
 .matches__button {
   z-index: 1;
   max-width: 180px;
   margin: 0 auto 17px; }
   @media (max-width: 540px) {
-    /* line 336, scss/main/matches.scss */
+    /* line 384, scss/main/matches.scss */
     .matches__button {
       margin-top: 0;
       margin-bottom: 0;
       max-width: 100%;
       width: 100%; } }
 
-/* line 348, scss/main/matches.scss */
+/* line 396, scss/main/matches.scss */
 .matches__info {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
   color: rgba(17, 24, 31, 0.5); }
   @media (max-width: 540px) {
-    /* line 348, scss/main/matches.scss */
+    /* line 396, scss/main/matches.scss */
     .matches__info {
       display: none; } }
-  /* line 356, scss/main/matches.scss */
+  /* line 404, scss/main/matches.scss */
   .matches__info_mobile {
     display: none;
     padding-bottom: 8px;
     margin-bottom: 8px;
     background: #ECF0F7; }
     @media (max-width: 540px) {
-      /* line 356, scss/main/matches.scss */
+      /* line 404, scss/main/matches.scss */
       .matches__info_mobile {
         display: block; } }
 
-/* line 367, scss/main/matches.scss */
+/* line 415, scss/main/matches.scss */
 .matches__tree {
   width: calc(100% + 80px - 24.4791666667vw);
   height: 38px;
@@ -2346,11 +2513,11 @@ h2 {
   margin: 0 auto;
   position: relative; }
   @media (max-width: 992px) {
-    /* line 367, scss/main/matches.scss */
+    /* line 415, scss/main/matches.scss */
     .matches__tree {
       border: none;
       height: 56px; } }
-  /* line 379, scss/main/matches.scss */
+  /* line 427, scss/main/matches.scss */
   .matches__tree:before {
     content: '';
     width: calc(100% + 100px - 49.4791666667vw);
@@ -2362,12 +2529,20 @@ h2 {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+    @media (max-width: 1440px) {
+      /* line 427, scss/main/matches.scss */
+      .matches__tree:before {
+        width: 310px; } }
+    @media (max-width: 1280px) {
+      /* line 427, scss/main/matches.scss */
+      .matches__tree:before {
+        width: 24.21875vw; } }
     @media (max-width: 992px) {
-      /* line 379, scss/main/matches.scss */
+      /* line 427, scss/main/matches.scss */
       .matches__tree:before {
         display: none; } }
 
-/* line 395, scss/main/matches.scss */
+/* line 449, scss/main/matches.scss */
 .matches__more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2388,22 +2563,22 @@ h2 {
   -webkit-transition: max-width .5s;
   transition: max-width .5s; }
   @media (max-width: 992px) {
-    /* line 395, scss/main/matches.scss */
+    /* line 449, scss/main/matches.scss */
     .matches__more {
       max-width: 200px; } }
-  /* line 415, scss/main/matches.scss */
+  /* line 469, scss/main/matches.scss */
   .matches__more:focus, .matches__more:hover {
     max-width: 200px; }
-  /* line 418, scss/main/matches.scss */
+  /* line 472, scss/main/matches.scss */
   .matches__more:active {
     background: #D9E0F1; }
-  /* line 421, scss/main/matches.scss */
+  /* line 475, scss/main/matches.scss */
   .matches__more span {
     font-size: 16px;
     line-height: 24px;
     color: #00205B;
     white-space: nowrap; }
-  /* line 427, scss/main/matches.scss */
+  /* line 481, scss/main/matches.scss */
   .matches__more svg {
     fill: rgba(0, 32, 91, 0.5);
     margin: auto 24px auto 0;
@@ -4150,6 +4325,280 @@ h2 {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       fill: #fff; }
+
+/* line 4, scss/main/calendar/calendar.scss */
+.calendar__title {
+  margin-bottom: 28px; }
+
+/* line 8, scss/main/calendar/calendar.scss */
+.calendar__controls {
+  margin-bottom: 78px; }
+
+/* line 3, scss/main/calendar/calendar-table.scss */
+.calendar-table__nav {
+  margin-bottom: 78px; }
+  /* line 5, scss/main/calendar/calendar-table.scss */
+  .calendar-table__nav > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    /* line 8, scss/main/calendar/calendar-table.scss */
+    .calendar-table__nav > ul > li + li {
+      margin-left: 59px; }
+    /* line 12, scss/main/calendar/calendar-table.scss */
+    .calendar-table__nav > ul > li > a.is-active {
+      color: #fff;
+      position: relative;
+      pointer-events: none; }
+      /* line 16, scss/main/calendar/calendar-table.scss */
+      .calendar-table__nav > ul > li > a.is-active:before {
+        content: '';
+        height: 56px;
+        width: 107px;
+        border-radius: 4px;
+        background: #0033A0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: -1; }
+
+/* line 36, scss/main/calendar/calendar-table.scss */
+.calendar-table__month-list {
+  display: table;
+  border-collapse: collapse;
+  width: 100%; }
+  /* line 40, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-list_days {
+    margin-bottom: 30px; }
+    /* line 42, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-list_days li {
+      display: table-cell;
+      width: calc(100% / 7); }
+
+/* line 48, scss/main/calendar/calendar-table.scss */
+.calendar-table__month-row {
+  display: table-row;
+  width: 100%; }
+
+/* line 52, scss/main/calendar/calendar-table.scss */
+.calendar-table__month-item {
+  display: table-cell;
+  width: calc(100% / 7);
+  height: 240px;
+  border: 1px solid #ECF0F7;
+  position: relative; }
+  /* line 59, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_black .calendar-table__date {
+    color: #11181F; }
+  /* line 63, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_win {
+    background: rgba(0, 51, 160, 0.05); }
+    /* line 65, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item_win:before, .calendar-table__month-item_win:after {
+      background: #0033A0; }
+  /* line 67, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_loose {
+    background: rgba(209, 77, 109, 0.05); }
+    /* line 69, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item_loose:before, .calendar-table__month-item_loose:after {
+      background: #D14D6D; }
+  /* line 71, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_soon {
+    background: #ECF0F7; }
+    /* line 73, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item_soon:before {
+      background: rgba(0, 51, 160, 0.6); }
+  /* line 76, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_win:before, .calendar-table__month-item_loose:before, .calendar-table__month-item_soon:before {
+    content: '';
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 84, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_win:after, .calendar-table__month-item_loose:after, .calendar-table__month-item_soon:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 92, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item_win .calendar-table__date, .calendar-table__month-item_loose .calendar-table__date, .calendar-table__month-item_soon .calendar-table__date {
+    color: #fff;
+    z-index: 1; }
+  /* line 99, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link {
+    z-index: 1; }
+    /* line 101, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link ~ .calendar-table__button {
+      opacity: 1; }
+    /* line 105, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link ~ .calendar-table__cell-row_2 {
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 112, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link ~ .calendar-table__cell-row > .calendar-table__team:last-of-type {
+      -webkit-transform: translateY(-19px);
+              transform: translateY(-19px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 117, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link ~ .calendar-table__cell-row .calendar-table__letter {
+      -webkit-transform: translateY(calc(-50% - 8px));
+              transform: translateY(calc(-50% - 8px)); }
+    /* line 121, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move):hover .calendar-table__hidden-link ~ .calendar-table__button {
+      -webkit-transition: 0s .05s;
+      transition: 0s .05s; }
+  /* line 127, scss/main/calendar/calendar-table.scss */
+  .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus {
+    z-index: 1; }
+    /* line 129, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus ~ .calendar-table__button {
+      opacity: 1; }
+    /* line 133, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus ~ .calendar-table__cell-row_2 {
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 140, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus ~ .calendar-table__cell-row > .calendar-table__team:last-of-type {
+      -webkit-transform: translateY(-19px);
+              transform: translateY(-19px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 145, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus ~ .calendar-table__cell-row .calendar-table__letter {
+      -webkit-transform: translateY(calc(-50% - 8px));
+              transform: translateY(calc(-50% - 8px));
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 150, scss/main/calendar/calendar-table.scss */
+    .calendar-table__month-item:not(.calendar-table__month-item_no-move) .calendar-table__hidden-link:focus ~ .calendar-table__button {
+      -webkit-transition: 0s .05s;
+      transition: 0s .05s; }
+
+/* line 157, scss/main/calendar/calendar-table.scss */
+.calendar-table__month-item-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+/* line 164, scss/main/calendar/calendar-table.scss */
+.calendar-table__hidden-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline-offset: -2px; }
+
+/* line 173, scss/main/calendar/calendar-table.scss */
+.calendar-table__cell-row_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 61px; }
+/* line 177, scss/main/calendar/calendar-table.scss */
+.calendar-table__cell-row_2 {
+  position: relative;
+  -webkit-transition: .15s;
+  transition: .15s; }
+
+/* line 183, scss/main/calendar/calendar-table.scss */
+.calendar-table__date {
+  padding-top: 19px;
+  padding-left: 13px;
+  color: rgba(17, 24, 31, 0.5); }
+
+/* line 188, scss/main/calendar/calendar-table.scss */
+.calendar-table__location {
+  padding-top: 19px;
+  padding-right: 13px;
+  margin-left: auto; }
+
+/* line 193, scss/main/calendar/calendar-table.scss */
+.calendar-table__team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .15s;
+  transition: .15s; }
+  /* line 196, scss/main/calendar/calendar-table.scss */
+  .calendar-table__team:not(:last-of-type) {
+    margin-bottom: 62px; }
+
+/* line 200, scss/main/calendar/calendar-table.scss */
+.calendar-table__letter {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(17, 24, 31, 0.5);
+  -webkit-transition: .15s;
+  transition: .15s; }
+
+/* line 215, scss/main/calendar/calendar-table.scss */
+.calendar-table__button {
+  width: 100%;
+  height: 62px;
+  border-radius: 0;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1; }
+  /* line 225, scss/main/calendar/calendar-table.scss */
+  .calendar-table__button:hover, .calendar-table__button:focus {
+    opacity: 1; }
+    /* line 228, scss/main/calendar/calendar-table.scss */
+    .calendar-table__button:hover ~ .calendar-table__cell-row_2, .calendar-table__button:focus ~ .calendar-table__cell-row_2 {
+      -webkit-transform: translateY(-22px);
+              transform: translateY(-22px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 235, scss/main/calendar/calendar-table.scss */
+    .calendar-table__button:hover ~ .calendar-table__cell-row > .calendar-table__team:last-of-type, .calendar-table__button:focus ~ .calendar-table__cell-row > .calendar-table__team:last-of-type {
+      -webkit-transform: translateY(-19px);
+              transform: translateY(-19px);
+      -webkit-transition: .25s;
+      transition: .25s; }
+    /* line 240, scss/main/calendar/calendar-table.scss */
+    .calendar-table__button:hover ~ .calendar-table__cell-row .calendar-table__letter, .calendar-table__button:focus ~ .calendar-table__cell-row .calendar-table__letter {
+      -webkit-transform: translateY(calc(-50% - 8px));
+              transform: translateY(calc(-50% - 8px)); }
+    /* line 244, scss/main/calendar/calendar-table.scss */
+    .calendar-table__button:hover ~ .calendar-table__button, .calendar-table__button:focus ~ .calendar-table__button {
+      -webkit-transition: 0s .05s;
+      transition: 0s .05s; }
 
 /* line 1, scss/footer/footer-partners.scss */
 .footer-partners {

@@ -1,0 +1,248 @@
+.calendar-table {}
+
+.calendar-table__nav {
+    margin-bottom: 78px;
+    &>ul {
+        display: flex;
+        &>li {
+            & + li {
+                margin-left: 59px;
+            }
+            &>a {
+                &.is-active {
+                    color: $themeWhite;
+                    position: relative;
+                    pointer-events: none;
+                    &:before {
+                        content: '';
+                        height: 56px;
+                        width: 107px;
+                        border-radius: 4px;
+                        background: $themeBlue;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calendar-table__month-content {}
+
+.calendar-table__month-list {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    &_days {
+        margin-bottom: 30px;
+        li {
+            display: table-cell;
+            width: calc(100% / 7);
+        }
+    }
+}
+.calendar-table__month-row {
+    display: table-row;
+    width: 100%;
+}
+.calendar-table__month-item {
+    display: table-cell;
+    width: calc(100% / 7);
+    height: 240px;
+    border: 1px solid $themeGrayLight;
+    position: relative;
+    &_black {
+        .calendar-table__date {
+            color: $themeBlack;
+        }
+    }
+    &_win {
+        background: rgba($themeBlue, .05);
+        &:before, &:after {background: $themeBlue;}
+    }
+    &_loose {
+        background: rgba($themeRed, .05);
+        &:before, &:after {background: $themeRed;}
+    }
+    &_soon {
+        background: $themeGrayLight;
+        &:before {background: rgba($themeBlue, .6);}
+    }
+    &_win, &_loose, &_soon {
+        &:before {
+            content: '';
+            width: 56px;
+            height: 56px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .calendar-table__date {
+            color: $themeWhite;
+            z-index: 1;
+        }
+    }
+    &:not(.calendar-table__month-item_no-move) {
+        &:hover {
+            .calendar-table__hidden-link {
+                z-index: 1;
+                & ~ .calendar-table__button {
+                    opacity: 1;
+                }
+                & ~ .calendar-table__cell-row {
+                    &_2 {
+                        transform: translateY(-22px);
+                        transition: .25s;
+                    }
+                }
+                & ~ .calendar-table__cell-row {
+                    & > .calendar-table__team {
+                        &:last-of-type {
+                            transform: translateY(-19px);
+                            transition: .25s;
+                        }
+                    }
+                    .calendar-table__letter {
+                        transform: translateY(calc(-50% - 8px));
+                    }
+                }
+                & ~ .calendar-table__button {
+                    transition: 0s .05s;
+                }
+            }
+        }
+        .calendar-table__hidden-link {
+            &:focus {
+                z-index: 1;
+                & ~ .calendar-table__button {
+                    opacity: 1;
+                }
+                & ~ .calendar-table__cell-row {
+                    &_2 {
+                        transform: translateY(-22px);
+                        transition: .25s;
+                    }
+                }
+                & ~ .calendar-table__cell-row {
+                    & > .calendar-table__team {
+                        &:last-of-type {
+                            transform: translateY(-19px);
+                            transition: .25s;
+                        }
+                    }
+                    .calendar-table__letter {
+                        transform: translateY(calc(-50% - 8px));
+                        transition: .25s;
+                    }
+                }
+                & ~ .calendar-table__button {
+                    transition: 0s .05s;
+                }
+            }
+        }
+    }
+}
+.calendar-table__month-item-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-table__hidden-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline-offset: -2px;
+}
+.calendar-table__cell-row {
+    &_1 {
+        display: flex;
+        margin-bottom: 61px;
+    }
+    &_2 {
+        position: relative;
+        transition: .15s;
+    }
+}
+
+.calendar-table__date {
+    padding-top: 19px;
+    padding-left: 13px;
+    color: rgba($themeBlack, .5);
+}
+.calendar-table__location {
+    padding-top: 19px;
+    padding-right: 13px;
+    margin-left: auto;
+}
+.calendar-table__team {
+    display: flex;
+    transition: .15s;
+    &:not(:last-of-type) {
+        margin-bottom: 62px;
+    }
+}
+.calendar-table__letter {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: $themeWhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba($themeBlack, .5);
+    transition: .15s;
+}
+.calendar-table__button {
+    width: 100%;
+    height: 62px;
+    border-radius: 0;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    &:hover, &:focus {
+        opacity: 1;
+        & ~ .calendar-table__cell-row {
+            &_2 {
+                transform: translateY(-22px);
+                transition: .25s;
+            }
+        }
+        & ~ .calendar-table__cell-row {
+            & > .calendar-table__team {
+                &:last-of-type {
+                    transform: translateY(-19px);
+                    transition: .25s;
+                }
+            }
+            .calendar-table__letter {
+                transform: translateY(calc(-50% - 8px));
+            }
+        }
+        & ~ .calendar-table__button {
+            transition: 0s .05s;
+        }
+    }
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="body">
+    <!-- gray header -->
+    <div style="display: flex; justify-content: center; background: #262F36; max-width: 100%; overflow: hidden;">
+        <img src="assets/img/heading.png" alt="Хедер КХЛ">
+    </div>
+    <!-- header -->
+    <div id="data-js-loading-scroll-anchor"></div>
+    <header class="body__header header">
+        <!-- top -->
+        <div class="header__header-blue header-blue">
+            <div class="header-blue__container container container_1">
+                <div class="header-blue__col header-blue__col_1">
+                    <!-- nav -->
+                    <nav class="header-blue__nav">
+                        <ul>
+                            <li><a href="#">«Динамо» МО</a></li>
+                            <li><a href="#">MХК «Динамо»</a></li>
+                            <li><a href="#">Хоккейная академия «Динамо»</a></li>
+                        </ul>
+                    </nav>
+                    <!-- hamburger -->
+                    <div class="header-blue__hamburger" data-js-hamburger-container>
+                        <a href="#" class="header-blue__hamburger-button" data-js-hamburger-button><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#hamburger"></use></svg></a>
+                        <div class="header-blue__hamburger-overlay" data-js-hamburger-menu data-js-hamburger-close></div>
+                        <div class="header-blue__hamburger-menu" data-js-hamburger-menu>
+                            <a href="#" class="header-blue__hamburger-close" aria-label="Закрыть меню" data-js-hamburger-close><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#cross"></use></svg></a>
+                            <ul class="header-blue__hamburger-social">
+                                <li><a href="#" aria-label="Facebook"><svg width="8" height="15"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
+                                <li><a href="#" aria-label="Twitter"><svg width="15" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>
+                                <li><a href="#" aria-label="Instagram"><svg width="14" height="14"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg></a></li>
+                                <li><a href="#" aria-label="ВКонтакте"><svg width="19" height="11"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg></a></li>
+                                <li><a href="#" aria-label="YouTube"><svg width="18" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg></a></li>
+                            </ul>
+                            <div class="header-blue__hamburger-search">
+                                <p><svg width="18" height="12"><use xlink:href="assets/img/sprites/sprite-icons.svg#search"></use></svg><span>Поиск</span></p>
+                                <input type="search">
+                            </div>
+                            <nav class="header-blue__hamburger-nav">
+                                <ul>
+                                    <li><a href="#"><span>Билеты</span></a></li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Клуб</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Наша история</a></li>
+                                                    <li><a href="#">Высший совет</a></li>
+                                                    <li><a href="#">Попечительский совет</a></li>
+                                                    <li><a href="#">Руководство</a></li>
+                                                    <li><a href="#">База</a></li>
+                                                    <li><a href="#">Контакты</a></li>
+                                                    <li><a href="#">Документы</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Команда</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Состав</a></li>
+                                                    <li><a href="#">Тренерский штаб</a></li>
+                                                    <li><a href="#">Персонал</a></li>
+                                                    <li><a href="#">Лазарет</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#"><span>Календарь</span></a></li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Статистика</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Командная</a></li>
+                                                    <li><a href="#">Персональная</a></li>
+                                                    <li><a href="#">Сравнение команд</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Пресс-центр</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Новости</a></li>
+                                                    <li><a href="#">Интервью</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-js-dropdown-click>
+                                        <a href="#" data-js-dropdown-trigger><span>Медиа</span><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg></a>
+                                        <div class="header-blue__dropdown dropdown" data-js-dropdown-menu>
+                                            <div class="dropdown__content">
+                                                <ul class="dropdown__menu">
+                                                    <li><a href="#">Фото</a></li>
+                                                    <li><a href="#">Динамо ТВ</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#"><span>Фан-зона</span></a></li>
+                                    <li><a href="#"><span>Магазин</span></a></li>
+                                </ul>
+                            </nav>
+                            <ul class="header-blue__hamburger-links">
+                                <li><a href="#">«Динамо» МО</a></li>
+                                <li><a href="#">MХК «Динамо» </a></li>
+                                <li><a href="#">Хоккейная академия «Динамо»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-blue__col header-blue__col_2">
+                    <!-- search -->
+                    <div class="header-blue__search">
+                        <a href="javascript:void(0);" class="search-open-btn">
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#search"></use></svg>
+                            <span>Поиск</span>
+                        </a>
+                        <div class="header-blue__search-inside">
+                            <a href="javascript:void(0);" class="search-close-btn" tabindex="-1"><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#cross"></use></svg></a>
+                            <input type="search" class="search-input" tabindex="-1">
+                        </div>
+                    </div>
+                    <!-- social -->
+                    <div class="header-blue__social" data-js-dropdown-hover>
+                        <a href="#" data-js-dropdown-trigger>
+                            <span>Соцсети клуба</span>
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#angleR"></use></svg>
+                        </a>
+                        <div class="header-blue__social-dropdown dropdown" data-js-dropdown-menu>
+                            <div class="dropdown__content">
+                                <ul class="dropdown__menu dropdown__menu_social">
+                                    <li><a href="#"><svg width="18" height="9"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg><span>ВКонтакте</span></a></li>
+                                    <li><a href="#"><svg width="7" height="13"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg><span>Facebook</span></a></li>
+                                    <li><a href="#"><svg width="14" height="11"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg><span>Twitter</span></a></li>
+                                    <li><a href="#"><svg width="13" height="13"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg><span>Instagram</span></a></li>
+                                    <li><a href="#"><svg width="15" height="10"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg><span>YouTube</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- language -->
+                    <div class="header-blue__language">
+                        <a href="#">En</a>
+                    </div>
+                    <!-- sign -->
+                    <div class="header-blue__sign">
+                        <a href="#">
+                            <svg><use xlink:href="assets/img/sprites/sprite-icons.svg#sign"></use></svg>
+                            <span>Войти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bot -->
+        <div class="header__header-common header-common">
+            <div class="header-common__container container container_1">
+                <div class="header-common__col header-common__col_1">
+                    <div class="header-common__row header-common__row_1">
+                        <!-- logo -->
+                        <a href="/" class="header-common__logo"><img src="assets/img/logo.png" srcset="assets/img/logo-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                        <a href="/" class="header-common__logo header-common__logo_long"><img src="assets/img/logo-long.png" srcset="assets/img/logo-long-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                        <!-- trophys -->
+                        <ul class="header-common__trophies">
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-1.png" srcset="assets/img/trophies/trophy-1-2x.png 2x" alt="Кубок" class="type_1"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-2.png" srcset="assets/img/trophies/trophy-2-2x.png 2x" alt="Кубок" class="type_2"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-3.png" srcset="assets/img/trophies/trophy-3-2x.png 2x" alt="Кубок" class="type_3"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-js-dropdown-hover>
+                                <a href="#" data-js-dropdown-trigger><img src="assets/img/trophies/trophy-4.png" srcset="assets/img/trophies/trophy-4-2x.png 2x" alt="Кубок" class="type_4"></a>
+                                <div class="header-common__dropdown header-common__dropdown_trophy dropdown" data-js-dropdown-menu>
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__trophy">
+                                            <img src="assets/img/trophies/trophy-detail.png" srcset="assets/img/trophies/trophy-detail-2x.png 2x" alt="Фото трофея">
+                                            <div>
+                                                <h3>Обладатель кубка <br>гагарина</h3>
+                                                <p>2012</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-common__row header-common__row_2">
+                        <nav class="header-common__nav">
+                            <ul>
+                                <li><a href="#">Билеты</a></li>
+                                <li data-js-dropdown-hover>
+                                    <a href="#" data-js-dropdown-trigger>Клуб</a>
+                                    <div class="header-common__dropdown dropdown" data-js-dropdown-menu>
+                                        <div class="dropdown__content">
+                                            <ul class="dropdown__menu">
+                                                <li><a href="#">Наша история</a></li>
+                                                <li><a href="#">Высший совет</a></li>
+                                                <li><a href="#">Попечительский совет</a></li>
+                                                <li><a href="#">Руководство</a></li>
+                                                <li><a href="#">База</a></li>
+                                                <li><a href="#">Контакты</a></li>
+                                                <li><a href="#">Документы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-js-dropdown-hover>
+                                    <a href="#" data-js-dropdown-trigger>Команда</a>
+                                    <div class="header-common__dropdown dropdown" data-js-dropdown-menu>
+                                        <div class="dropdown__content">
+                                            <ul class="dropdown__menu">
+                                                <li><a href="#">Состав</a></li>
+                                                <li><a href="#">Тренерский штаб</a></li>
+                                                <li><a href="#">Персонал</a></li>
+                                                <li><a href="#">Лазарет</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">Календарь</a></li>
+                                <li data-js-dropdown-hover>
+                                    <a href="#" data-js-dropdown-trigger>Статистика</a>
+                                    <div class="header-common__dropdown dropdown" data-js-dropdown-menu>
+                                        <div class="dropdown__content">
+                                            <ul class="dropdown__menu">
+                                                <li><a href="#">Командная</a></li>
+                                                <li><a href="#">Персональная</a></li>
+                                                <li><a href="#">Сравнение команд</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-js-dropdown-hover>
+                                    <a href="#" data-js-dropdown-trigger>Пресс-центр</a>
+                                    <div class="header-common__dropdown dropdown" data-js-dropdown-menu>
+                                        <div class="dropdown__content">
+                                            <ul class="dropdown__menu">
+                                                <li><a href="#">Новости</a></li>
+                                                <li><a href="#">Интервью</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-js-dropdown-hover>
+                                    <a href="#" data-js-dropdown-trigger>Медиа</a>
+                                    <div class="header-common__dropdown dropdown" data-js-dropdown-menu>
+                                        <div class="dropdown__content">
+                                            <ul class="dropdown__menu">
+                                                <li><a href="#">Фото</a></li>
+                                                <li><a href="#">Динамо ТВ</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">Фан-зона</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-common__col header-common__col_2">
+                    <ul class="header-common__partners">
+                        <li><a href="#"><img src="assets/img/partners/partner-1.png" srcset="assets/img/partners/partner-1-2x.png 2x" alt="Генеральный спонсор ХК «Динамо» Москва"></a></li>
+                        <li><a href="#"><img src="assets/img/partners/partner-2.png" srcset="assets/img/partners/partner-2-2x.png 2x" alt="Металлоинвест"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="body__main main">
+        <section class="main_calendar calendar">
+            <div class="calendar__container container container_1">
+                <h1 class="calendar__title h1">Календарь</h1>
+                <div class="calendar__controls calendar__controls_table">
+
+                </div>
+                <div class="calendar__controls calendar__controls_list">
+
+                </div>
+                <!-- table -->
+                <div class="calendar__calendar-table calendar-table" data-js-tab-container>
+                    <nav class="calendar-table__nav">
+                        <ul>
+                            <li><a data-js-tab-select="11" href="#">Январь</a></li>
+                            <li><a data-js-tab-select="12" href="#">Февраль</a></li>
+                            <li><a data-js-tab-select="1" href="#">Март</a></li>
+                            <li><a data-js-tab-select="2" href="#">Апрель</a></li>
+                            <li><a data-js-tab-select="3" href="#">Май</a></li>
+                            <li><a data-js-tab-select="4" href="#">Июнь</a></li>
+                            <li><a data-js-tab-select="5" href="#">Июль</a></li>
+                            <li><a data-js-tab-select="6" href="#">Август</a></li>
+                            <li><a data-js-tab-select="7" href="#">Сентябрь</a></li>
+                            <li><a data-js-tab-select="8" href="#">Октябрь</a></li>
+                            <li><a data-js-tab-select="9" href="#">Ноябрь</a></li>
+                            <li><a data-js-tab-select="10" href="#">Декабрь</a></li>
+                        </ul>
+                    </nav>
+                    <div class="calendar-table__month-list calendar-table__month-list_days">
+                        <ul class="calendar-table__month-row">
+                            <li>Пн</li>
+                            <li>Вт</li>
+                            <li>Ср</li>
+                            <li>Чт</li>
+                            <li>Пт</li>
+                            <li>Сб</li>
+                            <li>Вс</li>
+                        </ul>
+                    </div>
+                    <!-- March -->
+                    <div class="calendar-table__month-content" data-js-tab-content="1">
+                        <ul class="calendar-table__month-list">
+                            <!-- 1 -->
+                            <li class="calendar-table__month-row">
+                                <!-- empty -->
+                                <div class="calendar-table__month-item">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- empty black -->
+                                <div class="calendar-table__month-item calendar-table__month-item_black">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- win -->
+                                <div class="calendar-table__month-item calendar-table__month-item_win">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <a href="#" class="calendar-table__hidden-link"></a>
+                                        <a href="#" class="calendar-table__button button button_fill">Купить билеты</a>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                            <p class="calendar-table__location">Г</p>
+                                        </div>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_2">
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                            <p class="calendar-table__letter">Б</p>
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- loose -->
+                                <div class="calendar-table__month-item calendar-table__month-item_loose">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <a href="#" class="calendar-table__hidden-link"></a>
+                                        <a href="#" class="calendar-table__button button button_fill">Купить билеты</a>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                            <p class="calendar-table__location">Г</p>
+                                        </div>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_2">
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                            <p class="calendar-table__letter">Б</p>
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- soon -->
+                                <div class="calendar-table__month-item calendar-table__month-item_soon">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <a href="#" class="calendar-table__hidden-link"></a>
+                                        <a href="#" class="calendar-table__button button button_fill">Купить билеты</a>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                            <p class="calendar-table__location">Г</p>
+                                        </div>
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_2">
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                            <p class="calendar-table__letter">Б</p>
+                                            <div class="calendar-table__team">
+                                                <img src="" alt="">
+                                                <p>Динамо Киев</p>
+                                                <span>14</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- empty -->
+                                <div class="calendar-table__month-item">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- empty black -->
+                                <div class="calendar-table__month-item calendar-table__month-item_black">
+                                    <div class="calendar-table__month-item-wrapper">
+                                        <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                            <p class="calendar-table__date">30</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 2 -->
+                            <li class="calendar-table__month-row">
+                                <!-- empty -->
+                                <div class="calendar-table__month-item">
+                                    <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                        <p class="calendar-table__date">30</p>
+                                    </div>
+                                </div>
+                                <!-- empty -->
+                                <div class="calendar-table__month-item">
+                                    <div class="calendar-table__cell-row calendar-table__cell-row_1">
+                                        <p class="calendar-table__date">30</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 3 -->
+                            <li class="calendar-table__month-row"></li>
+                            <!-- 4 -->
+                            <li class="calendar-table__month-row"></li>
+                            <!-- 5 -->
+                            <li class="calendar-table__month-row"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- list -->
+                <div class="calendar__calendar-list calendar-list"></div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="body__footer footer">
+        <!-- top -->
+        <div class="footer__footer-partners footer-partners">
+            <div class="footer-partners__container container container_1">
+                <!-- first -->
+                <div class="footer-partners__content footer-partners__content_1">
+                    <p class="footer-partners__caption">Спонсоры и партнеры клуба</p>
+                    <ul class="footer-partners__list">
+                        <!-- 1 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-3.png" srcset="assets/img/partners/partner-3-2x.png 2x" alt="ВТБ">
+                            </a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-4.png" srcset="assets/img/partners/partner-4-2x.png 2x" alt="Металлоинвест">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- second -->
+                <div class="footer-partners__content footer-partners__content_2">
+                    <p class="footer-partners__caption">Партнеры чемпионата КХЛ сезона 2019/2020</p>
+                    <ul class="footer-partners__list">
+                        <!-- 1 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-5.png" srcset="assets/img/partners/partner-5-2x.png 2x" alt="Генеральный партнер">
+                                <p>Генеральный <br>партнер</p>
+                            </a>
+                        </li>
+                        <!-- 2 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-6.png" srcset="assets/img/partners/partner-6-2x.png 2x" alt="Официальный партнер">
+                                <p>Официальный <br>партнер</p>
+                            </a>
+                        </li>
+                        <!-- 3 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-7.png" srcset="assets/img/partners/partner-7-2x.png 2x" alt="Официальный партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 4 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-8.png" srcset="assets/img/partners/partner-8-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 5 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-9.png" srcset="assets/img/partners/partner-9-2x.png 2x" alt="Партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 6 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-10.png" srcset="assets/img/partners/partner-10-2x.png 2x" alt="Партнер">
+                                <p>Технический <br>партнер</p>
+                            </a>
+                        </li>
+                        <!-- 7 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-11.png" srcset="assets/img/partners/partner-11-2x.png 2x" alt="Генеральный партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 8 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-12.png" srcset="assets/img/partners/partner-12-2x.png 2x" alt="Официальный партнер">
+                                <p>Партнер</p>
+                            </a>
+                        </li>
+                        <!-- 9 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-13.png" srcset="assets/img/partners/partner-13-2x.png 2x" alt="Официальный партнер">
+                                <p>Поставщик</p>
+                            </a>
+                        </li>
+                        <!-- 10 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-14.png" srcset="assets/img/partners/partner-14-2x.png 2x" alt="Партнер">
+                                <p>Информационный <br>парнер</p>
+                            </a>
+                        </li>
+                        <!-- 11 -->
+                        <li class="footer-partners__item">
+                            <a href="#">
+                                <img src="assets/img/partners/partner-15.png" srcset="assets/img/partners/partner-15-2x.png 2x" alt="Партнер">
+                                <p>Информационный <br>парнер</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- bot -->
+        <div class="footer__footer-common footer-common">
+            <div class="footer-common__container container container_1">
+                <!-- top -->
+                <div class="footer-common__wrapper footer-common__wrapper_1">
+                    <a href="/" class="footer-common__logo"><img src="assets/img/logo-white-long.png" srcset="assets/img/logo-white-long-2x.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                    <a href="/" class="footer-common__logo footer-common__logo_mobile"><img src="assets/img/logo-white-long-mobile.png" srcset="assets/img/logo-white-long-2x-mobile.png 2x" alt="Хоккейный клуб Динамо Москва"></a>
+                    <ul class="footer-common__social">
+                        <li><a href="#" aria-label="Facebook"><svg class="fb"><use xlink:href="assets/img/sprites/sprite-icons.svg#facebook"></use></svg></a></li>
+                        <li><a href="#" aria-label="Twitter"><svg class="tw"><use xlink:href="assets/img/sprites/sprite-icons.svg#twitter"></use></svg></a></li>
+                        <li><a href="#" aria-label="Instagram"><svg class="in"><use xlink:href="assets/img/sprites/sprite-icons.svg#instagram"></use></svg></a></li>
+                        <li><a href="#" aria-label="Vkontakte"><svg class="vk"><use xlink:href="assets/img/sprites/sprite-icons.svg#vkontakte"></use></svg></a></li>
+                        <li><a href="#" aria-label="Odnoklassniki"><svg class="ok"><use xlink:href="assets/img/sprites/sprite-icons.svg#odnoklassniki"></use></svg></a></li>
+                        <li><a href="#" aria-label="Youtube"><svg class="yt"><use xlink:href="assets/img/sprites/sprite-icons.svg#youtube"></use></svg></a></li>
+                    </ul>
+                    <!-- hamburger -->
+                    <div class="footer-common__hamburger" data-js-hamburger-container>
+                        <a href="#" class="footer-common__hamburger-button" data-js-hamburger-button><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#hamburger"></use></svg></a>
+                        <nav class="footer-common__hamburger-menu" data-js-hamburger-menu>
+                            <a href="#" class="footer-common__hamburger-close" aria-label="Закрыть меню" data-js-hamburger-close><svg><use xlink:href="assets/img/sprites/sprite-icons.svg#cross"></use></svg></a>
+                            <!-- 1 -->
+                            <ul>
+                                <li><a href="#">Билеты</a></li>
+                                <li><a href="#">Мини-абонемент</a></li>
+                                <li><a href="#">Абонементы</a></li>
+                                <li><a href="#">Правила покупок</a></li>
+                                <li><a href="#">Правила поведения</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                            <!-- 2 -->
+                            <ul>
+                                <li><a href="#">Наша история</a></li>
+                                <li><a href="#">Высший совет</a></li>
+                                <li><a href="#">Попечительский совет</a></li>
+                                <li><a href="#">Руководство</a></li>
+                                <li><a href="#">База Динамо</a></li>
+                                <li><a href="#">Музей</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Символика</a></li>
+                                <li><a href="#">Стадион</a></li>
+                                <li><a href="#">Спонсоры и партнеры</a></li>
+                            </ul>
+                            <!-- 3 -->
+                            <ul>
+                                <li><a href="#">Состав</a></li>
+                                <li><a href="#">Тренерский штаб</a></li>
+                                <li><a href="#">Персонал</a></li>
+                            </ul>
+                            <!-- 4 -->
+                            <ul>
+                                <li><a href="#">Календарь</a></li>
+                            </ul>
+                            <!-- 5 -->
+                            <ul>
+                                <li><a href="#">Командная статистика</a></li>
+                                <li><a href="#">Персональная статистика</a></li>
+                                <li><a href="#">Сравнение команд</a></li>
+                            </ul>
+                            <!-- 6 -->
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Интервью</a></li>
+                                <li><a href="#">Матч-центр</a></li>
+                                <li><a href="#">События</a></li>
+                                <li><a href="#">Конференции</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- mid -->
+                <div class="footer-common__wrapper footer-common__wrapper_2">
+                    <!-- nav -->
+                    <nav class="footer-common__nav">
+                        <!-- 1 -->
+                        <ul>
+                            <li><a href="#">Билеты</a></li>
+                            <li><a href="#">Мини-абонемент</a></li>
+                            <li><a href="#">Абонементы</a></li>
+                            <li><a href="#">Правила покупок</a></li>
+                            <li><a href="#">Правила поведения</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <!-- 2 -->
+                        <ul>
+                            <li><a href="#">Наша история</a></li>
+                            <li><a href="#">Высший совет</a></li>
+                            <li><a href="#">Попечительский совет</a></li>
+                            <li><a href="#">Руководство</a></li>
+                            <li><a href="#">База Динамо</a></li>
+                            <li><a href="#">Музей</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Символика</a></li>
+                            <li><a href="#">Стадион</a></li>
+                            <li><a href="#">Спонсоры и партнеры</a></li>
+                        </ul>
+                        <!-- 3 -->
+                        <ul>
+                            <li><a href="#">Состав</a></li>
+                            <li><a href="#">Тренерский штаб</a></li>
+                            <li><a href="#">Персонал</a></li>
+                        </ul>
+                        <!-- 4 -->
+                        <ul>
+                            <li><a href="#">Календарь</a></li>
+                        </ul>
+                        <!-- 5 -->
+                        <ul>
+                            <li><a href="#">Командная статистика</a></li>
+                            <li><a href="#">Персональная статистика</a></li>
+                            <li><a href="#">Сравнение команд</a></li>
+                        </ul>
+                        <!-- 6 -->
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Интервью</a></li>
+                            <li><a href="#">Матч-центр</a></li>
+                            <li><a href="#">События</a></li>
+                            <li><a href="#">Конференции</a></li>
+                        </ul>
+                    </nav>
+                    <!-- contacts -->
+                    <div class="footer-common__contacts">
+                        <a href="tel:+74951209000">(495) 120-90-00</a>
+                        <a href="mailto:info@dynamo.ru">info@dynamo.ru</a>
+                    </div>
+                </div>
+                <!-- bot -->
+                <div class="footer-common__wrapper footer-common__wrapper_3">
+                    <p>1946-2020. Все права защищены</p>
+                    <p>Разработка сайта: <a href="https://x4.digital/">x4.digital</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/focus-visible.js"></script>
+    <script src="assets/js/keyboard-click.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
