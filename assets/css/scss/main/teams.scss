@@ -1,7 +1,12 @@
-.teams {}
+.teams {
+    position: relative;
+    padding-bottom: 39px;
+    z-index: 1;
+}
 
 .teams__container {
     display: flex;
+    z-index: 1;
     @media (max-width: 768px) {
         flex-direction: column;
     }
@@ -115,7 +120,7 @@
     border-radius: 4px;
     overflow: hidden;
 
-    background: rgba($themeGrayLight, .3);
+    background: #F8F9FB;
     display: flex;
     align-items: center;
     padding: 0 32px 0 24px;
@@ -150,7 +155,7 @@
         line-height: 24px;
     }
     &_selected {
-        background: rgba($themeBlue, .3);
+        background: #B3C2E3;
     }
     &:nth-of-type(odd) {
         background: $themeGrayLight;
@@ -364,7 +369,7 @@
     flex: 0 1 calc(50% - 31px);
     margin-right: 31px;
     margin-bottom: 32px;
-    background: rgba($themeGrayLight, .5);
+    background: #F3F4F8;
     border: 1px solid $themeGrayLight;
     box-sizing: border-box;
     border-radius: 4px;
@@ -512,7 +517,12 @@
     border-top: none;
     border-radius: 0 0 24px 24px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70%;
+    z-index: -1;
     @media (max-width: 1440px) {
         width: calc(100% + 840px - #{pxToVw(1440, 1330px)});
     }
@@ -569,6 +579,8 @@
     max-width: 48px;
     max-height: 48px;
     transition: max-width .75s;
+
+    z-index: 1;
     @media (max-width: 992px) {
         right: auto!important;
         left: 50%!important;
