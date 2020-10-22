@@ -444,10 +444,12 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: auto;
         &>li {
             &[data-js-dropdown-hover=active] {
                 &>a {
                     pointer-events: none;
+                    color: $themeWhite;
                     &:before {
                         content: '';
                         width: 100%;
@@ -479,11 +481,7 @@
 .header-blue__dropdown {
     transform: translateY(100%);
     left: -24px;
-    bottom: -10px;
     min-width: calc(100% + 24px * 2);
-    .dropdown__content {
-        margin-top: 0;
-    }
 }
 
 .header-blue__logo {

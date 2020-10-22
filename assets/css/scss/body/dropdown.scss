@@ -3,6 +3,7 @@
     white-space: nowrap;
     position: absolute;
     bottom: 0;
+    opacity: 0;
     visibility: hidden;
     z-index: 1;
 }
@@ -146,6 +147,7 @@
 
 [data-js-dropdown-hover=active], [data-js-dropdown-click=active] {
     .dropdown {
+        opacity: 1;
         visibility: visible;
     }
     [data-js-dropdown-menu] {

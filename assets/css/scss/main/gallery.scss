@@ -327,11 +327,16 @@
         align-items: center;
         padding: 0 20px 0 16px;
         border-radius: 100px;
-        &:hover, &:focus {
-            background: $themeBlue;
-            color: $themeWhite;
-            &>svg {
-                fill: $themeWhite
+        position: relative;
+        &:hover {
+            &:before, &:after {
+                transition: transform .25s;
+            }
+            &:before {
+                transform: translateX(-16px);
+            }
+            &:after {
+                transform: translateX(16px);
             }
         }
         &:active {
@@ -344,6 +349,23 @@
         &>span {
             font-size: 16px;
             line-height: 32px;
+        }
+        &:before, &:after {
+            content: '';
+            height: 100%;
+            width: 50%;
+            background: inherit;
+            border-radius: inherit;
+            position: absolute;
+            top: 0;
+            transition: transform .15s;
+            z-index: -1;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
         }
     }
 }

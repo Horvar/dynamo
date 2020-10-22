@@ -673,10 +673,11 @@ h2 {
   white-space: nowrap;
   position: absolute;
   bottom: 0;
+  opacity: 0;
   visibility: hidden;
   z-index: 1; }
 
-/* line 9, scss/body/dropdown.scss */
+/* line 10, scss/body/dropdown.scss */
 .dropdown__content {
   background: #ECF0F7;
   border-radius: 4px;
@@ -686,13 +687,13 @@ h2 {
   -webkit-transition: .2s;
   transition: .2s; }
 
-/* line 22, scss/body/dropdown.scss */
+/* line 23, scss/body/dropdown.scss */
 .dropdown__menu > li:first-of-type > a {
   padding-top: 8px; }
-/* line 27, scss/body/dropdown.scss */
+/* line 28, scss/body/dropdown.scss */
 .dropdown__menu > li:last-of-type > a {
   padding-bottom: 8px; }
-/* line 31, scss/body/dropdown.scss */
+/* line 32, scss/body/dropdown.scss */
 .dropdown__menu > li > a {
   outline: none;
   display: -webkit-box;
@@ -704,49 +705,49 @@ h2 {
   padding: 4px 16px;
   font-size: 16px;
   line-height: 24px; }
-  /* line 38, scss/body/dropdown.scss */
+  /* line 39, scss/body/dropdown.scss */
   .dropdown__menu > li > a:hover, .dropdown__menu > li > a:focus {
     background: #0033A0;
     color: #fff; }
-    /* line 41, scss/body/dropdown.scss */
+    /* line 42, scss/body/dropdown.scss */
     .dropdown__menu > li > a:hover svg, .dropdown__menu > li > a:focus svg {
       fill: #fff;
       opacity: 1; }
-    /* line 45, scss/body/dropdown.scss */
+    /* line 46, scss/body/dropdown.scss */
     .dropdown__menu > li > a:hover span, .dropdown__menu > li > a:focus span {
       opacity: 1; }
-  /* line 49, scss/body/dropdown.scss */
+  /* line 50, scss/body/dropdown.scss */
   .dropdown__menu > li > a:active {
     background: #00205B;
     color: #fff; }
-  /* line 53, scss/body/dropdown.scss */
+  /* line 54, scss/body/dropdown.scss */
   .dropdown__menu > li > a svg {
     fill: #11181F;
     opacity: .8;
     width: 20px;
     margin-right: 12px; }
-  /* line 59, scss/body/dropdown.scss */
+  /* line 60, scss/body/dropdown.scss */
   .dropdown__menu > li > a span {
     opacity: .8; }
-/* line 66, scss/body/dropdown.scss */
+/* line 67, scss/body/dropdown.scss */
 .dropdown__menu_social > li > a {
   padding-right: 54px; }
 
-/* line 76, scss/body/dropdown.scss */
+/* line 77, scss/body/dropdown.scss */
 .dropdown__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 16px 24px; }
-  /* line 79, scss/body/dropdown.scss */
+  /* line 80, scss/body/dropdown.scss */
   .dropdown__social li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    /* line 81, scss/body/dropdown.scss */
+    /* line 82, scss/body/dropdown.scss */
     .dropdown__social li + * {
       margin-left: 16px; }
-    /* line 84, scss/body/dropdown.scss */
+    /* line 85, scss/body/dropdown.scss */
     .dropdown__social li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -754,14 +755,14 @@ h2 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      /* line 87, scss/body/dropdown.scss */
+      /* line 88, scss/body/dropdown.scss */
       .dropdown__social li a svg {
         fill: #0033A0; }
-        /* line 89, scss/body/dropdown.scss */
+        /* line 90, scss/body/dropdown.scss */
         .dropdown__social li a svg:hover {
           fill: #11181F; }
 
-/* line 97, scss/body/dropdown.scss */
+/* line 98, scss/body/dropdown.scss */
 .dropdown__trophy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -771,7 +772,7 @@ h2 {
   background-position: bottom left;
   padding: 30px 42px 18px 24px;
   position: relative; }
-  /* line 104, scss/body/dropdown.scss */
+  /* line 105, scss/body/dropdown.scss */
   .dropdown__trophy::before {
     content: '';
     width: 100%;
@@ -782,17 +783,17 @@ h2 {
     background: #0033A0;
     border-radius: 4px 4px 0 0; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* line 97, scss/body/dropdown.scss */
+    /* line 98, scss/body/dropdown.scss */
     .dropdown__trophy {
       background: url(../img/trophies/trophy-bg-2x.png) #fff; } }
-  /* line 118, scss/body/dropdown.scss */
+  /* line 119, scss/body/dropdown.scss */
   .dropdown__trophy img {
     width: auto;
     height: 100%; }
-  /* line 122, scss/body/dropdown.scss */
+  /* line 123, scss/body/dropdown.scss */
   .dropdown__trophy > div {
     margin-left: 45px; }
-    /* line 124, scss/body/dropdown.scss */
+    /* line 125, scss/body/dropdown.scss */
     .dropdown__trophy > div > h3 {
       font-weight: 500;
       font-size: 14px;
@@ -801,7 +802,7 @@ h2 {
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #0033A0; }
-    /* line 133, scss/body/dropdown.scss */
+    /* line 134, scss/body/dropdown.scss */
     .dropdown__trophy > div > p {
       font-size: 70px;
       line-height: 84px;
@@ -809,14 +810,15 @@ h2 {
       text-align: center;
       color: rgba(0, 51, 160, 0.2); }
 
-/* line 143, scss/body/dropdown.scss */
+/* line 144, scss/body/dropdown.scss */
 [data-js-dropdown-hover], [data-js-dropdown-click] {
   position: relative; }
 
-/* line 148, scss/body/dropdown.scss */
+/* line 149, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] .dropdown, [data-js-dropdown-click=active] .dropdown {
+  opacity: 1;
   visibility: visible; }
-/* line 152, scss/body/dropdown.scss */
+/* line 154, scss/body/dropdown.scss */
 [data-js-dropdown-hover=active] [data-js-dropdown-menu] .dropdown__content, [data-js-dropdown-click=active] [data-js-dropdown-menu] .dropdown__content {
   max-height: 100%;
   -webkit-transition: .5s;
@@ -1367,11 +1369,13 @@ h2 {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    /* line 449, scss/header/header-blue.scss */
+            justify-content: space-between;
+    margin-bottom: auto; }
+    /* line 450, scss/header/header-blue.scss */
     .header-blue__nav-fixed > ul > li[data-js-dropdown-hover=active] > a {
-      pointer-events: none; }
-      /* line 451, scss/header/header-blue.scss */
+      pointer-events: none;
+      color: #fff; }
+      /* line 453, scss/header/header-blue.scss */
       .header-blue__nav-fixed > ul > li[data-js-dropdown-hover=active] > a:before {
         content: '';
         width: 100%;
@@ -1381,37 +1385,33 @@ h2 {
         bottom: -3px;
         left: 0;
         border-radius: 5px; }
-    /* line 463, scss/header/header-blue.scss */
+    /* line 465, scss/header/header-blue.scss */
     .header-blue__nav-fixed > ul > li + li {
       margin-left: 24px; }
-    /* line 466, scss/header/header-blue.scss */
+    /* line 468, scss/header/header-blue.scss */
     .header-blue__nav-fixed > ul > li > a {
       font-weight: 500;
       font-size: 13px;
       line-height: 20px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.7); }
-      /* line 472, scss/header/header-blue.scss */
+      /* line 474, scss/header/header-blue.scss */
       .header-blue__nav-fixed > ul > li > a:hover, .header-blue__nav-fixed > ul > li > a:focus {
         color: #fff; }
 
-/* line 479, scss/header/header-blue.scss */
+/* line 481, scss/header/header-blue.scss */
 .header-blue__dropdown {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   left: -24px;
-  bottom: -10px;
   min-width: calc(100% + 24px * 2); }
-  /* line 484, scss/header/header-blue.scss */
-  .header-blue__dropdown .dropdown__content {
-    margin-top: 0; }
 
-/* line 489, scss/header/header-blue.scss */
+/* line 487, scss/header/header-blue.scss */
 .header-blue__logo {
   margin-top: -4px;
   margin-right: 45px;
   display: none; }
-  /* line 493, scss/header/header-blue.scss */
+  /* line 491, scss/header/header-blue.scss */
   .header-blue__logo svg {
     width: 25px;
     height: 28px;
@@ -2831,7 +2831,7 @@ h2 {
   @media (min-width: 1600px) {
     /* line 104, scss/main/news-cards.scss */
     .news-cards__photo {
-      height: 13.6979166667vw;
+      height: 11.6666666667vw;
       margin-bottom: 20px; } }
   @media (max-width: 992px) {
     /* line 104, scss/main/news-cards.scss */
@@ -4133,25 +4133,53 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 20px 0 16px;
-    border-radius: 100px; }
-    /* line 330, scss/main/gallery.scss */
-    .gallery__more > a:hover, .gallery__more > a:focus {
-      background: #0033A0;
-      color: #fff; }
-      /* line 333, scss/main/gallery.scss */
-      .gallery__more > a:hover > svg, .gallery__more > a:focus > svg {
-        fill: #fff; }
-    /* line 337, scss/main/gallery.scss */
+    border-radius: 100px;
+    position: relative; }
+    /* line 332, scss/main/gallery.scss */
+    .gallery__more > a:hover:before, .gallery__more > a:hover:after {
+      -webkit-transition: -webkit-transform .25s;
+      transition: -webkit-transform .25s;
+      transition: transform .25s;
+      transition: transform .25s, -webkit-transform .25s; }
+    /* line 335, scss/main/gallery.scss */
+    .gallery__more > a:hover:before {
+      -webkit-transform: translateX(-16px);
+              transform: translateX(-16px); }
+    /* line 338, scss/main/gallery.scss */
+    .gallery__more > a:hover:after {
+      -webkit-transform: translateX(16px);
+              transform: translateX(16px); }
+    /* line 342, scss/main/gallery.scss */
     .gallery__more > a:active {
       opacity: .7; }
-    /* line 340, scss/main/gallery.scss */
+    /* line 345, scss/main/gallery.scss */
     .gallery__more > a > svg {
       fill: rgba(0, 32, 91, 0.5);
       margin-right: 16px; }
-    /* line 344, scss/main/gallery.scss */
+    /* line 349, scss/main/gallery.scss */
     .gallery__more > a > span {
       font-size: 16px;
       line-height: 32px; }
+    /* line 353, scss/main/gallery.scss */
+    .gallery__more > a:before, .gallery__more > a:after {
+      content: '';
+      height: 100%;
+      width: 50%;
+      background: inherit;
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      -webkit-transition: -webkit-transform .15s;
+      transition: -webkit-transform .15s;
+      transition: transform .15s;
+      transition: transform .15s, -webkit-transform .15s;
+      z-index: -1; }
+    /* line 364, scss/main/gallery.scss */
+    .gallery__more > a:before {
+      left: 0; }
+    /* line 367, scss/main/gallery.scss */
+    .gallery__more > a:after {
+      right: 0; }
 
 /* line 6, scss/main/page-slider.scss */
 .page-slider__content {
