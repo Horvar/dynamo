@@ -7,6 +7,7 @@
 .teams__container {
     display: flex;
     z-index: 1;
+    overflow: hidden;
     @media (max-width: 768px) {
         flex-direction: column;
     }
@@ -523,6 +524,9 @@
     transform: translateX(-50%);
     height: 70%;
     z-index: -1;
+    @media (min-width: 1920px) {
+        width: 1292px;
+    }
     @media (max-width: 1440px) {
         width: calc(100% + 840px - #{pxToVw(1440, 1330px)});
     }
@@ -546,13 +550,16 @@
     }
     &:before {
         content: '';
-        width: calc(100% + 100px - #{pxToVw(1920, 950px)});
+        width: calc(100% + 80px - #{pxToVw(1920, 950px)});
         height: 100%;
         border-right: 1px solid rgba($themeBlueDark, .2);
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        @media (min-width: 1920px) {
+            width: 424px;
+        }
         @media (max-width: 1440px) {
             width: calc(100% - 500px - #{pxToVw(1440, 100px)});
         }
@@ -593,12 +600,18 @@
         @media (min-width: 1441px) {
             left: calc(-40px + #{pxToVw(1920, 252px)});
         }
+        @media (min-width: 1920px) {
+            left: 215px;
+        }
     } 
     &:last-of-type {
         transform: translate(50%, 50%);
         right: 155px;
         @media (min-width: 1441px) {
-            right: calc(-40px + #{pxToVw(1920, 252px)});
+            right: calc(-0px + #{pxToVw(1920, 212px)});
+        }
+        @media (min-width: 1920px) {
+            right: 215px;
         }
     }
     &:focus, &:hover {
